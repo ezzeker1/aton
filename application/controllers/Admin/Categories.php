@@ -10,7 +10,7 @@
  *
  * @author jason
  */
-class Categories extends CI_Controller{
+class Categories extends Logged_controller{
     //put your code here
     private $table_name;
       function __construct() {
@@ -19,7 +19,7 @@ class Categories extends CI_Controller{
         $this->table_name='categories';
     }
     function index(){
-        $data['main_content'] = 'Admin/template/Categories'  ;
+        $data['main_content'] = 'Categories'  ;
         $this->load->view('Admin/Layouts/template',$data);
     }
     

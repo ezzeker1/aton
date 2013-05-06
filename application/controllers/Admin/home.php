@@ -3,11 +3,14 @@ class Home extends Logged_controller{
     
     function __construct() {
         parent::__construct();
+        $this->data=array(
+            'title'=>'ATON | Admin panel | Home'
+        );
     }
     function index()
     {
-         $data['main_content'] = 'Admin/template/index'  ;
-         $data['load_footer'] = TRUE;
-         $this->load->view('Admin/Layouts/template',$data);  
+         $this->data['main_content'] = 'index'  ;
+         $this->data['load_footer'] = TRUE;
+         $this->load->view('Admin/Layouts/template',$this->data);  
     }
 }
