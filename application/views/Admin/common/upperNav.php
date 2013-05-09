@@ -89,7 +89,7 @@
 					
 						<ul class="dropdown-menu">
 							<li><a href="<?php echo base_url('Admin/Categories'); ?>">Categories</a></li>
-							<li><a href="<?php echo base_url('Admin/Products'); ?>">Products</a></li>
+							<li><a href="<?php echo base_url('Admin/products'); ?>">Products</a></li>
 						</ul> 				
 					</li>
 					

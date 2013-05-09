@@ -20,16 +20,17 @@
                                         <form action=<?echo base_url()?>Admin/Categories/add_category method="post" id="validation-form" class="form-horizontal ">
 						<fieldset>
 						    <div class="control-group">
-						      <label class="control-label" for="category_name">Category Name</label>
+						      <label class="control-label" for="category_name">Category Name </label>
 						      <div class="controls">
-						        <input type="text" class="input-large" name="category_name" id="name">
+                                                          <?php echo '<font color="red">'.form_error('category_name').'</font>'; ?>
+                                                        <input type="text" class="input-large" name="category_name"id="name">
 						      </div>
 						    </div>
 						    
 						    <div class="control-group">
 						      <label class="control-label" for="category_description">Category Description</label>
 						      <div class="controls">
-						        <textarea class="span4" name="category_description" id="message" rows="4"></textarea>
+						        <textarea class="span4" name="category_description"id="message" rows="4"></textarea>
 						      </div>
 						    </div>
 						    
