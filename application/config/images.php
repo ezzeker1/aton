@@ -1,0 +1,10 @@
+<?php 
+$config=array(
+    'image_sizes'=>
+array(
+    'gallery'=>array(
+        'small'=>'199x130',
+        'large'=>'800x600'
+    )
+    )
+);

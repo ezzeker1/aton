@@ -11,7 +11,7 @@
 
 $config['assets_cssmin_filters'] = array(
 	"ImportImports"                 => false,
-	"RemoveComments"                => true, 
+	"RemoveComments"                => false, 
 	"RemoveEmptyRulesets"           => false,
 	"RemoveEmptyAtBlocks"           => false,
 	"ConvertLevel3AtKeyframes"      => true,

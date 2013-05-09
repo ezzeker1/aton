@@ -1,12 +1,8 @@
 <div class="main">
-
     <div class="container">
-
       <div class="row">
-      	
       	<div class="span12">
-      		<div class="widget stacked">
-					
+      		<div class="widget stacked">		
 				<div class="widget-header">
 					<i class="icon-th-large"></i>
 					<h3>Image Gallery</h3>
@@ -201,30 +197,20 @@
 							
 						</ul>
 					
-				</div> <!-- /widget-content -->
-					
-			</div> <!-- /widget -->					
-			
+				</div> <!-- /widget-content -->			
+			</div> <!-- /widget -->						
 	    </div> <!-- /span12 -->     	
-      	
-      	
       </div> <!-- /row -->
-      
-
-          <div class="row">
+<div class="row">
     <div class="span12">
-         		<div class="widget stacked">
-					
+         		<div class="widget stacked">			
 				<div class="widget-header">
 					<i class="icon-check"></i>
 					<h3>Add new photo</h3>
-				</div> <!-- /widget-header -->
-				
+				</div> <!-- /widget-header -->	
 				<div class="widget-content">
-					
 					<br />
-					
-					<form action="<?php echo base_url('Admin/Gallery/add'); ?>" id="validation-form" class="form-horizontal">
+                                        <form enctype="multipart/form-data" action="<?php echo base_url('Admin/Gallery/add'); ?>" id="validation-form" class="form-horizontal">
 						<fieldset>
 						    <div class="control-group">
 						      <label class="control-label" for="name">Caption</label>
@@ -249,8 +235,8 @@
 				</div> <!-- /widget-content -->
 					
 			</div> <!-- /widget -->					
+    </div>
 </div>
-          </div>
       
     </div> <!-- /container -->
 </div> <!-- /main -->
