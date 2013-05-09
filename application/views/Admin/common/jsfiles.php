@@ -1,3 +1,3 @@
- <?php Assets::js($assets_js); ?>
+ <?php Assets::js($assets_js);  ?>
 </body>
 </html>

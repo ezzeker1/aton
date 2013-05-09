@@ -13,9 +13,10 @@ if(!function_exists('initialize_tinymce')){
     /*
      * change src to the location of the tiny_mce.js
      */
-        $tinymce = '<script type="text/javascript" src="'. base_url().'resources/tinymce/tiny_mce.js"></script>
+    $script_url=base_url().'resources/js/tinymce/jquery.tinymce.js';
+    $tinymce = '<script type="text/javascript" src="'. $script_url.'"></script>
                 <script type="text/javascript">
-                tinyMCE.init({
+                    tinyMCE.init({
                     // General options
                     mode : "textareas",
                     theme : "advanced",
@@ -25,9 +26,8 @@ if(!function_exists('initialize_tinymce')){
                     forced_root_block : false,
                     force_br_newlines : true,
                     force_p_newlines : false,
-                    file_browser_callback : "elFinderBrowser",
-                    plugins:  "youtube,autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
-                    document_base_url : "base_url() ",
+                    
+                    plugins:  "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template"
                     theme_advanced_toolbar_location : "top",
                     theme_advanced_toolbar_align : "left",
                     theme_advanced_resize_horizontal : true,
@@ -36,8 +36,8 @@ if(!function_exists('initialize_tinymce')){
                     theme_advanced_buttons3 : ""
 
                 });';
-        $tinymce.="function elFinderBrowser (field_name, url, type, win) {
-                    var elfinder_url = '".base_url() ."style/tinymce/plugins/elfinder/elfinder.html';    // use an absolute path!
+    $tinymce.="function elFinderBrowser (field_name, url, type, win) {
+                    var elfinder_url = '".base_url() ."resources/js/tinymce/plugins/elfinder/elfinder.html';    // use an absolute path!
                     tinyMCE.activeEditor.windowManager.open({
                         file: elfinder_url,
                         title: 'elFinder 2.0',

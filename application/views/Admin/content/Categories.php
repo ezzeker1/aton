@@ -14,7 +14,13 @@
 				</div> <!-- /widget-header -->
 				
 				<div class="widget-content">
-					
+					<ul class="nav nav-tabs">
+					  <li class="active">
+					    <a data-toggle="tab" href="#profile">Profile</a>
+					  </li>
+					  <li class=""><a data-toggle="tab" href="#settings">Settings</a></li>
+					</ul>
+                                    
 					<br />
 					
                                         <form action=<?echo base_url()?>Admin/Categories/add_category method="post" id="validation-form" class="form-horizontal ">

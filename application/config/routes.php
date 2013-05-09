@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "Admin/login";
 $route['404_override'] = '';
+$route['Admin/pages/(:any)']='Admin/pages/load/$1';
 
 
 /* End of file routes.php */

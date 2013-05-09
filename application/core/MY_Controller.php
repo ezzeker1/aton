@@ -33,9 +33,6 @@ class Logged_controller extends CI_Controller
     function _load_assets()
     {
         $this->assets_js=array(
-                'libs/jquery-1.8.3.min.js',
-                'libs/jquery-ui-1.10.0.custom.min.js',
-                'libs/bootstrap.min.js',
                 'Application.js'
              );
         $this->assets_css=array(

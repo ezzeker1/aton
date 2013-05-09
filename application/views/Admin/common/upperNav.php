@@ -101,11 +101,9 @@
 						</a>	    
 					
 						<ul class="dropdown-menu">
-							<li><a href="./pricing.html">Pricing Plans</a></li>
-							<li><a href="./faq.html">FAQ's</a></li>
-							<li><a href="./gallery.html">Gallery</a></li>
-							<li><a href="./reports.html">Reports</a></li>
-							<li><a href="./account.html">User Account</a></li>
+							<li><a href="<?php echo base_url('Admin/pages/home'); ?>">Home</a></li>
+							<li><a href="<?php echo base_url('Admin/pages/aboutus'); ?>">About us</a></li>
+							<li><a href="<?php echo base_url('Admin/pages/contactus'); ?>">Contact us</a></li>
 						</ul> 				
 					</li>
 					
