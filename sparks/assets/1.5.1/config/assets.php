@@ -42,7 +42,7 @@ $config['assets']['auto_clear_js_cache']  = true;
 */
 
 $config['assets']['base_url']   = null;
-$config['assets']['assets_dir'] = 'resources';
+$config['assets']['assets_dir'] = 'resources/admin';
 $config['assets']['js_dir']     = 'js';
 $config['assets']['css_dir']    = 'css';
 $config['assets']['cache_dir']  = 'cache';

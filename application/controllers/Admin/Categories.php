@@ -6,7 +6,6 @@
  */
 class Categories extends Logged_controller{
     //put your code here
-    private $table_name;
     
     function __construct() {
         parent::__construct();
@@ -21,7 +20,8 @@ class Categories extends Logged_controller{
                 'plugins/hoverIntent/jquery.hoverIntent.minified.js',
                 'plugins/lightbox/jquery.lightbox.min.js',
                 'demo/gallery.js',
-            ))
+            )),
+             'tinymce'=>initialize_tinymce()
         );
         
     }
@@ -40,27 +40,24 @@ class Categories extends Logged_controller{
     
     function add_category(){
         //Validate user input
-        if($this->validate_user_input()==false){
-            //Validation Failed
-            $this->index();
-        }
-        else{
-            //Validation Successful
-        $name_ar= $this->input->post('category_name_ar');
-        $name_en= $this->input->post('category_name_en');
-        $description_ar=$this->input->post('category_description_ar');
-        $description_en=$this->input->post('category_description_en');
-        /**
-         * Should change after we agree on the Crud design to hold multi lang
-         * Data
-         */
-        $payload=array('name_ar'=>$name_ar,
-            'name_en'=>$name_en,
-            'description_ar'=>$description_ar,
-            'description_en'=>$description_en);
-        $this->CategoriesModel->create_category($payload);
-       //============================================================
-        redirect('Admin/Categories');
+        if($this->validate_user_input()==true)
+         {
+                //Validation Successful
+                $name_ar= $this->input->post('category_name_ar');
+                $name_en= $this->input->post('category_name_en');
+                $description_ar=$this->input->post('category_description_ar');
+                $description_en=$this->input->post('category_description_en');
+                /**
+                * Should change after we agree on the Crud design to hold multi lang
+                * Data
+                */
+                $payload=array('name_ar'=>$name_ar,
+                    'name_en'=>$name_en,
+                    'description_ar'=>$description_ar,
+                    'description_en'=>$description_en);
+                $this->CategoriesModel->create_category($payload);
+            //============================================================
+                redirect('Admin/Categories');
         }
         $this->data['main_content'] = 'Categories'  ;
         $this->load->view('Admin/Layouts/template',$this->data);
@@ -82,7 +79,7 @@ class Categories extends Logged_controller{
     {
         $this->datatables->select('id,name_en,name_ar,description_en,description_ar')
         ->add_column('Edit',anchor('Admin/'.$this->router->method.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'id')
-        ->add_column('Delete',anchor('admin/'.$this->router->method.'/edit/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'id')
+        ->add_column('Delete',anchor('admin/'.$this->router->method.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'id')
         ->from('categories');
         
         echo $this->datatables->generate();

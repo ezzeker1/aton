@@ -10,7 +10,6 @@ class CategoriesModel extends CI_Model {
     function __construct() {
         parent::__construct();
         $this->categories_table='categories';
-$this->output->enable_profiler();
     }
     /**
     * @param array $payloadData Data to be persisted in the database.
@@ -73,7 +72,7 @@ $this->output->enable_profiler();
             $result = $this->get_category();
             if($result){
                 foreach($result as $key=>$row){
-             $category_names[$row->id]=$row->name;      
+                    $category_names[$row->id]=$row->name_en.'/'.$row->name_ar;      
                 }
                 return $category_names;
             }else{

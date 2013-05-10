@@ -5,7 +5,7 @@
  * Date:11/11/2012 
  */
 if(!function_exists('initialize_tinymce')){
-    function initialize_tinymce()
+    function initialize_tinymce($height=450,$width=900)
     {
     $ci=& get_instance();
     $ci->load->helper('url_helper');
@@ -17,7 +17,8 @@ if(!function_exists('initialize_tinymce')){
      <script type="text/javascript">
            tinymce.init({
                 selector: "textarea",
-                height:"500",
+                height:"'.$height.'",
+                width:"'.$width.'",
                 plugins: [
                     "advlist autolink lists link image charmap print preview hr anchor pagebreak",
                     "searchreplace wordcount visualblocks visualchars code fullscreen",
