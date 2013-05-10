@@ -8,6 +8,7 @@ class Logged_controller extends CI_Controller
         parent::__construct();
         $this->_load_assets();
         $this->_is_logged();
+        $this->_set_table();
     }
     /*
      * check if user is authorized
@@ -34,7 +35,8 @@ class Logged_controller extends CI_Controller
     {
         $this->assets_js=array(
                 'Application.js',
-                'parsley.extend.min.js'
+                'parsley.extend.min.js',
+                'aton.js'
             
              );
         $this->assets_css=array(
@@ -51,5 +53,13 @@ class Logged_controller extends CI_Controller
             'assets_js'=>$this->assets_js,
             'assets_css'=>$this->assets_css
         ));
+    }
+    function _set_table()
+    {
+        $this->load->library('table');
+        $tmpl = array (
+                    'table_open'=> '<table class="table table-bordered table-striped table-highlight">'
+              );
+        $this->table->set_template($tmpl); 
     }
 }

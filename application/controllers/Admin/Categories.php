@@ -1,10 +1,4 @@
-<?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Description of Categories
  *
@@ -14,10 +8,8 @@ class Categories extends Logged_controller{
     //put your code here
     private $table_name;
     
-      function __construct() {
+    function __construct() {
         parent::__construct();
-        $this->load->model('GenericCRUD');
-        $this->table_name='categories';
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->form_validation->set_message('required', '*');

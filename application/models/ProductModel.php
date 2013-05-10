@@ -10,18 +10,18 @@
  *
  * @author jason
  */
-class product_model extends CI_Model{
+class ProductModel extends CI_Model{
     private $categories_table;    
-//put your code here
-function __construct() {
-    parent::__construct();
-    $this->categories_table='roducts';
-    
-}
-/**
- * @param array $payloadData Data to be persisted in the database.
- * @return boolean True if insert is successful false if not.
- */
+    //put your code here
+    function __construct() {
+        parent::__construct();
+        $this->categories_table='roducts';
+
+    }
+    /**
+    * @param array $payloadData Data to be persisted in the database.
+    * @return boolean True if insert is successful false if not.
+    */
     function create_product($payloadData){
         $this->db->insert($this->categories_table,$payloadData);
         if($this->db->affected_rows() > 0){

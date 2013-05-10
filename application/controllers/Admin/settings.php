@@ -14,12 +14,24 @@ class Settings extends Logged_controller{
     }
     function index()
     {
-        $this->data['settings']=$this->SettingsModel->get();
+        $this->data['table']=$this->generateTable();
         $this->data['main_cotent']='settings';
         $this->load->view('Admin/Layouts/template',$this->data);  
     }
     function update()
     {
         
+    }
+    function generateTable()
+    {
+        foreach($this->data['settings']=$this->SettingsModel->get() as $setting) 
+        {
+            $this->table->add_row(
+                    array(
+                        $setting->key,
+                        '<input id="name" class="input-large" type="text" name="name" value="'.$setting->value.'">'
+                    ));
+        }
+        return $this->table->generate();
     }
 }

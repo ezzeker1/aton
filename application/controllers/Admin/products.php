@@ -1,16 +1,10 @@
-<?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Description of products
  *
  * @author jason
  */
-class products extends Logged_controller{
+class Products extends Logged_controller{
     //Loading constructor
     function __construct() {
         parent::__construct();
@@ -20,23 +14,19 @@ class products extends Logged_controller{
         $this->form_validation->set_message('is_unique','Category name already exist');
         //Temp usage of the General Crud to get the category data
         $this->load->model('CategoriesModel');
+        $this->data=array(
+            'title'=>'ATON | Admin panel | Products'
+        );
     }
     
-    function index(){
-     $category_names = $this->CategoriesModel->get_category_names();
-    if($category_names !=FALSE){
-     $data['main_content'] = 'products';
-     $data['category_names']=$category_names;
-     $this->load->view('Admin/Layouts/template',$data);   
+    function index()
+    {
+     $category_names = $this->CategoriesModel->get_category_list();
+        if(!$category_names)
+            $this->data['']='error';
+        
+        $this->data['main_content'] = 'products';
+        $this->data['category_names']=$category_names;
+        $this->load->view('Admin/Layouts/template',$this->data);   
     }
-    else{
-        /**
-         * In case of no category names were found we have to view 
-         * Error message since user has to list products under category name
-         */
-    }
-    }
-    
 }
-
-?>
