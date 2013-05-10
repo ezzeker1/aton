@@ -58,7 +58,7 @@ class Logged_controller extends CI_Controller
     {
         $this->load->library('table');
         $tmpl = array (
-                    'table_open'=> '<table class="table table-bordered table-striped table-highlight">'
+                    'table_open'=> '<table id="big_table" class="table table-bordered table-striped table-highlight">'
               );
         $this->table->set_template($tmpl); 
     }

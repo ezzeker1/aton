@@ -22,6 +22,7 @@ class Pages extends Logged_controller{
     }
     function load($page)
     {
+        $this->data['h3']=$page;
         $this->data['page']=$this->PagesModel->get($page);
         $this->data['main_content']='PageEdit';
         $this->load->view('Admin/Layouts/template',$this->data);

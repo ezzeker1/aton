@@ -9,7 +9,7 @@
 					
 				<div class="widget-header">
 					<i class="icon-check"></i>
-					<h3>Form Validation</h3>
+					<h3><?php echo $h3; ?></h3>
 				</div> <!-- /widget-header -->
 				
 				<div class="widget-content">

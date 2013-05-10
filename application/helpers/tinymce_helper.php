@@ -19,11 +19,14 @@ if(!function_exists('initialize_tinymce')){
                 selector: "textarea",
                 height:"500",
                 plugins: [
-                    "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
-                    "insertdatetime media table contextmenu paste advimage"
+                    "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen",
+                    "insertdatetime media nonbreaking save table contextmenu directionality",
+                    "emoticons template paste "
                 ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                toolbar2: "print preview media | forecolor backcolor emoticons",
+
             });';
             $tinymce.="function elFinderBrowser (field_name, url, type, win) {
                     var elfinder_url = '".base_url() ."resources/js/tinymce/plugins/elfinder/elfinder.html';    // use an absolute path!

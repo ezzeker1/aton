@@ -5,7 +5,7 @@
       <div class="row">
       	
       	<div class="span12">
-      		
+
       		<div class="widget stacked">
 					
 				<div class="widget-header">
