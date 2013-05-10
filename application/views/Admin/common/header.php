@@ -10,6 +10,5 @@
     <script type="text/javascript" src="<?php echo base_url();?>resources/js/libs/jquery-ui-1.10.0.custom.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>resources/js/libs/bootstrap.min.js"></script>
 
-    <?php if(isset($tinymce)) echo $tinymce; ?>
     <?php Assets::css($assets_css); ?>
 </head>

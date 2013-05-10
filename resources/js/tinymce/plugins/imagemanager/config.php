@@ -34,7 +34,7 @@
         
         $mcImageManagerConfig['filesystem'] = "Moxiecode_LocalFileImpl";
         $mcImageManagerConfig['filesystem.path'] = '../../../../upload-files/'; // absolute or relative from this script path, optional.
-        $mcImageManagerConfig['filesystem.rootpath'] =    $_SERVER['DOCUMENT_ROOT'].'/uploads/custom'; // absolute or relative from this script path, required.
+        $mcImageManagerConfig['filesystem.rootpath'] =    $_SERVER['DOCUMENT_ROOT'].'/aton/uploads/custom'; // absolute or relative from this script path, required.
         $mcImageManagerConfig['filesystem.datefmt'] = "Y-m-d H:i";
         $mcImageManagerConfig['filesystem.include_directory_pattern'] = '';
         $mcImageManagerConfig['filesystem.exclude_directory_pattern'] = '/^mcith$/i';
