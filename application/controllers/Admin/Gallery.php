@@ -22,6 +22,6 @@ class Gallery extends Logged_controller{
     function index()
     {
         $this->data['main_content']='gallery';
-        $this->load->view('Admin/Layouts/template',$this->data);
+        $this->load->view('admin/Layouts/template',$this->data);
     }
 }

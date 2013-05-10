@@ -161,9 +161,9 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
-/resources/js/tinymce/plugins/elfinder/files/.quarantine/
-/resources/js/tinymce/plugins/elfinder/files/.tmb/
 /resources/admin/js/tinymce/plugins/elfinder/files/.quarantine/
 /resources/admin/js/tinymce/plugins/elfinder/files/.tmb/
-/resources/admin/js/tinymce1/plugins/elfinder/files/.quarantine/
-/resources/admin/js/tinymce1/plugins/elfinder/files/.tmb/
+/resources/admin//js/tinymce/plugins/elfinder/files/.quarantine/
+/resources/admin//js/tinymce/plugins/elfinder/files/.tmb/
+/resources/admin//js/tinymce1/plugins/elfinder/files/.quarantine/
+/resources/admin//js/tinymce1/plugins/elfinder/files/.tmb/

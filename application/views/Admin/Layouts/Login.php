@@ -1,8 +1,8 @@
 <?php
 //Loading the header
-$this->load->view('Admin/common/header');
+$this->load->view('admin/common/header');
 //Loading the contents
-$this->load->view('Admin/content/'.$main_content);
+$this->load->view('admin/content/'.$main_content);
 //Loading the final javascript and end of body,html tags
-$this->load->view('Admin/common/jsfiles')
+$this->load->view('admin/common/jsfiles')
 ?>

@@ -26,7 +26,7 @@
 	
 	<div class="content clearfix">
 		
-		<form action="<?php echo base_url('Admin/login/auth'); ?>" method="post">
+		<form action="<?php echo base_url('admin/login/auth'); ?>" method="post">
 		
 			<h1>Sign In</h1>		
 			

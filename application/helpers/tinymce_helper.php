@@ -13,7 +13,7 @@ if(!function_exists('initialize_tinymce')){
     /*
      * change src to the location of the tiny_mce.js
      */
-        $tinymce = '<script type="text/javascript" src="'. base_url().'resources/js/tinymce/tinymce.min.js"></script>
+        $tinymce = '<script type="text/javascript" src="'. base_url().'resources/admin/js/tinymce/tinymce.min.js"></script>
      <script type="text/javascript">
            tinymce.init({
                 selector: "textarea",
@@ -30,7 +30,7 @@ if(!function_exists('initialize_tinymce')){
 
             });';
             $tinymce.="function elFinderBrowser (field_name, url, type, win) {
-                    var elfinder_url = '".base_url() ."resources/js/tinymce/plugins/elfinder/elfinder.html';    // use an absolute path!
+                    var elfinder_url = '".base_url() ."resources/admin/js/tinymce/plugins/elfinder/elfinder.html';    // use an absolute path!
                     tinyMCE.activeEditor.windowManager.open({
                         file: elfinder_url,
                         title: 'elFinder 2.0',

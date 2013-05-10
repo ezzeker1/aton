@@ -11,6 +11,6 @@ class Home extends Logged_controller{
     {
          $this->data['main_content'] = 'index'  ;
          $this->data['load_footer'] = TRUE;
-         $this->load->view('Admin/Layouts/template',$this->data);  
+         $this->load->view('admin/Layouts/template',$this->data);  
     }
 }

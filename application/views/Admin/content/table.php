@@ -3,7 +3,7 @@
 	var oTable = $('#big_table').dataTable( {
 		"bProcessing": true,
 		"bServerSide": true,
-		"sAjaxSource": '<?php echo base_url();?>Admin/<?php echo $this->uri->segment(2); ?>/datatable',
+		"sAjaxSource": '<?php echo base_url();?>admin/<?php echo $this->uri->segment(2); ?>/datatable',
                 "sPaginationType": "full_numbers",
                 "iDisplayStart ":20,
                 "oLanguage": {

@@ -43,7 +43,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="javascript:;">My Profile</a></li>
 							<li class="divider"></li>
-                                                        <li><a href="<?php echo base_url('Admin/login/logout'); ?>">Logout</a></li>
+                                                        <li><a href="<?php echo base_url('admin/login/logout'); ?>">Logout</a></li>
 						</ul>
 						
 					</li>
@@ -74,7 +74,7 @@
 				<ul class="mainnav">
 				
 					<li class="">
-						<a href="<?php echo base_url('Admin/home'); ?>">
+						<a href="<?php echo base_url('admin/home'); ?>">
 							<i class="icon-home"></i>
 							<span>Home</span>
 						</a>	    				
@@ -88,8 +88,8 @@
 						</a>	    
 					
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo base_url('Admin/Categories'); ?>">Categories</a></li>
-							<li><a href="<?php echo base_url('Admin/products'); ?>">Products</a></li>
+							<li><a href="<?php echo base_url('admin/Categories'); ?>">Categories</a></li>
+							<li><a href="<?php echo base_url('admin/products'); ?>">Products</a></li>
 						</ul> 				
 					</li>
 					
@@ -101,14 +101,14 @@
 						</a>	    
 					
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo base_url('Admin/pages/home'); ?>">Home</a></li>
-							<li><a href="<?php echo base_url('Admin/pages/aboutus'); ?>">About us</a></li>
-							<li><a href="<?php echo base_url('Admin/pages/contactus'); ?>">Contact us</a></li>
+							<li><a href="<?php echo base_url('admin/pages/home'); ?>">Home</a></li>
+							<li><a href="<?php echo base_url('admin/pages/aboutus'); ?>">About us</a></li>
+							<li><a href="<?php echo base_url('admin/pages/contactus'); ?>">Contact us</a></li>
 						</ul> 				
 					</li>
 					
                                         <li class="">
-						<a href="<?php echo base_url('Admin/Gallery'); ?>">
+						<a href="<?php echo base_url('admin/Gallery'); ?>">
 							<i class="icon-picture"></i>
 							<span>Gallery</span>
 						</a>	    				

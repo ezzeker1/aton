@@ -63,3 +63,26 @@ class Logged_controller extends CI_Controller
         $this->table->set_template($tmpl); 
     }
 }
+class FrontController extends CI_Controller{
+    var $lang;
+    public function __construct() {
+        parent::__construct();
+        $this->load->helper('language');
+        $this->_set_locale();
+    }
+    /*
+     * sets the locale data
+     */
+    function _set_locale()
+    {
+        $user_data=$this->session->userdata('user_data');
+        
+        if(isset($user_data['language']))
+            $this->lang=$user_data['language'];
+        else
+        {
+            $this->load->model('SettingsModel');
+            $this->lang=$this->SettingsModel->getSetting('default_language');
+        }
+    }
+}

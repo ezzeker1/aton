@@ -15,7 +15,7 @@
 					  <li class=""><a data-toggle="tab" href="#ar">Arabic</a></li>
 					</ul>
 					<br />
-                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('Admin/Categories/add_product'); ?>" method="post" id="validation-form" class="form-horizontal ">
+                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/Categories/add_product'); ?>" method="post" id="validation-form" class="form-horizontal ">
                                     <div class="tab-content">
                                           <div class="control-group">
 				            <label class="control-label" for="categoryNameSelect">Select Category</label>
@@ -74,7 +74,7 @@
 				          </div>
                                         <div class="control-group">
                                             <div class="controls">
-                                               <img  id="product_picture_display" class="instant_display" src="<?php echo base_url(); ?>resources/img/no_img.jpg"/>  
+                                               <img  id="product_picture_display" class="instant_display" src="<?php echo base_url(); ?>resources/admin/img/no_img.jpg"/>  
                                                </div>
                                         </div>
                                     

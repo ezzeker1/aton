@@ -16,7 +16,7 @@ class Settings extends Logged_controller{
     {
         $this->data['table']=$this->generateTable();
         $this->data['main_cotent']='settings';
-        $this->load->view('Admin/Layouts/template',$this->data);  
+        $this->load->view('admin/Layouts/template',$this->data);  
     }
     function update()
     {

@@ -4,7 +4,7 @@
  * @Porject: ATON
  * @Date: 10/05/2013
  */
-class Gallery extends CI_Model{
+class SettingsModel extends CI_Model{
 
     function get()
     {
@@ -19,5 +19,11 @@ class Gallery extends CI_Model{
             return true;
         else
             return false;
+    }
+    function getSetting($key)
+    {
+        $this->db->where('key',$key);
+        return $this->db->get('settings')->row()->value;
+
     }
 }

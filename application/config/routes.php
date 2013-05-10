@@ -38,10 +38,18 @@
 |
 */
 
-$route['default_controller'] = "Admin/login";
+$route['default_controller'] = "site/Home";
 $route['404_override'] = '';
-$route['Admin/pages/(:any)']='Admin/pages/load/$1';
 
+
+
+$route['admin/pages/(:any)']='admin/pages/load/$1';
+$route['admin/(:any)']='admin/$1';
+$route['home']='site/Home';
+$route['about-us']='site/Home/load_page/aboutus';
+$route['products']='site/Home';
+$route['contact-us']='site/Home/load_page/contactus';
+$route['gallery']='site/Home';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

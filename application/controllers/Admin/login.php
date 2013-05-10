@@ -18,8 +18,8 @@ class Login extends CI_Controller{
                  'bootstrap-responsive.min.css',
                  'font-awesome.min.css',
                  'ui-lightness/jquery-ui-1.10.0.custom.min.css',
-                 'base-admin-2.css',
-                 'base-admin-2-responsive.css',
+                 'base--2.css',
+                 'base--2-responsive.css',
                  'pages/signin.css',
                  'custom.css'
              )
@@ -27,7 +27,7 @@ class Login extends CI_Controller{
     }
     function  index(){
       $this->data['main_content'] = 'login';
-      $this->load->view('Admin/Layouts/Login',$this->data);
+      $this->load->view('admin/Layouts/Login',$this->data);
     }
     
     function auth(){
@@ -40,7 +40,7 @@ class Login extends CI_Controller{
                 'is_logged_in' =>true
             );
          $this->session->set_userdata($session_data);
-         redirect('Admin/home');
+         redirect('admin/home');
         }
     else{//user is not validated
         $this->logout();
@@ -49,7 +49,7 @@ class Login extends CI_Controller{
     function logout()
     {
         $this->session->sess_destroy();
-        redirect('Admin/login');
+        redirect('admin/login');
     }
 }
 ?>

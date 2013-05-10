@@ -34,7 +34,7 @@ class Categories extends Logged_controller{
         $this->data['assets_js']=  array_merge($this->assets_js, array(
                 'plugins/jquery.dataTables.min.js'
             ));
-        $this->load->view('Admin/Layouts/table',$this->data);
+        $this->load->view('admin/Layouts/table',$this->data);
     }
     
     
@@ -57,10 +57,10 @@ class Categories extends Logged_controller{
                     'description_en'=>$description_en);
                 $this->CategoriesModel->create_category($payload);
             //============================================================
-                redirect('Admin/Categories');
+                redirect('admin/Categories');
         }
         $this->data['main_content'] = 'Categories'  ;
-        $this->load->view('Admin/Layouts/template',$this->data);
+        $this->load->view('admin/Layouts/template',$this->data);
     }
     //validating user input
     //@Return Validation results
@@ -78,7 +78,7 @@ class Categories extends Logged_controller{
     function datatable()
     {
         $this->datatables->select('id,name_en,name_ar,description_en,description_ar')
-        ->add_column('Edit',anchor('Admin/'.$this->router->method.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'id')
+        ->add_column('Edit',anchor('admin/'.$this->router->method.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'id')
         ->add_column('Delete',anchor('admin/'.$this->router->method.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'id')
         ->from('categories');
         

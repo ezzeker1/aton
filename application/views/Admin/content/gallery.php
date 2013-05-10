@@ -210,7 +210,7 @@
 				</div> <!-- /widget-header -->	
 				<div class="widget-content">
 					<br />
-                                        <form enctype="multipart/form-data" action="<?php echo base_url('Admin/Gallery/add'); ?>" id="validation-form" class="form-horizontal">
+                                        <form enctype="multipart/form-data" action="<?php echo base_url('admin/Gallery/add'); ?>" id="validation-form" class="form-horizontal">
 						<fieldset>
 						    <div class="control-group">
 						      <label class="control-label" for="name">Caption</label>

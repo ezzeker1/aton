@@ -63,7 +63,7 @@ class CI_DB_cubrid_utility extends CI_DB_utility {
 	{
 		// No SQL based support in CUBRID as of version 8.4.0. Database or
 		// table optimization can be performed using CUBRID Manager
-		// database administration tool. See the link above for more info.
+		// database istration tool. See the link above for more info.
 		return FALSE;
 	}
 
@@ -83,7 +83,7 @@ class CI_DB_cubrid_utility extends CI_DB_utility {
 	{
 		// Not supported in CUBRID as of version 8.4.0. Database or
 		// table consistency can be checked using CUBRID Manager
-		// database administration tool. See the link above for more info.
+		// database istration tool. See the link above for more info.
 		return FALSE;
 	}
 
@@ -99,7 +99,7 @@ class CI_DB_cubrid_utility extends CI_DB_utility {
 	{
 		// No SQL based support in CUBRID as of version 8.4.0. Database or
 		// table backup can be performed using CUBRID Manager
-		// database administration tool.
+		// database istration tool.
 		return $this->db->display_error('db_unsuported_feature');
 	}
 }

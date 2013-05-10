@@ -8,8 +8,8 @@
  */
 
 $mcOldCWD = getcwd();
-chdir($basepath . "../../../../../wp-admin/");
-require_once("admin.php");
+chdir($basepath . "../../../../../wp-/");
+require_once(".php");
 chdir($mcOldCWD);
 
 /**

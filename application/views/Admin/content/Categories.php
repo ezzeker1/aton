@@ -23,7 +23,7 @@
                                     
 					<br />
 
-                                        <form data-validate="parsley" action="<?php echo base_url('Admin/Categories/add_category'); ?>" method="post" id="validation-form" class="form-horizontal ">
+                                        <form data-validate="parsley" action="<?php echo base_url('admin/Categories/add_category'); ?>" method="post" id="validation-form" class="form-horizontal ">
 						
                                         <div class="tab-content">
                                             <div id="en" class="tab-pane active">
