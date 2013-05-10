@@ -10,13 +10,14 @@ class CategoriesModel extends CI_Model {
     function __construct() {
         parent::__construct();
         $this->categories_table='categories';
-
+$this->output->enable_profiler();
     }
     /**
     * @param array $payloadData Data to be persisted in the database.
     * @return boolean True if insert is successful false if not.
     */
     function create_category($payloadData){
+        
         $this->db->insert($this->categories_table,$payloadData);
         if($this->db->affected_rows() > 0){
             return TRUE;

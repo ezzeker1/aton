@@ -12,6 +12,7 @@ class Categories extends Logged_controller{
         parent::__construct();
         $this->load->helper('form');
         $this->load->library('form_validation');
+        $this->load->model('CategoriesModel');
         $this->form_validation->set_message('required', '*');
         $this->form_validation->set_message('is_unique','Category name already exist');
         $this->data=array(
@@ -37,15 +38,19 @@ class Categories extends Logged_controller{
         }
         else{
             //Validation Successful
-        $name= $this->input->post('category_name');
-        $description=$this->input->post('category_description');
+        $name_ar= $this->input->post('category_name_ar');
+        $name_en= $this->input->post('category_name_en');
+        $description_ar=$this->input->post('category_description_ar');
+        $description_en=$this->input->post('category_description_en');
         /**
          * Should change after we agree on the Crud design to hold multi lang
          * Data
          */
-        $payload=array('name'=>$name,
-            'description'=>$description);
-        $this->GenericCRUD->create($this->table_name,$payload);
+        $payload=array('name_ar'=>$name_ar,
+            'name_en'=>$name_en,
+            'description_ar'=>$description_ar,
+            'description_en'=>$description_en);
+        $this->CategoriesModel->create_category($payload);
        //============================================================
         redirect('Admin/Categories');
         }
@@ -57,7 +62,9 @@ class Categories extends Logged_controller{
         //Form validation Rules
         //Category name must be unique and it is required.
         //Category description is not required and is not unique.
-        $this->form_validation->set_rules('category_name','Category Name','required|is_unique[categories.name]');
+        $this->form_validation->set_rules('category_name_ar','Category Name','required|is_unique[categories.name_ar]');
+        $this->form_validation->set_rules('category_name_en','Category Name','required|is_unique[categories.name_en]');
+        
         return ($this->form_validation->run());
         
     }
