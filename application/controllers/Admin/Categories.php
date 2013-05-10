@@ -22,11 +22,19 @@ class Categories extends Logged_controller{
         $this->load->library('form_validation');
         $this->form_validation->set_message('required', '*');
         $this->form_validation->set_message('is_unique','Category name already exist');
+        $this->data=array(
+            'title'=>'ATON | Admin panel | Categories',
+            'assets_js'=>  array_merge($this->assets_js, array(
+                'plugins/hoverIntent/jquery.hoverIntent.minified.js',
+                'plugins/lightbox/jquery.lightbox.min.js',
+                'demo/gallery.js',
+            ))
+        );
         
     }
     function index(){
-        $data['main_content'] = 'Categories'  ;
-        $this->load->view('Admin/Layouts/template',$data);
+        $this->data['main_content'] = 'Categories'  ;
+        $this->load->view('Admin/Layouts/template',$this->data);
     }
     
     function add_category(){
@@ -61,6 +69,4 @@ class Categories extends Logged_controller{
         return ($this->form_validation->run());
         
     }
-    
-    
 }

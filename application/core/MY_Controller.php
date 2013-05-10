@@ -33,7 +33,9 @@ class Logged_controller extends CI_Controller
     function _load_assets()
     {
         $this->assets_js=array(
-                'Application.js'
+                'Application.js',
+                'parsley.extend.min.js'
+            
              );
         $this->assets_css=array(
                  'bootstrap.min.css',
