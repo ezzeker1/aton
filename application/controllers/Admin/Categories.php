@@ -62,6 +62,20 @@ class Categories extends Logged_controller{
         $this->data['main_content'] = 'Categories'  ;
         $this->load->view('admin/Layouts/template',$this->data);
     }
+    function edit($id)
+    {
+        if(isset($id)){
+            //where is the new data to be updated ??
+        }
+    }
+     function delete($id)
+    {
+       if(isset($id)){
+        $this->CategoriesModel->delete_category($id);
+       }
+      $this->data['main_content'] = 'Categories'  ;
+      $this->load->view('admin/Layouts/template',$this->data);
+    }
     //validating user input
     //@Return Validation results
     function validate_user_input(){

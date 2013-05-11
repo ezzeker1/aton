@@ -15,7 +15,7 @@
 					  <li class=""><a data-toggle="tab" href="#ar">Arabic</a></li>
 					</ul>
 					<br />
-                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/Categories/add_product'); ?>" method="post" id="validation-form" class="form-horizontal ">
+                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/Products/add'); ?>" method="post" id="validation-form" class="form-horizontal ">
                                     <div class="tab-content">
                                           <div class="control-group">
 				            <label class="control-label" for="categoryNameSelect">Select Category</label>
@@ -32,7 +32,7 @@
                                     <div id="en" class="tab-pane active">
                                             <fieldset>
 						    <div class="control-group">
-						      <label class="control-label" for="product_name">Product Name </label>
+						      <label class="control-label" for="product_name_en">Product Name </label>
 						      <div class="controls">
                                                         <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_en"id="name">
 						      </div>
@@ -49,7 +49,7 @@
                                         <div id="ar" class="tab-pane">     
                                            <fieldset>
 						    <div class="control-group">
-						      <label class="control-label" for="product_name">اسم  </label>
+						      <label class="control-label" for="product_name_ar">اسم  </label>
 						      <div class="controls">
                                                         <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_ar"id="name">
 						      </div>

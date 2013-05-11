@@ -32,6 +32,12 @@ class Products extends Logged_controller{
     }
     function add()
     {
+        //Validating fields
+        if($this->form_validation->run()){
+            $this->upload_picture(01); 
+        }
+        
+        //Loading the page
      $category_names = $this->CategoriesModel->get_category_list();
         if(!$category_names)
             $this->data['']='error';
@@ -40,6 +46,30 @@ class Products extends Logged_controller{
         $this->data['category_names']=$category_names;
         $this->load->view('admin/Layouts/template',$this->data);   
     }
+    function upload_picture($id){
+        $config['upload_path'] = '/uploads/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']    = '100';
+        $config['max_width']  = '1024';
+        $config['max_height']  = '768';
+        $config['input_name'] = 'product_picture';
+        
+        $this->load->library('upload', $config);
+        if ( ! $this->upload->do_upload())
+		{
+            redirect('admin/login/logout');
+		}
+		
+//        
+//         $original=$this->upload_model->custom_upload_multi($config,true);
+//         if(is_string($original))
+//            $this->notify->set_message($original,'error');
+//        else
+//            $this->notify->set_message('Picture(s) has been uploaded ','success');
+        redirect('admin/gallery');
+    }
+    
+    
     function datatable()
     {
         $this->datatables->select('products.id,products.name_en,products.name_ar,products.description_en,products.description_ar,categories.id as cat_id')
@@ -49,5 +79,21 @@ class Products extends Logged_controller{
         ->from('products');
         
         echo $this->datatables->generate();
+    }
+    
+    function validateUserInput(){
+        //Validate for arabic fields
+      //$this->form_validation->set_rules('$category_name_ar','Category name','required');
+        $this->form_validation->set_rules('product_name_ar','required');
+//        $this->form_validation->set_rules('product_description_ar','required');
+        //Validate English fields
+        $this->form_validation->set_rules('$category_name_en','Category name','required');
+        $this->form_validation->set_rules('product_name_en','required');
+//        $this->form_validation->set_rules('product_description_en','required');
+        //Validatin file uploads
+        $this->form_validation->set_rules('product_picture','required');
+        $this->form_validation->set_rules('product_pdf','required');
+        
+        return ($this->form_validation->run());
     }
 }
