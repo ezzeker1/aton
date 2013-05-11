@@ -28,15 +28,15 @@
     <div class="callbacks_container">
       <ul class="rslides" id="slider3">
         <li>
-          <img src="<?php base_url(); ?>resources/site/images/applications-slider.jpg" alt="" />
+          <img src="<?php echo base_url(); ?>resources/site/images/applications-slider.jpg" alt="" />
           <p class="caption">المشروع الاول</p>
         </li>
         <li>
-          <img src="<?php base_url(); ?>resources/site/images/applications-slider-2.jpg" alt="" />
+          <img src="<?php echo base_url(); ?>resources/site/images/applications-slider-2.jpg" alt="" />
           <p class="caption">المشروع الثانى</p>
         </li>
         <li>
-           <img src="<?php base_url(); ?>resources/site/images/applications-slider-3.jpg" alt="" />
+           <img src="<?php echo base_url(); ?>resources/site/images/applications-slider-3.jpg" alt="" />
           <p class="caption">المشروع الثالث</p>
         </li>
       </ul>

@@ -27,12 +27,7 @@
 <!-- Le javascript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-<script src="<?php echo base_url(); ?>resources/site/js/modernizr.custom.17475.js"></script>
-<script src="<?php echo base_url(); ?>resources/site/js/jquery.js"></script> 
-<script src="<?php echo base_url(); ?>resources/site/js/bootstrap-rtl.js"></script>
-<script src="<?php echo base_url(); ?>resources/site/js/jquery.elastislide.js"></script>  
-<script src="<?php echo base_url(); ?>resources/site/js/holder.js"></script> 
-<script src="<?php echo base_url(); ?>resources/site/js/core-script.js"></script>
+<?php echo load_js($assets_js); ?>
 <script>
       !function ($) {
         $(function(){

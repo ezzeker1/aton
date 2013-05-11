@@ -36,14 +36,30 @@
             
             
             <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="<?php echo base_url('home'); ?>">الرئيسية</a></li>
-                <li><a href="<?php echo base_url('about-us'); ?>">من نحن</a></li>
-                <li><a href="<?php echo base_url('products'); ?>">المنتجات</a></li>
-                <li> <a href="<?php echo base_url('gallery'); ?>">معرض الصور</a></li>
-                <li> <a href="<?php echo base_url('contact-us'); ?>">الاتصال بنا</a></li>
+                <ul class="nav">
+                <li><a href="<?php echo base_url('home'); ?>">الرئيسية</a></li>
+                <li class="dropdown <?php echo isset($application_active)?'active':''; ?>"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">التطبيقات   <b class="caret"></b></a>
+                <ul class="dropdown-menu ">
+                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الأول</a></li>
+                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الثانى</a></li>
+                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الثالث</a></li>                    
+                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الرابع</a></li>
+                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الخامس</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown <?php echo isset($product_active)?'active':''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">المنتجات  <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo base_url('product-list'); ?>">المنتج الأول</a></li>
+                    <li><a href="<?php echo base_url('product-list'); ?>">المنتج الثانى</a></li>
+                    <li><a href="<?php echo base_url('product-list'); ?>">المنتج الثالث</a></li>                    
+                    <li><a href="<?php echo base_url('product-list'); ?>">المنتج الرابع</a></li>
+                    <li><a href="<?php echo base_url('product-list'); ?>">المنتج الخامس</a></li>
+                  </ul>
+                </li>
+                <li class="<?php echo isset($gallery_active)?'active':''; ?>"> <a href="<?php echo base_url('gallery'); ?>">معرض الصور</a></li>
+				<li class="<?php echo isset($about_active)?'active':''; ?>"><a href="<?php echo base_url('about-us'); ?>">من نحن</a></li>
+                <li class="<?php echo isset($contact_active)?'active':''; ?>"> <a href="<?php echo base_url('contact-us'); ?>">الاتصال بنا</a></li>
               </ul>
-            </div>
             
             <!--/.nav-collapse --> 
           </div>
@@ -52,6 +68,6 @@
         <!-- /.navbar --> 
         
       </div>
-      <!-- /.container --> 
+      </div>
     </div>
-    <!-- /.navbar-wrapper --> 
+      <!-- /.container --> 

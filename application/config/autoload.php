@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database','session','Datatables');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url','tinymce');
+$autoload['helper'] = array('url','tinymce','site_assets');
 
 
 /*

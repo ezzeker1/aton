@@ -33,32 +33,35 @@ class Products extends Logged_controller{
     function add()
     {
         //Validating fields
-        if($this->form_validation->run()){
+//        if($this->form_validation->run()){
             $this->upload_picture(01); 
-        }
+//        }
         
         //Loading the page
      $category_names = $this->CategoriesModel->get_category_list();
         if(!$category_names)
             $this->data['']='error';
         
-        $this->data['main_content'] = 'products';
-        $this->data['category_names']=$category_names;
-        $this->load->view('admin/Layouts/template',$this->data);   
+//        $this->data['main_content'] = 'products';
+//        $this->data['category_names']=$category_names;
+//        $this->load->view('admin/Layouts/template',$this->data);   
     }
     function upload_picture($id){
-        $config['upload_path'] = '/uploads/';
+        $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size']    = '100';
-        $config['max_width']  = '1024';
-        $config['max_height']  = '768';
+        $config['max_size']    = '5000';
+        $config['max_width']  = '9999';
+        $config['max_height']  = '9999';
         $config['input_name'] = 'product_picture';
         
         $this->load->library('upload', $config);
-        if ( ! $this->upload->do_upload())
-		{
-            redirect('admin/login/logout');
-		}
+        if ( ! $this->upload->do_upload('product_picture'))
+        {
+            //var_dump($this->upload);
+           // redirect('admin/login/logout');
+        }
+          var_dump($this->upload->data());
+        
 		
 //        
 //         $original=$this->upload_model->custom_upload_multi($config,true);
@@ -66,7 +69,7 @@ class Products extends Logged_controller{
 //            $this->notify->set_message($original,'error');
 //        else
 //            $this->notify->set_message('Picture(s) has been uploaded ','success');
-        redirect('admin/gallery');
+//        redirect('admin/gallery');
     }
     
     

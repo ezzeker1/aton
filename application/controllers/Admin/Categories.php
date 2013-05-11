@@ -92,8 +92,8 @@ class Categories extends Logged_controller{
     function datatable()
     {
         $this->datatables->select('id,name_en,name_ar,description_en,description_ar')
-        ->add_column('Edit',anchor('admin/'.$this->router->method.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'id')
-        ->add_column('Delete',anchor('admin/'.$this->router->method.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'id')
+        ->add_column('Edit',anchor('admin/'.$this->router->class.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'id')
+        ->add_column('Delete',anchor('admin/'.$this->router->class.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'id')
         ->from('categories');
         
         echo $this->datatables->generate();

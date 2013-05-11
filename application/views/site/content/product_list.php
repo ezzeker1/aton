@@ -65,12 +65,12 @@
     	<h1>المنتج الأول</h1>
     </div>    
     <div class="products-list clearfix">    
-   <div class="span4"><img src="<?php base_url(); ?>resources/site/images/product_list-1.jpg" width="297" height="249" alt="welcome img"></div> 
+   <div class="span4"><img src="<?php echo base_url(); ?>resources/site/images/product_list-1.jpg" width="297" height="249" alt="welcome img"></div> 
   <div class="span8"><h4>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم</h4>
     <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما . هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما .</p>   
     <p>مواصفات المنتج</p>
     <p>ابعاد المنتج</p>
-    <p><a class="btn" href="#">المزيد</a></p>
+    <p><a class="btn" href="<?php echo base_url('product/1'); ?>">المزيد</a></p>
     
      </div>  
     </div>  
@@ -79,12 +79,12 @@
     	<h1>المنتج الثانى</h1>
     </div>    
     <div class="products-list clearfix">    
-   <div class="span4"><img src="<?php base_url(); ?>resources/site/images/product_list-2.jpg" width="297" height="249" alt="welcome img"></div> 
+   <div class="span4"><img src="<?php echo base_url(); ?>resources/site/images/product_list-2.jpg" width="297" height="249" alt="welcome img"></div> 
   <div class="span8"><h4>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم</h4>
     <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما . هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما .</p>   
     <p>مواصفات المنتج</p>
     <p>ابعاد المنتج</p>
-    <p><a class="btn" href="#">المزيد</a></p>
+    <p><a class="btn" href="<?php echo base_url('product/1'); ?>">المزيد</a></p>
     
      </div>  
     </div> 
@@ -93,12 +93,12 @@
     	<h1>المنتج الثالث</h1>
     </div>    
     <div class="products-list clearfix">    
-   <div class="span4"><img src="<?php base_url(); ?>resources/site/images/product_list-3.jpg" width="297" height="249" alt="welcome img"></div> 
+   <div class="span4"><img src="<?php echo base_url(); ?>resources/site/images/product_list-3.jpg" width="297" height="249" alt="welcome img"></div> 
   <div class="span8"><h4>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم</h4>
     <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما . هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما .</p>   
     <p>مواصفات المنتج</p>
     <p>ابعاد المنتج</p>
-    <p><a class="btn" href="#">المزيد</a></p>
+    <p><a class="btn" href="<?php echo base_url('product/1'); ?>">المزيد</a></p>
     
      </div>  
     </div> 
@@ -107,12 +107,12 @@
     	<h1>المنتج الرابع</h1>
     </div>    
     <div class="products-list clearfix">    
-   <div class="span4"><img src="<?php base_url(); ?>resources/site/images/product_list-4.jpg" width="297" height="249" alt="welcome img"></div> 
+   <div class="span4"><img src="<?php echo base_url(); ?>resources/site/images/product_list-4.jpg" width="297" height="249" alt="welcome img"></div> 
   <div class="span8"><h4>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم</h4>
     <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما . هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما .</p>   
     <p>مواصفات المنتج</p>
     <p>ابعاد المنتج</p>
-    <p><a class="btn" href="#">المزيد</a></p>
+    <p><a class="btn" href="<?php echo base_url('product/1'); ?>">المزيد</a></p>
     
      </div>  
     </div> 
@@ -121,12 +121,12 @@
     	<h1>المنتج الخامس</h1>
     </div>    
     <div class="products-list clearfix">    
-   <div class="span4"><img src="<?php base_url(); ?>resources/site/images/product_list-5.jpg" width="297" height="249" alt="welcome img"></div> 
+   <div class="span4"><img src="<?php echo base_url(); ?>resources/site/images/product_list-5.jpg" width="297" height="249" alt="welcome img"></div> 
   <div class="span8"><h4>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم</h4>
     <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما . هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما .</p>   
     <p>مواصفات المنتج</p>
     <p>ابعاد المنتج</p>
-    <p><a class="btn" href="#">المزيد</a></p>
+    <p><a class="btn" href="<?php echo base_url('product/1'); ?>">المزيد</a></p>
     
      </div>  
     </div> 

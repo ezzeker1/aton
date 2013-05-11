@@ -46,10 +46,12 @@ $route['404_override'] = '';
 $route['admin/pages/(:any)']='admin/pages/load/$1';
 $route['admin/(:any)']='admin/$1';
 $route['home']='site/Home';
-$route['about-us']='site/Home/load_page/aboutus';
+$route['about-us']='site/Home/load_about/aboutus';
 $route['products']='site/Home';
-$route['contact-us']='site/Home/load_page/contactus';
-$route['gallery']='site/Home';
+$route['contact-us']='site/Home/load_contact';
+$route['gallery']='site/Gallery';
+$route['product/(:any)']='site/product/load/$1';
+$route['product-list']='site/Product/product_list';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

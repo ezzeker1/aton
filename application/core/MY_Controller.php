@@ -65,10 +65,13 @@ class Logged_controller extends CI_Controller
 }
 class FrontController extends CI_Controller{
     var $lang;
+    var $assets_css;
+    var $assets_js;
     public function __construct() {
         parent::__construct();
         $this->load->helper('language');
         $this->_set_locale();
+        $this->_load_assets();
     }
     /*
      * sets the locale data
@@ -84,5 +87,24 @@ class FrontController extends CI_Controller{
             $this->load->model('SettingsModel');
             $this->lang=$this->SettingsModel->getSetting('default_language');
         }
+    }
+    function _load_assets()
+    {
+         $this->assets_js=array(
+                'modernizr.custom.17475.js',
+                'jquery.js',
+                'bootstrap-rtl.js',
+                'holder.js'
+             );
+        $this->assets_css=array(
+                "bootstrap.css" ,
+                "bootstrap-responsive.css",
+                "elastislide.css" ,
+                "boorstrap-over.css" 
+             );
+        $this->load->vars(array(
+            'assets_js'=>$this->assets_js,
+            'assets_css'=>$this->assets_css
+        ));
     }
 }
