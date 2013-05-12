@@ -10,7 +10,7 @@
 			</a>
 			
 			<a class="brand" href="./index.html">
-				Base Admin <sup>2.0</sup>
+				ATON <sup>Admin Panel </sup>
 			</a>		
 			
 			<div class="nav-collapse collapse">
@@ -26,8 +26,6 @@
 						<ul class="dropdown-menu">
 							<li><a href="javascript:;">Account Settings</a></li>
 							<li><a href="javascript:;">Privacy Settings</a></li>
-							<li class="divider"></li>
-							<li><a href="javascript:;">Help</a></li>
 						</ul>
 						
 					</li>
@@ -48,11 +46,7 @@
 						
 					</li>
 				</ul>
-			
-				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Search">
-				</form>
-				
+
 			</div><!--/.nav-collapse -->	
 	
 		</div> <!-- /container -->
@@ -73,14 +67,14 @@
 			<div class="subnav-collapse collapse">
 				<ul class="mainnav">
 				
-					<li class="">
+					<li class="<?php echo isset($home_active)?'active':''; ?>">
 						<a href="<?php echo base_url('admin/home'); ?>">
 							<i class="icon-home"></i>
 							<span>Home</span>
 						</a>	    				
 					</li>
 					
-					<li class="dropdown active">					
+					<li class="dropdown <?php echo isset($products_active)?'active':''; ?>">					
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-th"></i>
 							<span>Products</span>
@@ -93,7 +87,7 @@
 						</ul> 				
 					</li>
 					
-					<li class="dropdown">					
+					<li class="dropdown <?php echo isset($pages_active)?'active':''; ?>">					
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-copy"></i>
 							<span>Pages</span>
@@ -107,7 +101,7 @@
 						</ul> 				
 					</li>
 					
-                                        <li class="">
+                                        <li class="<?php echo isset($gallery_active)?'active':''; ?>">
 						<a href="<?php echo base_url('admin/gallery'); ?>">
 							<i class="icon-picture"></i>
 							<span>Gallery</span>

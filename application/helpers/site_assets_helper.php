@@ -21,11 +21,11 @@
  */
 if (!function_exists('load_css')) {
 
-	function load_css($data) {
+	function load_css($data,$group) {
 		$CI =& get_instance();
 		$CI->load->helper('html');
 
-		$csspath = base_url() . 'resources/site/css/';
+		$csspath = base_url() . 'resources/'.$group.'/css/';
 
 		if (!is_array($data))
 			return link_tag($csspath . $data, 'stylesheet', 'text/css');
@@ -51,7 +51,7 @@ if (!function_exists('load_css')) {
  */
 if (!function_exists('load_js')) {
 
-	function load_js($js) {
+	function load_js($js,$group) {
 		$CI =& get_instance();
 		$CI->load->helper('url');
 		if (!is_array($js)) {
@@ -60,7 +60,7 @@ if (!function_exists('load_js')) {
 
 		$return = '';
 		foreach ($js as $j) {
-			$return .= '<script type="text/javascript" src="' . base_url() . 'resources/site/js/' . $j . '"></script>' .PHP_EOL;
+			$return .= '<script type="text/javascript" src="' . base_url() . 'resources/'.$group.'/js/' . $j . '"></script>' .PHP_EOL;
 		}
 		return $return;
 	}
@@ -75,10 +75,10 @@ if (!function_exists('load_js')) {
  */
 if (!function_exists('load_img')) {
 
-	function load_img($img){
+	function load_img($img,$group){
 		$CI =& get_instance();
 		$CI->load->helper('url');
-		return base_url().'resources/site/images/' . $img;
+		return base_url().'resources/'.$group.'/images/' . $img;
 	}
 
 }

@@ -4,7 +4,8 @@ class Home extends Logged_controller{
     function __construct() {
         parent::__construct();
         $this->data=array(
-            'title'=>'ATON | Admin panel | Home'
+            'title'=>'ATON | Admin panel | Home',
+            'home_active'=>true
         );
     }
     function index()

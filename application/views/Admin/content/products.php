@@ -41,7 +41,7 @@
 						    <div class="control-group">
 						      <label class="control-label" for="product_description">Product Description</label>
 						      <div class="controls">
-						        <textarea data-required="true" data-trigger="change" class="span4" name="product_description_en" id="message" rows="4"></textarea>
+						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_en" id="message" rows="4"></textarea>
 						      </div>
 						    </div>
 						  </fieldset>
@@ -58,7 +58,7 @@
 						    <div class="control-group">
 						      <label class="control-label" for="product_description">تفصيل</label>
 						      <div class="controls">
-						        <textarea data-required="true" data-trigger="change" class="span4" name="product_description_ar" id="message" rows="4"></textarea>
+						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_ar" id="message" rows="4"></textarea>
 						      </div>
 						    </div>
                                          </fieldset>

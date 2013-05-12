@@ -9,6 +9,7 @@
     <script type="text/javascript" src="<?php echo base_url();?>resources/admin/js/libs/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>resources/admin/js/libs/jquery-ui-1.10.0.custom.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>resources/admin/js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>resources/admin/js/plugins/jquery.dataTables.min.js"></script>
 
-    <?php Assets::css($assets_css); ?>
+<?php echo load_css($assets_css,'admin'); ?>
 </head>

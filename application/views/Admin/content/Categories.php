@@ -39,7 +39,7 @@
 						    <div class="control-group">
 						      <label class="control-label" for="category_description">Category Description</label>
 						      <div class="controls">
-						        <textarea class="span4" name="category_description_en"id="message" rows="4"></textarea>
+						        <textarea class="span4 rich" name="category_description_en"id="message" rows="4"></textarea>
 						      </div>
 						    </div>
 						    
@@ -59,7 +59,7 @@
 						    <div class="control-group">
 						      <label class="control-label" for="category_description">تفصيل</label>
 						      <div class="controls">
-						        <textarea class="span4" name="category_description_ar" id="message" rows="4"></textarea>
+						        <textarea class="span4 rich" name="category_description_ar" id="message" rows="4"></textarea>
 						      </div>
 						    </div>
 						  </fieldset>

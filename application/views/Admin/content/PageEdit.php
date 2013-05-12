@@ -22,7 +22,7 @@
                                     <div class="control-group">
                                         <label for="message" class="control-label">Content</label>
                                         <div class="controls">
-                                        <textarea rows="4" id="message" name="content" class="span4"></textarea>
+                                        <textarea rows="4" id="message" name="content" class="span4 rich"></textarea>
                                         </div>
                                     </div>
 

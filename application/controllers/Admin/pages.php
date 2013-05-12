@@ -10,6 +10,7 @@ class Pages extends Logged_controller{
         $this->load->model('pages_model');
         $this->data=array(
             'title'=>'ATON | Admin panel | Pages | '.$this->uri->segment(3),
+            'pages_active'=>true,
             'assets_js'=>  array_merge($this->assets_js, array(
                 'plugins/hoverIntent/jquery.hoverIntent.minified.js',
                 'plugins/lightbox/jquery.lightbox.min.js',

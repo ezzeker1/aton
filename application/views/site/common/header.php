@@ -41,7 +41,7 @@ margin:0
 			</div>
 		</script>
 <!-- Le styles -->
-<?php echo load_css($assets_css); ?>
+<?php echo load_css($assets_css,'site'); ?>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>

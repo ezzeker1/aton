@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database','session','Datatables');
+$autoload['libraries'] = array('database','session','Datatables','notify');
 
 
 /*
@@ -122,7 +122,7 @@ $autoload['model'] = array();
 |
 */
 
-$autoload['sparks'] = array('assets/1.5.1');
+$autoload['sparks'] = array();
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */

@@ -17,7 +17,11 @@ class Products extends Logged_controller{
         $this->load->model('products_model');
         $this->data=array(
             'title'=>'ATON | Admin panel | Products',
-             'tinymce'=>initialize_tinymce(300,400)
+            'products_active'=>true,
+            'tinymce'=>initialize_tinymce(300,400),
+            'assets_js'=>  array_merge($this->assets_js, array(
+                'plugins/msgbox/jquery.msgbox.min.js'
+            )),
         );
     }
     function index()
@@ -26,9 +30,7 @@ class Products extends Logged_controller{
         $this->data['buttons']=  anchor('admin/'.$this->router->class.'/add','Add new product', 'class="btn btn-primary"');
         $this->data['h3']='Product managment';
         $this->data['tableTitle']='Products';
-        $this->data['assets_js']=  array_merge($this->assets_js, array(
-                'plugins/jquery.dataTables.min.js'
-            ));
+        
         $this->load->view('admin/layouts/table',$this->data);
     }
     
@@ -43,8 +45,11 @@ class Products extends Logged_controller{
               $this->createFilesFolder($recordId);
               $this->upload_picture($recordId);
               $this->upload_pdf($recordId);
-            
-          }         
+              $this->notify->set_message('Product has been added successfully','success');
+          }    
+          else
+               $this->notify->set_message('Error occured while adding product','error');
+             redirect('admin/products');
         }
 
         
@@ -61,8 +66,13 @@ class Products extends Logged_controller{
         
     }
     function delete($id){
-        $this->productsmodel->delete_product($id);
-        redirect('admin/products');
+      if(isset($id)){
+            if(!$this->products_model->delete_product($id))
+                $this->notify->set_message('Error has been occured while deleting product','error');
+            else
+                $this->notify->set_message('Product #'.$id.'has been deleted successfully','success');
+       }
+       redirect('admin/products');
     }
             
     function insert_record(){
@@ -78,7 +88,7 @@ class Products extends Logged_controller{
     }
     function upload_picture($recordId){
         //configuring upload
-        $config['upload_path'] = './uploads/'.$recordId.'/';
+        $config['upload_path'] = './uploads/products/'.$recordId.'/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size']    = '5000';
         $config['max_width']  = '9999';
@@ -96,7 +106,7 @@ class Products extends Logged_controller{
     }
     function upload_pdf($recordId){
         //configuring upload
-        $config['upload_path'] = './uploads/'.$recordId.'/';
+        $config['upload_path'] = './uploads/products/'.$recordId.'/';
         $config['allowed_types'] = 'pdf';
 //        $config['max_size']    = '5000';
 //        $config['max_width']  = '9999';
@@ -115,15 +125,14 @@ class Products extends Logged_controller{
     }
     function createFilesFolder($id){
         $permissions='755';
-        return  mkdir('./uploads/'.$id,$permissions);
+        return  mkdir('./uploads/products/'.$id,$permissions);
     }
-    
     function datatable()
     {
         $this->datatables->select('products.id,products.name_en,products.name_ar,products.description_en,products.description_ar,categories.id as cat_id')
                 ->join('categories','categories.id=products.category_id')
         ->add_column('Edit',anchor('admin/'.$this->router->class.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'products.id')
-        ->add_column('Delete',anchor('admin/'.$this->router->class.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'products.id')
+        ->add_column('Delete',anchor('admin/'.$this->router->class.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="confirm-popup btn btn-small btn-warning"'),'products.id')
         ->from('products');
         
         echo $this->datatables->generate();

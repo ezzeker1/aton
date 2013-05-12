@@ -10,6 +10,7 @@ class Gallery extends Logged_controller{
         $this->load->model('gallery_model');
         $this->data=array(
             'title'=>'ATON | Admin panel | Gallery',
+            'gallery_active'=>true,
             'assets_js'=>  array_merge($this->assets_js, array(
                 'plugins/hoverIntent/jquery.hoverIntent.minified.js',
                 'plugins/lightbox/jquery.lightbox.min.js',

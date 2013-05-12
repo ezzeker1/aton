@@ -7,7 +7,8 @@ class Logged_controller extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->_load_assets();
-        $this->_is_logged();
+        if($this->router->class!='login')
+            $this->_is_logged();
         $this->_set_table();
     }
     /*
@@ -36,9 +37,12 @@ class Logged_controller extends CI_Controller
         $this->assets_js=array(
                 'Application.js',
                 'parsley.extend.min.js',
-                'aton.js'
-            
+                'aton.js',
+                'plugins/msgGrowl/js/msgGrowl.js'  
              );
+        
+        
+
         $this->assets_css=array(
                  'bootstrap.min.css',
                  'bootstrap-responsive.min.css',
@@ -46,8 +50,9 @@ class Logged_controller extends CI_Controller
                  'ui-lightness/jquery-ui-1.10.0.custom.min.css',
                  'base-admin-2.css',
                  'base-admin-2-responsive.css',
-                 'plugins/lightbox/themes/evolution-dark/jquery.lightbox.css',
-                 'custom.css'
+                 'custom.css',
+                 '../js/plugins/msgGrowl/css/msgGrowl.css',
+                 '../js/plugins/msgbox/jquery.msgbox.css'
              );
         $this->load->vars(array(
             'assets_js'=>$this->assets_js,

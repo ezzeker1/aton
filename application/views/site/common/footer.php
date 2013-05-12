@@ -27,7 +27,7 @@
 <!-- Le javascript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-<?php echo load_js($assets_js); ?>
+<?php echo load_js($assets_js,'site'); ?>
 <script>
       !function ($) {
         $(function(){

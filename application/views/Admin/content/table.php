@@ -7,11 +7,10 @@
                 "sPaginationType": "full_numbers",
                 "iDisplayStart ":20,
                 "oLanguage": {
-            "sProcessing": "<img id=\"datatable_loader\" src='<?php echo base_url(); ?>style/images/ajax-loader_dark.gif'>"
+            "sProcessing": "<img id=\"datatable_loader\" src='<?php echo base_url(); ?>resources/admin/img/ajax-loader_dark.gif'>"
         },  
         "fnInitComplete": function() {
                 oTable.fnAdjustColumnSizing();
-                init_spinner('<?php echo $this->uri->segment(2); ?>');
          },
         'fnServerData': function(sSource, aoData, fnCallback)
             {

@@ -16,12 +16,13 @@ class Categories extends Logged_controller{
         $this->form_validation->set_message('is_unique','Category name already exist');
         $this->data=array(
             'title'=>'ATON | Admin panel | Categories',
+            'products_active'=>true,
             'assets_js'=>  array_merge($this->assets_js, array(
                 'plugins/hoverIntent/jquery.hoverIntent.minified.js',
                 'plugins/lightbox/jquery.lightbox.min.js',
-                'demo/gallery.js',
+                'plugins/msgbox/jquery.msgbox.min.js'
             )),
-             'tinymce'=>initialize_tinymce()
+             'tinymce'=>initialize_tinymce(300,400)
         );
         
     }
@@ -31,9 +32,6 @@ class Categories extends Logged_controller{
         $this->data['buttons']=  anchor('admin/categories/add_category','Add new category', 'class="btn btn-primary"');
         $this->data['h3']='Category managment';
         $this->data['tableTitle']='Categories';
-        $this->data['assets_js']=  array_merge($this->assets_js, array(
-                'plugins/jquery.dataTables.min.js'
-            ));
         $this->load->view('admin/layouts/table',$this->data);
     }
     
@@ -55,8 +53,11 @@ class Categories extends Logged_controller{
                     'name_en'=>$name_en,
                     'description_ar'=>$description_ar,
                     'description_en'=>$description_en);
-                $this->categories_model->create_category($payload);
-            //============================================================
+                $added=$this->categories_model->create_category($payload);
+                if(!$added)
+                    $this->notify->set_message('Error has been occured while adding category','error');
+                else
+                    $this->notify->set_message('Category has been added successfully','success');
                 redirect('admin/categories');
         }
         $this->data['main_content'] = 'categories'  ;
@@ -71,10 +72,12 @@ class Categories extends Logged_controller{
      function delete($id)
     {
        if(isset($id)){
-        $this->categories_model->delete_category($id);
+            if(!$this->categories_model->delete_category($id))
+                $this->notify->set_message('Error has been occured while deleting  category','error');
+            else
+                $this->notify->set_message('Category#'.$id.' has been deleted successfully','success');
        }
-      $this->data['main_content'] = 'categories'  ;
-      $this->load->view('admin/Layouts/template',$this->data);
+       redirect('admin/categories');
     }
     //validating user input
     //@Return Validation results
@@ -93,7 +96,7 @@ class Categories extends Logged_controller{
     {
         $this->datatables->select('id,name_en,name_ar,description_en,description_ar')
         ->add_column('Edit',anchor('admin/'.$this->router->class.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'id')
-        ->add_column('Delete',anchor('admin/'.$this->router->class.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="btn btn-small btn-warning"'),'id')
+        ->add_column('Delete',anchor('admin/'.$this->router->class.'/delete/$1', '<i class="btn-icon-only icon-remove "></i>','class="confirm-popup btn btn-small btn-warning"'),'id')
         ->from('categories');
         
         echo $this->datatables->generate();
