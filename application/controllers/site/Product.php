@@ -15,7 +15,7 @@ class Product extends FrontController{
            "js/core-script.js"
         ));
         $this->data['main_content']='product_list';
-        $this->load->view('site/layouts/inner',$this->data);
+        $this->load->view('site/layouts/inner_no_slider',$this->data);
     }
     function load($id=0)
     {
@@ -25,6 +25,6 @@ class Product extends FrontController{
         ));
         
         $this->data['main_content']='product_details';
-        $this->load->view('site/layouts/inner',$this->data);
+        $this->load->view('site/layouts/inner_no_slider',$this->data);
     }
 }

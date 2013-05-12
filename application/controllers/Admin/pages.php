@@ -7,7 +7,7 @@
 class Pages extends Logged_controller{
     public function __construct() {
         parent::__construct();
-        $this->load->model('PagesModel');
+        $this->load->model('pages_model');
         $this->data=array(
             'title'=>'ATON | Admin panel | Pages | '.$this->uri->segment(3),
             'assets_js'=>  array_merge($this->assets_js, array(
@@ -23,8 +23,8 @@ class Pages extends Logged_controller{
     function load($page)
     {
         $this->data['h3']=$page;
-        $this->data['page']=$this->PagesModel->get($page);
+        $this->data['page']=$this->pages_model->get($page);
         $this->data['main_content']='PageEdit';
-        $this->load->view('admin/Layouts/template',$this->data);
+        $this->load->view('admin/layouts/template',$this->data);
     }
 }

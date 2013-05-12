@@ -38,20 +38,21 @@
 |
 */
 
-$route['default_controller'] = "site/Home";
+$route['default_controller'] = "site/home";
 $route['404_override'] = '';
 
 
 
 $route['admin/pages/(:any)']='admin/pages/load/$1';
 $route['admin/(:any)']='admin/$1';
-$route['home']='site/Home';
-$route['about-us']='site/Home/load_about/aboutus';
-$route['products']='site/Home';
-$route['contact-us']='site/Home/load_contact';
-$route['gallery']='site/Gallery';
+$route['home']='site/home';
+$route['about-us']='site/home/load_about/aboutus';
+$route['products']='site/home';
+$route['contact-us']='site/home/load_contact';
+$route['gallery']='site/gallery';
 $route['product/(:any)']='site/product/load/$1';
-$route['product-list']='site/Product/product_list';
+$route['product-list']='site/product/product_list';
+$route['applications']='site/home/load_application';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

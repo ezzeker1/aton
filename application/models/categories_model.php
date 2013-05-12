@@ -1,28 +1,22 @@
 <?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of CategoriesModel
  *
  * @author jason
  */
-class CategoriesModel extends CI_Model {
-private $categories_table;    
-//put your code here
-function __construct() {
-    parent::__construct();
-    $this->categories_table='categories';
-    
-}
-/**
- * @param array $payloadData Data to be persisted in the database.
- * @return boolean True if insert is successful false if not.
- */
+class Categories_model extends CI_Model {
+    private $categories_table;    
+    //put your code here
+    function __construct() {
+        parent::__construct();
+        $this->categories_table='categories';
+    }
+    /**
+    * @param array $payloadData Data to be persisted in the database.
+    * @return boolean True if insert is successful false if not.
+    */
     function create_category($payloadData){
+        
         $this->db->insert($this->categories_table,$payloadData);
         if($this->db->affected_rows() > 0){
             return TRUE;
@@ -78,7 +72,7 @@ function __construct() {
             $result = $this->get_category();
             if($result){
                 foreach($result as $key=>$row){
-             $category_names[$row->id]=$row->name;      
+                    $category_names[$row->id]=$row->name_en.'/'.$row->name_ar;      
                 }
                 return $category_names;
             }else{

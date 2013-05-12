@@ -26,7 +26,7 @@ class Logged_controller extends CI_Controller
             ));
         }
         else
-            redirect('Admin/login');
+            redirect('admin/login');
     }
     /*
      * Function to load common assets on the whole template
@@ -84,8 +84,8 @@ class FrontController extends CI_Controller{
             $this->lang=$user_data['language'];
         else
         {
-            $this->load->model('SettingsModel');
-            $this->lang=$this->SettingsModel->getSetting('default_language');
+            $this->load->model('settings_model');
+            $this->lang=$this->settings_model->getSetting('default_language');
         }
     }
     function _load_assets()

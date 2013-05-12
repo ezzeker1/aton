@@ -4,10 +4,10 @@
  * @Porject: ATON
  * @Date: 10/05/2013
  */
-class Settings extends Logged_controller{
+class Settings_model extends Logged_controller{
    function __construct() {
         parent::__construct();
-        $this->load->model('SettingsModel');
+        $this->load->model('settings_model');
         $this->data=array(
             'title'=>'ATON | Admin panel | Home'
         );
@@ -16,7 +16,7 @@ class Settings extends Logged_controller{
     {
         $this->data['table']=$this->generateTable();
         $this->data['main_cotent']='settings';
-        $this->load->view('admin/Layouts/template',$this->data);  
+        $this->load->view('admin/layouts/template',$this->data);  
     }
     function update()
     {
@@ -24,7 +24,7 @@ class Settings extends Logged_controller{
     }
     function generateTable()
     {
-        foreach($this->data['settings']=$this->SettingsModel->get() as $setting) 
+        foreach($this->data['settings']=$this->settings_model->get() as $setting) 
         {
             $this->table->add_row(
                     array(

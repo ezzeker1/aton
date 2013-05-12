@@ -22,7 +22,7 @@ class Gallery extends FrontController{
     {
         $this->data['gallery_active']=TRUE;
         $this->data['main_content']='gallery';
-        $this->load->view('site/layouts/inner',$this->data);
+        $this->load->view('site/layouts/inner_no_slider',$this->data);
     }
     
 }

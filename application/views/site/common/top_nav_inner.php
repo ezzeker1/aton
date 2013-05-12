@@ -40,15 +40,15 @@
             
             
             <div style="margin-right: 8%;" class="nav-collapse collapse">
-               <ul class="nav">
+                <ul class="nav">
                 <li><a href="<?php echo base_url('home'); ?>">الرئيسية</a></li>
                 <li class="dropdown <?php echo isset($application_active)?'active':''; ?>"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">التطبيقات   <b class="caret"></b></a>
                 <ul class="dropdown-menu ">
-                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الأول</a></li>
-                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الثانى</a></li>
-                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الثالث</a></li>                    
-                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الرابع</a></li>
-                    <li><a href="<?php echo base_url('application'); ?>">التطبيق  الخامس</a></li>
+                    <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الأول</a></li>
+                    <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الثانى</a></li>
+                    <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الثالث</a></li>                    
+                    <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الرابع</a></li>
+                    <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الخامس</a></li>
                   </ul>
                 </li>
                 <li class="dropdown <?php echo isset($product_active)?'active':''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">المنتجات  <b class="caret"></b></a>

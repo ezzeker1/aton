@@ -14,18 +14,11 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/aton';
 
-/*
-|--------------------------------------------------------------------------
-| Index File
-|--------------------------------------------------------------------------
-|
-| Typically this will be your index.php file, unless you've renamed it to
-| something else. If you are using mod_rewrite to remove the page set this
-| variable so that it is blank.
-|
-*/
+$config['base_url']	= 'http://localhost/aton';
+//$config['base_url']	= 'http://www.hypelabs.net/aton';
+
+
 $config['index_page'] = '';
 
 /*
@@ -44,7 +37,7 @@ $config['index_page'] = '';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
-$config['uri_protocol']	= 'PATH_INFO';
+$config['uri_protocol']	= 'AUTO';
 
 /*
 |--------------------------------------------------------------------------
@@ -126,7 +119,7 @@ $config['subclass_prefix'] = 'MY_';
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['permitted_uri_chars'] = '~a-z 0-9~%.:_\-';
 
 
 /*

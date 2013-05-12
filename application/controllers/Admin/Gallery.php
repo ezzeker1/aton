@@ -7,7 +7,7 @@
 class Gallery extends Logged_controller{
     public function __construct() {
         parent::__construct();
-        $this->load->model('GalleryModel');
+        $this->load->model('gallery_model');
         $this->data=array(
             'title'=>'ATON | Admin panel | Gallery',
             'assets_js'=>  array_merge($this->assets_js, array(
@@ -22,6 +22,6 @@ class Gallery extends Logged_controller{
     function index()
     {
         $this->data['main_content']='gallery';
-        $this->load->view('admin/Layouts/template',$this->data);
+        $this->load->view('admin/layouts/template',$this->data);
     }
 }

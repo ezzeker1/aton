@@ -88,7 +88,7 @@
 						</a>	    
 					
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo base_url('admin/Categories'); ?>">Categories</a></li>
+							<li><a href="<?php echo base_url('admin/categories'); ?>">Categories</a></li>
 							<li><a href="<?php echo base_url('admin/products'); ?>">Products</a></li>
 						</ul> 				
 					</li>
@@ -108,7 +108,7 @@
 					</li>
 					
                                         <li class="">
-						<a href="<?php echo base_url('admin/Gallery'); ?>">
+						<a href="<?php echo base_url('admin/gallery'); ?>">
 							<i class="icon-picture"></i>
 							<span>Gallery</span>
 						</a>	    				

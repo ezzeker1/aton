@@ -11,7 +11,7 @@ class Categories extends Logged_controller{
         parent::__construct();
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $this->load->model('CategoriesModel');
+        $this->load->model('categories_model');
         $this->form_validation->set_message('required', '*');
         $this->form_validation->set_message('is_unique','Category name already exist');
         $this->data=array(
@@ -28,13 +28,13 @@ class Categories extends Logged_controller{
     function index(){
         
         $this->table->set_heading('#','Name','Description','اسم ','تفصيل','Edit','Delete');
-        $this->data['buttons']=  anchor('Admin/Categories/add_category','Add new category', 'class="btn btn-primary"');
+        $this->data['buttons']=  anchor('admin/categories/add_category','Add new category', 'class="btn btn-primary"');
         $this->data['h3']='Category managment';
         $this->data['tableTitle']='Categories';
         $this->data['assets_js']=  array_merge($this->assets_js, array(
                 'plugins/jquery.dataTables.min.js'
             ));
-        $this->load->view('admin/Layouts/table',$this->data);
+        $this->load->view('admin/layouts/table',$this->data);
     }
     
     
@@ -55,12 +55,12 @@ class Categories extends Logged_controller{
                     'name_en'=>$name_en,
                     'description_ar'=>$description_ar,
                     'description_en'=>$description_en);
-                $this->CategoriesModel->create_category($payload);
+                $this->categories_model->create_category($payload);
             //============================================================
-                redirect('admin/Categories');
+                redirect('admin/categories');
         }
-        $this->data['main_content'] = 'Categories'  ;
-        $this->load->view('admin/Layouts/template',$this->data);
+        $this->data['main_content'] = 'categories'  ;
+        $this->load->view('admin/layouts/template',$this->data);
     }
     function edit($id)
     {
@@ -71,9 +71,9 @@ class Categories extends Logged_controller{
      function delete($id)
     {
        if(isset($id)){
-        $this->CategoriesModel->delete_category($id);
+        $this->categories_model->delete_category($id);
        }
-      $this->data['main_content'] = 'Categories'  ;
+      $this->data['main_content'] = 'categories'  ;
       $this->load->view('admin/Layouts/template',$this->data);
     }
     //validating user input
