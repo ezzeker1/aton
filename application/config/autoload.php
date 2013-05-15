@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database','session','Datatables','notify');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url','tinymce','site_assets');
+$autoload['helper'] = array('url','tinymce','site_assets','aton_helper');
 
 
 /*
