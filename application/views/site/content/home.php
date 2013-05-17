@@ -125,7 +125,7 @@
     <div class="quotation">
     <h1 class="green-title">طلب عرض اسعار</h1>
     <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر .</p>
-    <a class="btn btn-large" href="#">المزيد</a>
+    <a class="" href="#">المزيد</a>
     
     </div>
     <br><br><br><br><br><br>
