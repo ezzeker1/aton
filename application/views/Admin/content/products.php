@@ -5,7 +5,7 @@
       		<div class="widget stacked">	
 				<div class="widget-header">
 					<i class="icon-check"></i>
-					<h3>Add product</h3>
+                                        <h3><?php echo $widget_header;?></h3>
 				</div> <!-- /widget-header -->
 				<div class="widget-content">
 					<ul class="nav nav-tabs">
@@ -15,14 +15,14 @@
 					  <li class=""><a data-toggle="tab" href="#ar">Arabic</a></li>
 					</ul>
 					<br />
-                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/Products/add'); ?>" method="post" id="validation-form" class="form-horizontal ">
+                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/Products/'.$controller_action); ?>" method="post" id="validation-form" class="form-horizontal ">
                                     <div class="tab-content">
                                           <div class="control-group">
 				            <label class="control-label" for="categoryNameSelect">Select Category</label>
 				            <div class="controls">
                                                 
-				              <select data-error-message="You have to select category" data-min="1" id="validateSelect" name="categoryNameSelect">
-				                <option value="0">Select...</option>
+				              <select data-error-message="You have to select category" data-min="1" id="validateSelect" name="categoryNameSelect"  >
+                                                  <option value="<?php if(isset($category_value)){echo $category_value;}else{echo '0';}?>"><?php if(isset($categoryname_en)){echo $categoryname_en;}else{echo 'Select...';}?></option>
 				                <?php foreach($category_names as $value=>$category_name)
                                                 echo"<option value='".$value."'>".$category_name."</option>";
 				                ?>
@@ -34,14 +34,14 @@
 						    <div class="control-group">
 						      <label class="control-label" for="product_name_en">Product Name </label>
 						      <div class="controls">
-                                                        <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_en"id="name">
+                                                          <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_en"id="name" value="<?php echo get_product_info($product_info,'name_en'); ?>">
 						      </div>
 						    </div>
 						    
 						    <div class="control-group">
 						      <label class="control-label" for="product_description">Product Description</label>
 						      <div class="controls">
-						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_en" id="message" rows="4"></textarea>
+						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_en" id="message" rows="4"><?php echo get_product_info($product_info,'description_en'); ?></textarea>
 						      </div>
 						    </div>
 						  </fieldset>
@@ -51,14 +51,14 @@
 						    <div class="control-group">
 						      <label class="control-label" for="product_name_ar">اسم  </label>
 						      <div class="controls">
-                                                        <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_ar"id="name">
+                                                        <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_ar"id="name" value="<?php echo get_product_info($product_info,'name_ar'); ?>">
 						      </div>
 						    </div>
 						    
 						    <div class="control-group">
 						      <label class="control-label" for="product_description">تفصيل</label>
 						      <div class="controls">
-						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_ar" id="message" rows="4"></textarea>
+						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_ar" id="message" rows="4" ><?php echo get_product_info($product_info,'description_ar'); ?></textarea>
 						      </div>
 						    </div>
                                          </fieldset>
@@ -74,7 +74,7 @@
 				          </div>
                                         <div class="control-group">
                                             <div class="controls">
-                                               <img  id="product_picture_display" class="instant_display" src="<?php echo base_url(); ?>resources/admin/img/no_img.jpg"/>  
+                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img_path)){echo base_url().$product_img_path;}else{echo base_url.resources/admin/img/no_img.jpg();} ?>"/>  
                                                </div>
                                         </div>
                                     
@@ -89,7 +89,7 @@
                                         </div>
                                             
                                         <div class="form-actions">
-                                                <button type="submit" class="btn btn-danger btn">Add</button>&nbsp;&nbsp;
+                                                <button type="submit" class="btn btn-danger btn"><?php echo $form_action_button; ?></button>&nbsp;&nbsp;
                                                 <button type="reset" class="btn">Cancel</button>
                                         </div>
                                     </form>

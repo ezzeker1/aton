@@ -51,26 +51,119 @@ class Products extends Logged_controller{
                $this->notify->set_message('Error occured while adding product','error');
              redirect('admin/products');
         }
-
+        //set page data
+        $this->data['widget_header'] ='Add product';
+        $this->data['form_action_button']='Add';
+        $this->data['controller_action']='add';
+        $this->loadform();
         
-        //Loading the page
+    }
+    function edit($id){
+        $this->clean_pdf($id);
+        $product_data = $this->products_model->get_product($id);
+        $category_information = $this->categories_model->get_category($product_data[0]->category_id);
+        $product_files = $this->get_product_files($id);
+        $this->data['product_img_path']=$product_files['picture'];
+        $this->data['product_pdf_path']=$product_files['pdf'];
+        $this->data['categoryname_ar'] = $category_information[0]->name_ar;
+        $this->data['categoryname_en'] = $category_information[0]->name_en;
+        $this->data['category_value'] = $category_information[0]->id;
+        $this->data['product_info'] = $product_data[0];
+        $this->data['widget_header']= 'Edit product';
+        $this->data['form_action_button'] = 'Edit';
+        $this->data['controller_action'] = 'do_edit/'.$id;
+        
+        $this->loadform();
+    }
+  
+    function do_edit($id){
+        $payload['category_id'] =$this->input->post('categoryNameSelect');
+        $payload['name_en']=$this->input->post('product_name_en');
+        $payload['name_ar']=$this->input->post('product_name_ar');
+        $payload['description_en']=$this->input->post('product_description_en');
+        $payload['description_ar']=$this->input->post('product_description_ar');
+       //should check for the return value of the update function if false redirect to error page
+        $this->products_model->update_product($id,$payload);
+        redirect('/admin/products');
+    }
+    /**
+     * get_product_files scand the uploads/products/$product_id directory
+     * to get all the files related to the product [product img, product pdf]
+     * as per the specs of the projects only 1 pdf and 1 img should be uploaded
+     * for each project.
+     * 
+     * @param Int $id product id.
+     * @return array array of strings holding the file names or False incase of files not found.
+     */
+    function get_product_files($id){
+        $product_folder_path = './uploads/products/'.$id.'/';
+        $directory_files = scandir($product_folder_path);
+        $product_picture = $this->get_product_picture($directory_files);
+        $product_pdf = $this->get_product_pdf($directory_files);
+        $product_files = array('picture'=>  substr($product_folder_path,2).$product_picture,
+                               'pdf'=>$product_folder_path.$product_pdf);
+        return $product_files;
+    }
+    /**
+     * get_product_pdf is for getting pdf file of the specified product
+     * @param array $directory_files array of files names in the upload folder that corresponds to that product.
+     * @return object string representing filename or false incase of file not found.
+     */
+    function get_product_pdf($directory_files){
+        foreach($directory_files as $file){
+            if($this->end_with($file, 'pdf')){
+                return $file;
+            }
+        }
+        return FALSE;
+    }
+    
+    /**
+     * get_product_picture  is for getting img file of the specified product
+     * function search for three extensions [gif - jpg - png] so any img file with extension other than 
+     * these three will be ignored.
+     * @param array $directory_files array of files names in the upload folder that corresponds to that product.
+     * @return object string representing filename or false incase of file not found.
+     */
+    function get_product_picture($directory_files){
+        foreach($directory_files as $file){
+            if($this->end_with($file, 'gif') || $this->end_with($file, 'jpg') || $this->end_with($file, 'png'))
+            {
+                return $file;
+            }
+        }
+        return FALSE;
+    }
+    /**
+     * end_with function is for checking the file extension wither the file ends with the desired pattern or not
+     * @param String $str string representing filename.ext 
+     * @param String $pattern string representing file extension we want to check for.
+     */    
+    function end_with($str,$pattern){
+       if(strlen($str) > strlen($pattern)){
+          $file_ext = substr($str, (strlen($pattern) * -1));
+          if($file_ext == $pattern){
+              return $str;
+          }
+       }
+        return FALSE;
+    }
+    
+    function loadform(){
+         //Loading the page
      $category_names = $this->categories_model->get_category_list();
         if(!$category_names)
             $this->data['']='error';
-        
         $this->data['main_content'] = 'products';
         $this->data['category_names']=$category_names;
-        $this->load->view('admin/layouts/template',$this->data);   
-    }
-    function loadform($data){
-        
+        $this->load->view('admin/layouts/template',$this->data);      
     }
     function delete($id){
-      if(isset($id)){
+        if(isset($id)){
             if(!$this->products_model->delete_product($id))
                 $this->notify->set_message('Error has been occured while deleting product','error');
             else
-                $this->notify->set_message('Product #'.$id.'has been deleted successfully','success');
+            $this->notify->set_message('Product #'.$id.'has been deleted successfully','success');
        }
        redirect('admin/products');
     }
@@ -81,10 +174,49 @@ class Products extends Logged_controller{
         $payload['name_ar']=$this->input->post('product_name_ar');
         $payload['description_en']=$this->input->post('product_description_en');
         $payload['description_ar']=$this->input->post('product_description_ar');
+        return  $this->products_model->create_product($payload);
         
-        
-       return  $this->products_model->create_product($payload);
-        
+    }
+    /**
+     * 
+     * clean_picture delete the current product img in order to upload new one
+     *@param string $product_id id of the traget product
+     *@return boolean true in cese of successful deletion and false in case of error or file not found.
+     */
+    function clean_picture($product_id){
+        $product_files=$this->get_product_files($product_id);
+        $product_img = $product_files['picture'];
+        if($product_img){
+            unlink($product_img);
+            return TRUE;
+        }
+        return false;
+    }
+     /**
+     * 
+     * clean_pdf delete the current product pdf in order to upload new one
+     *@param string $product_id id of the traget product
+     *@return boolean true in cese of successful deletion and false in case of error or file not found.
+     */
+    function clean_pdf($product_id){
+        $product_files=$this->get_product_files($product_id);
+        $product_pdf = $product_files['pdf'];
+        if($product_pdf){
+            unlink($product_pdf);
+            return TRUE;
+        }
+        return false;
+    }
+    /**
+     * remove_product_folder remove the product folder where related files [images, pdf] are saved.
+     * function should be called only when deleting the product
+     * 
+     * @param string $product_id id of the product that will be deleted
+     * @return bool return  bool true in case of success false in case of failure.
+     */
+    function remove_product_folder($product_id){
+        $base_product_path = './uploads/products/'.$product_id.'/';
+        return rmdir($base_product_path);        
     }
     function upload_picture($recordId){
         //configuring upload
@@ -94,8 +226,6 @@ class Products extends Logged_controller{
         $config['max_width']  = '9999';
         $config['max_height']  = '9999';
         $config['input_name'] = 'product_picture';
-        
-        
         $this->load->library('upload', $config);
         //incase of failed upload 
         if ( ! $this->upload->do_upload('product_picture'))
@@ -108,12 +238,7 @@ class Products extends Logged_controller{
         //configuring upload
         $config['upload_path'] = './uploads/products/'.$recordId.'/';
         $config['allowed_types'] = 'pdf';
-//        $config['max_size']    = '5000';
-//        $config['max_width']  = '9999';
-//        $config['max_height']  = '9999';
         $config['input_name'] = 'product_pdf';
-        
-        
         $this->load->library('upload', $config);
         //incase of failed upload 
         $uploadResult = $this->upload->do_upload('product_pdf');
@@ -123,10 +248,14 @@ class Products extends Logged_controller{
         }
         return TRUE;
     }
+    
+    
     function createFilesFolder($id){
         $permissions='755';
         return  mkdir('./uploads/products/'.$id,$permissions);
     }
+    
+    
     function datatable()
     {
         $this->datatables->select('products.id,products.name_en,products.name_ar,products.description_en,products.description_ar,categories.id as cat_id')
@@ -134,7 +263,6 @@ class Products extends Logged_controller{
         ->add_column('Edit',anchor('admin/'.$this->router->class.'/edit/$1', '<i class="btn-icon-only icon-pencil"></i>','class="btn btn-small"'),'products.id')
         ->add_column('Delete',anchor('admin/'.$this->router->class.'/delete/$1', '<i class="btn-icon-only icon-remove"></i>','class="confirm-popup btn btn-small btn-warning"'),'products.id')
         ->from('products');
-        
         echo $this->datatables->generate();
     }
     
@@ -149,8 +277,7 @@ class Products extends Logged_controller{
         $this->form_validation->set_rules('product_description_en','required');
         //Validatin file uploads
 //        $this->form_validation->set_rules('product_picture','Product picture','required');
-////        $this->form_validation->set_rules('product_pdf','Product pdf','required');
-//        
-        return ($this->form_validation->run());
+//        $this->form_validation->set_rules('product_pdf','Product pdf','required');
+       return ($this->form_validation->run());
     }
 }
