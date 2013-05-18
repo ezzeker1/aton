@@ -16,7 +16,7 @@
 */
 
 $config['base_url']	= 'http://localhost/aton';
-//$config['base_url']	= 'http://www.hypelabs.net/aton';
+//$config['base_url']	= 'http://www.aton-eg.com';
 
 
 $config['index_page'] = '';
