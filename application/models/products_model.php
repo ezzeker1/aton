@@ -102,5 +102,26 @@ function __construct() {
             }
     
         
-        }           
+        }   
+        
+        function get_products_count(){
+            return  $this->db->count_all('products');
+        }
+        /**
+         * Return a specified number of rows 
+         */
+        function get_products($row_number){
+            $this->db->limit($row_number);
+        }
+        function get_products_max($max_limit){
+            if(isset($max_limit)){
+                $this->db->limit($max_limit);
+            $query=  $this->db->get($this->products_table);
+              if($query->num_rows()>0){
+                 return $query->result();
+                 }
+                
+            }
+        return FALSE;
+        }
 }
