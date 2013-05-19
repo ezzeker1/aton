@@ -3,8 +3,9 @@ $config=array(
     'image_sizes'=>
 array(
     'gallery'=>array(
-        'small'=>'199x130',
-        'large'=>'800x600'
+        'small'=>'65x65',
+        'medium'=>'199x130',
+        'large'=>'1000x1000'
     )
     )
 );

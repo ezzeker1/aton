@@ -21,9 +21,11 @@ class Gallery_model extends CI_Model{
         if(empty($files))
             return $images;
         foreach ($files as $file) {
+            $caption=explode('.',$file);
                 $images []= array (
                         'url' => $this->gallery_path_url . $file,
-                        'thumb_url' => $this->gallery_path_url . 'thumbs/' . $file
+                        'thumb_url' => $this->gallery_path_url . 'thumbs/' . $file,
+                        'caption'=>   $caption[0]
                 );
         }
         return $images;
@@ -55,7 +57,7 @@ class Gallery_model extends CI_Model{
      */
     function scan_dir($dir,$order='desc') 
     {
-        $ignored = array('.', '..', 'thumbs','models');
+        $ignored = array('.', '..', 'thumbs','index.html');
 
         //if no dir found create one 
         if(!is_dir($dir))
@@ -69,7 +71,7 @@ class Gallery_model extends CI_Model{
 
         arsort($files);
         $files = array_keys($files);
-        if($order='desc')
+        if($order=='desc')
             $files=array_reverse($files);
 
         return ($files) ? $files : false;

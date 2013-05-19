@@ -174,3 +174,4 @@ ul.parsley-error-list a{ line-height: 11px; color:red; }
     padding: 0 6px;
     font-size: 10.5px;
 }
+.gallery-container li{width:auto !important;}

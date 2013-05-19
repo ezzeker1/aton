@@ -22,10 +22,13 @@ class Gallery extends FrontController {
                 'gallery.css'
             ))
         );
+        $this->load->model('gallery_model');
     }
 
     function index() {
         $this->data['gallery_active'] = TRUE;
+        $this->data['images']=$this->gallery_model->get_images();
+        
         $this->data['main_content'] = 'gallery';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
     }
