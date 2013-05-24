@@ -74,7 +74,7 @@
 				          </div>
                                         <div class="control-group">
                                             <div class="controls">
-                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img_path)){echo base_url().$product_img_path;}else{echo base_url.resources/admin/img/no_img.jpg();} ?>"/>  
+                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img_path)){echo base_url().$product_img_path;}else{echo base_url()."resources/admin/img/no_img.jpg";} ?>/>  
                                                </div>
                                         </div>
                                     

@@ -40,7 +40,6 @@ class Products extends Logged_controller {
     }
 
     function add() {
-
         //Validating fields
         if ($this->validateUserInput()) {
             //Insert the data to database and return the recordID
@@ -59,6 +58,8 @@ class Products extends Logged_controller {
         $this->data['widget_header'] = 'Add product';
         $this->data['form_action_button'] = 'Add';
         $this->data['controller_action'] = 'add';
+        $this->data['product_info']=NULL;
+        $this->data['product_img_path']=NULL;
         $this->loadform();
     }
 
