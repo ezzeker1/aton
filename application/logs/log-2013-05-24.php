@@ -9686,3 +9686,878 @@ DEBUG - 2013-05-24 03:46:57 --> File loaded: application/views/admin/common/jsfi
 DEBUG - 2013-05-24 03:46:57 --> File loaded: application/views/admin/layouts/template.php
 DEBUG - 2013-05-24 03:46:57 --> Final output sent to browser
 DEBUG - 2013-05-24 03:46:57 --> Total execution time: 0.0570
+DEBUG - 2013-05-24 13:08:04 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:04 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> No URI present. Default controller set.
+DEBUG - 2013-05-24 13:08:04 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:04 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:04 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:04 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:04 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:04 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:04 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:04 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:04 --> Database Driver Class Initialized
+ERROR - 2013-05-24 13:08:04 --> Severity: Notice  --> mysql_pconnect(): send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ C:\xampp\htdocs\aton\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-05-24 13:08:05 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:05 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:05 --> A session cookie was not found.
+DEBUG - 2013-05-24 13:08:05 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:05 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:05 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:05 --> Helper loaded: language_helper
+DEBUG - 2013-05-24 13:08:05 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:08:05 --> File loaded: application/views/site/common/header.php
+DEBUG - 2013-05-24 13:08:05 --> File loaded: application/views/site/common/top_nav.php
+DEBUG - 2013-05-24 13:08:05 --> File loaded: application/views/site/content/home.php
+DEBUG - 2013-05-24 13:08:05 --> File loaded: application/views/site/common/lower_slider.php
+DEBUG - 2013-05-24 13:08:05 --> File loaded: application/views/site/common/footer.php
+DEBUG - 2013-05-24 13:08:05 --> File loaded: application/views/site/layouts/general.php
+DEBUG - 2013-05-24 13:08:05 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:05 --> Total execution time: 1.1167
+DEBUG - 2013-05-24 13:08:13 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:13 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:13 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:13 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:13 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:13 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:13 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:13 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:13 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:13 --> Database Driver Class Initialized
+ERROR - 2013-05-24 13:08:13 --> Severity: Notice  --> mysql_pconnect(): send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ C:\xampp\htdocs\aton\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-05-24 13:08:14 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:14 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:14 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:14 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:08:14 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:08:14 --> File loaded: application/views/admin/content/login.php
+DEBUG - 2013-05-24 13:08:14 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:08:14 --> File loaded: application/views/admin/layouts/Login.php
+DEBUG - 2013-05-24 13:08:14 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:14 --> Total execution time: 1.0689
+DEBUG - 2013-05-24 13:08:14 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:14 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Router Class Initialized
+ERROR - 2013-05-24 13:08:14 --> 404 Page Not Found --> resources
+DEBUG - 2013-05-24 13:08:14 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:14 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:14 --> Router Class Initialized
+ERROR - 2013-05-24 13:08:14 --> 404 Page Not Found --> resources
+DEBUG - 2013-05-24 13:08:18 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:18 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:18 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:18 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:18 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:18 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:18 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:18 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:18 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:18 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:18 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:18 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:18 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:19 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:19 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:19 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:19 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:19 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:19 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:19 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:19 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:19 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:08:19 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:08:19 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:08:19 --> File loaded: application/views/admin/content/index.php
+DEBUG - 2013-05-24 13:08:19 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:08:19 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:08:19 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 13:08:19 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:19 --> Total execution time: 0.0593
+DEBUG - 2013-05-24 13:08:21 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:21 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:21 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:21 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:21 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:21 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:08:21 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:08:21 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:08:21 --> File loaded: application/views/admin/content/table.php
+DEBUG - 2013-05-24 13:08:21 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:08:21 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:08:21 --> File loaded: application/views/admin/layouts/table.php
+DEBUG - 2013-05-24 13:08:21 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:21 --> Total execution time: 0.0548
+DEBUG - 2013-05-24 13:08:21 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:21 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:21 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:21 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:21 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:21 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:21 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:21 --> Total execution time: 0.0469
+DEBUG - 2013-05-24 13:08:22 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:22 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:22 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:22 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:22 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:22 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:22 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:08:22 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:08:22 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:08:22 --> File loaded: application/views/admin/content/table.php
+DEBUG - 2013-05-24 13:08:22 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:08:22 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:08:22 --> File loaded: application/views/admin/layouts/table.php
+DEBUG - 2013-05-24 13:08:22 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:22 --> Total execution time: 0.0477
+DEBUG - 2013-05-24 13:08:23 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:23 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:23 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:23 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:23 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:23 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:23 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:23 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:23 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:23 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:23 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:23 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:23 --> Total execution time: 0.0519
+DEBUG - 2013-05-24 13:08:24 --> Config Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:08:24 --> URI Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Router Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Output Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Security Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Input Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:08:24 --> Language Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:08:24 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Session Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:08:24 --> Session routines successfully run
+DEBUG - 2013-05-24 13:08:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:08:24 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Table Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Model Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:08:24 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:08:24 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:08:24 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:08:24 --> File loaded: application/views/admin/content/PageEdit.php
+DEBUG - 2013-05-24 13:08:24 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:08:24 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:08:24 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 13:08:24 --> Final output sent to browser
+DEBUG - 2013-05-24 13:08:24 --> Total execution time: 0.0506
+DEBUG - 2013-05-24 13:11:25 --> Config Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:11:25 --> URI Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Router Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Output Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Security Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Input Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:11:25 --> Language Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:11:25 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:11:25 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:11:26 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:11:26 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:11:26 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:11:26 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:11:26 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Session Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:11:26 --> Session routines successfully run
+DEBUG - 2013-05-24 13:11:26 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:11:26 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Table Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Model Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Model Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:11:26 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:11:26 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:11:26 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:11:26 --> File loaded: application/views/admin/content/PageEdit.php
+DEBUG - 2013-05-24 13:11:26 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:11:26 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:11:26 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 13:11:26 --> Final output sent to browser
+DEBUG - 2013-05-24 13:11:26 --> Total execution time: 0.0499
+DEBUG - 2013-05-24 13:11:47 --> Config Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:11:47 --> URI Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Router Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Output Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Security Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Input Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:11:47 --> Language Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:11:47 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Session Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:11:47 --> Session routines successfully run
+DEBUG - 2013-05-24 13:11:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:11:47 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Table Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Model Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Model Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:11:47 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:11:47 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:11:47 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:11:47 --> File loaded: application/views/admin/content/PageEdit.php
+DEBUG - 2013-05-24 13:11:47 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:11:47 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:11:47 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 13:11:47 --> Final output sent to browser
+DEBUG - 2013-05-24 13:11:47 --> Total execution time: 0.0537
+DEBUG - 2013-05-24 13:12:05 --> Config Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:12:05 --> URI Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Router Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Output Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Security Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Input Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:12:05 --> Language Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:12:05 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Session Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:12:05 --> Session routines successfully run
+DEBUG - 2013-05-24 13:12:05 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:12:05 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Table Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Model Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Model Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:12:05 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:12:05 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:12:05 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:12:05 --> File loaded: application/views/admin/content/PageEdit.php
+DEBUG - 2013-05-24 13:12:05 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:12:05 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:12:05 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 13:12:05 --> Final output sent to browser
+DEBUG - 2013-05-24 13:12:05 --> Total execution time: 0.0533
+DEBUG - 2013-05-24 13:12:30 --> Config Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:12:30 --> URI Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Router Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Output Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Security Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Input Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:12:30 --> Language Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:12:30 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Session Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:12:30 --> Session routines successfully run
+DEBUG - 2013-05-24 13:12:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:12:30 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Table Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Model Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Model Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 13:12:30 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:12:30 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 13:12:30 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 13:12:30 --> File loaded: application/views/admin/content/PageEdit.php
+DEBUG - 2013-05-24 13:12:30 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 13:12:30 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 13:12:30 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 13:12:30 --> Final output sent to browser
+DEBUG - 2013-05-24 13:12:30 --> Total execution time: 0.0459
+DEBUG - 2013-05-24 13:12:32 --> Config Class Initialized
+DEBUG - 2013-05-24 13:12:32 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:12:32 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:12:32 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:12:32 --> URI Class Initialized
+DEBUG - 2013-05-24 13:12:32 --> Router Class Initialized
+ERROR - 2013-05-24 13:12:32 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 13:12:46 --> Config Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Hooks Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 13:12:46 --> URI Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Router Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Output Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Security Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Input Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 13:12:46 --> Language Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Loader Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 13:12:46 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Session Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 13:12:46 --> Session routines successfully run
+DEBUG - 2013-05-24 13:12:46 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 13:12:46 --> Controller Class Initialized
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: language_helper
+DEBUG - 2013-05-24 13:12:46 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 13:12:46 --> File loaded: application/views/site/common/header.php
+DEBUG - 2013-05-24 13:12:46 --> File loaded: application/views/site/common/top_nav_inner.php
+DEBUG - 2013-05-24 13:12:46 --> File loaded: application/views/site/content/application.php
+DEBUG - 2013-05-24 13:12:46 --> File loaded: application/views/site/common/lower_slider.php
+DEBUG - 2013-05-24 13:12:46 --> File loaded: application/views/site/common/footer.php
+DEBUG - 2013-05-24 13:12:46 --> File loaded: application/views/site/layouts/inner.php
+DEBUG - 2013-05-24 13:12:46 --> Final output sent to browser
+DEBUG - 2013-05-24 13:12:46 --> Total execution time: 0.0440
+DEBUG - 2013-05-24 14:01:49 --> Config Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:01:49 --> URI Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Router Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Output Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Security Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Input Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:01:49 --> Language Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:01:49 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Session Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:01:49 --> Session routines successfully run
+DEBUG - 2013-05-24 14:01:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:01:49 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Table Class Initialized
+DEBUG - 2013-05-24 14:01:49 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 14:01:49 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 14:01:49 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 14:01:49 --> File loaded: application/views/admin/content/index.php
+DEBUG - 2013-05-24 14:01:49 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 14:01:49 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 14:01:49 --> File loaded: application/views/admin/layouts/template.php
+DEBUG - 2013-05-24 14:01:49 --> Final output sent to browser
+DEBUG - 2013-05-24 14:01:49 --> Total execution time: 0.0431
+DEBUG - 2013-05-24 14:01:50 --> Config Class Initialized
+DEBUG - 2013-05-24 14:01:50 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:01:50 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:01:50 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:01:50 --> URI Class Initialized
+DEBUG - 2013-05-24 14:01:50 --> Router Class Initialized
+ERROR - 2013-05-24 14:01:50 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:24 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:24 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:24 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:24 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:24 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:24 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:24 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:25 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:25 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:25 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:25 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:25 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:25 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:25 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:25 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:25 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:25 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:25 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:25 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:25 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:26 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:26 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:26 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:26 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:26 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:26 --> Router Class Initialized
+ERROR - 2013-05-24 14:02:26 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:02:35 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:35 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Router Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Output Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Security Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Input Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:02:35 --> Language Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:02:35 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Session Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:02:35 --> Session routines successfully run
+DEBUG - 2013-05-24 14:02:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:02:35 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Table Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:02:35 --> Model Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Model Class Initialized
+DEBUG - 2013-05-24 14:02:35 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 14:02:35 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 14:02:35 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 14:02:35 --> File loaded: application/views/admin/content/table.php
+DEBUG - 2013-05-24 14:02:35 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 14:02:35 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 14:02:35 --> File loaded: application/views/admin/layouts/table.php
+DEBUG - 2013-05-24 14:02:35 --> Final output sent to browser
+DEBUG - 2013-05-24 14:02:35 --> Total execution time: 0.0469
+DEBUG - 2013-05-24 14:02:36 --> Config Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:02:36 --> URI Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Router Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Output Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Security Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Input Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:02:36 --> Language Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:02:36 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:02:36 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:02:36 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:02:36 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:02:36 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:02:36 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Session Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:02:36 --> Session routines successfully run
+DEBUG - 2013-05-24 14:02:36 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:02:36 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Table Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:02:36 --> Model Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Model Class Initialized
+DEBUG - 2013-05-24 14:02:36 --> Final output sent to browser
+DEBUG - 2013-05-24 14:02:36 --> Total execution time: 0.0486
+DEBUG - 2013-05-24 14:12:04 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:04 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:04 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:04 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:04 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:04 --> Router Class Initialized
+ERROR - 2013-05-24 14:12:04 --> 404 Page Not Found --> admin/applicatons
+DEBUG - 2013-05-24 14:12:21 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:21 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Router Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Output Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Security Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Input Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:12:21 --> Language Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:12:21 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Session Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:12:21 --> Session routines successfully run
+DEBUG - 2013-05-24 14:12:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:12:21 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Table Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:21 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 14:12:21 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 14:12:21 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 14:12:21 --> File loaded: application/views/admin/content/table.php
+DEBUG - 2013-05-24 14:12:21 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 14:12:21 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 14:12:21 --> File loaded: application/views/admin/layouts/table.php
+DEBUG - 2013-05-24 14:12:21 --> Final output sent to browser
+DEBUG - 2013-05-24 14:12:21 --> Total execution time: 0.0465
+DEBUG - 2013-05-24 14:12:22 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:22 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Router Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Output Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Security Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Input Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:12:22 --> Language Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:12:22 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:12:22 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:12:22 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:12:22 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:12:22 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:12:22 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Session Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:12:22 --> Session routines successfully run
+DEBUG - 2013-05-24 14:12:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:12:22 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Table Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:22 --> Final output sent to browser
+DEBUG - 2013-05-24 14:12:22 --> Total execution time: 0.0510
+DEBUG - 2013-05-24 14:12:28 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:28 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Router Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Output Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Security Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Input Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:12:28 --> Language Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:12:28 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Session Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:12:28 --> Session routines successfully run
+DEBUG - 2013-05-24 14:12:28 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:12:28 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Table Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:28 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 14:12:28 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 14:12:28 --> File loaded: application/views/admin/common/upperNav.php
+DEBUG - 2013-05-24 14:12:28 --> File loaded: application/views/admin/content/table.php
+DEBUG - 2013-05-24 14:12:28 --> File loaded: application/views/admin/common/footer.php
+DEBUG - 2013-05-24 14:12:28 --> File loaded: application/views/admin/common/jsfiles.php
+DEBUG - 2013-05-24 14:12:28 --> File loaded: application/views/admin/layouts/table.php
+DEBUG - 2013-05-24 14:12:28 --> Final output sent to browser
+DEBUG - 2013-05-24 14:12:28 --> Total execution time: 0.0508
+DEBUG - 2013-05-24 14:12:29 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:29 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Router Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Output Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Security Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Input Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:12:29 --> Language Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:12:29 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:12:29 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:12:29 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:12:29 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:12:29 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:12:29 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Session Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:12:29 --> Session routines successfully run
+DEBUG - 2013-05-24 14:12:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:12:29 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Table Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:29 --> Final output sent to browser
+DEBUG - 2013-05-24 14:12:29 --> Total execution time: 0.0425
+DEBUG - 2013-05-24 14:12:31 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:31 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Router Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Output Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Security Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Input Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-05-24 14:12:31 --> Language Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Loader Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Config file loaded: application/config/images.php
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: form_helper
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: url_helper
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: tinymce_helper
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: site_assets_helper
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: aton_helper
+DEBUG - 2013-05-24 14:12:31 --> Database Driver Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Session Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: string_helper
+DEBUG - 2013-05-24 14:12:31 --> Session routines successfully run
+DEBUG - 2013-05-24 14:12:31 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-05-24 14:12:31 --> Form Validation Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Controller Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Table Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Model Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Helper loaded: html_helper
+DEBUG - 2013-05-24 14:12:31 --> File loaded: application/views/admin/common/header.php
+DEBUG - 2013-05-24 14:12:31 --> File loaded: application/views/admin/common/upperNav.php
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Undefined variable: controller_action C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 18
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Undefined variable: product_info C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 26
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Undefined variable: product_info C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 33
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Undefined variable: product_info C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 43
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Undefined variable: product_info C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 50
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Use of undefined constant base_url - assumed 'base_url' C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Use of undefined constant resources - assumed 'resources' C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Use of undefined constant admin - assumed 'admin' C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Use of undefined constant img - assumed 'img' C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Notice  --> Use of undefined constant no_img - assumed 'no_img' C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+ERROR - 2013-05-24 14:12:31 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\aton\application\views\admin\content\application_edit.php 66
+DEBUG - 2013-05-24 14:12:31 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:31 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Router Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Config Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Hooks Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Utf8 Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> UTF-8 Support Enabled
+DEBUG - 2013-05-24 14:12:31 --> URI Class Initialized
+DEBUG - 2013-05-24 14:12:31 --> Router Class Initialized
