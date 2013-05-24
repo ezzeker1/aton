@@ -29,7 +29,7 @@
 				              </select>
 				            </div>
 				          </div>
-                                    <div id="en" class="tab-pane active">
+                                        <div id="en" class="tab-pane active">
                                             <fieldset>
 						    <div class="control-group">
 						      <label class="control-label" for="product_name_en">Product Name </label>

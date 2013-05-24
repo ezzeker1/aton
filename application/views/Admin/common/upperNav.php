@@ -24,8 +24,7 @@
 						</a>
 						
 						<ul class="dropdown-menu">
-							<li><a href="javascript:;">Account Settings</a></li>
-							<li><a href="javascript:;">Privacy Settings</a></li>
+							<li><a href="<?php echo base_url('admin/settings'); ?>">Website Settings</a></li>
 						</ul>
 						
 					</li>

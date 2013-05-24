@@ -50,4 +50,9 @@ class Home extends FrontController {
         $this->load->view('site/layouts/inner', $this->data);
     }
 
+    function change_locale($language, $uri) {
+        set_locale($language);
+        redirect($uri);
+    }
+
 }

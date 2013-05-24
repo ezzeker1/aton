@@ -11,7 +11,7 @@ class Pages_model extends CI_Model{
         $this->db->where('name',$page);
         return $this->db->get('pages')->row();
     }
-    function getALl()
+    function get_all()
     {
         return $this->db->get('pages')->result();
     }

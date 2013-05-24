@@ -52,7 +52,7 @@
                                 </div>
 
                                 <div class="form-actions">
-                                    <button type="submit" class="btn btn-danger btn">Validate</button>
+                                    <button type="submit" class="btn btn-danger btn">Add</button>
                                     <button type="reset" class="btn">Cancel</button>
                                 </div>
                             </fieldset>

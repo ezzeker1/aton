@@ -15,7 +15,6 @@ class Product extends FrontController {
         $this->load->model("products_model");
         $this->load->model("categories_model");
         $this->load->library("pagination");
-        
     }
 
     function product_list() {
@@ -40,11 +39,12 @@ class Product extends FrontController {
         $this->data['main_content'] = 'product_details';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
     }
-    function init_pagination($per_page){
-        $config['base_url'] = base_url().'product/product_list';
+
+    function init_pagination($per_page) {
+        $config['base_url'] = base_url() . 'product/product_list';
         $config['total_rows'] = $this->products_model->get_products_count();
         $config['per_page'] = $per_page;
-        $this->pagination->initialize($config); 
+        $this->pagination->initialize($config);
     }
 
 }

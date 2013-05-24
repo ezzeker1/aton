@@ -23,14 +23,14 @@ class Gallery extends Logged_controller {
                 'plugins/validate/jquery.validate.js',
                 'demo/validation.js'
             )),
-            'assets_css'=>array_merge($this->assets_css,array(
+            'assets_css' => array_merge($this->assets_css, array(
                 '../js/plugins/lightbox/themes/evolution-dark/jquery.lightbox.css',
             ))
         );
     }
 
     function index() {
-        $this->data['images']=$this->gallery_model->get_images();
+        $this->data['images'] = $this->gallery_model->get_images();
         $this->data['main_content'] = 'gallery';
         $this->load->view('admin/layouts/template', $this->data);
     }

@@ -4,10 +4,9 @@
  * 
  */
 $(document).ready(function() {
-   $('.nav-tabs li a').on('click',function(e){
-//       e.preventDefault();
-//       init_tinymce();
-   });   
+    $('.nav-tabs li a').on('click',function(e){
+      //  init_tinymce();
+    });   
 });
 function trigger_upload(id)
 {
@@ -25,20 +24,31 @@ function readURL(input,img)
         reader.readAsDataURL(input.files[0]);
     }
 }
- $('a.confirm-popup').live ('click', function (e) {
-     var anchor=$(this);
-     e.preventDefault();
+$('a.confirm-popup').live ('click', function (e) {
+    var anchor=$(this);
+    e.preventDefault();
     $.msgbox("Are you sure that you want to permanently delete the selected item?", {
         type: "confirm",
         buttons : [
-            {type: "submit", value: 'Yes'},
-            {type: "submit", value: 'No'},
-            {type: "cancel", value: "Cancel"}
+        {
+            type: "submit", 
+            value: 'Yes'
+        },
+
+        {
+            type: "submit", 
+            value: 'No'
+        },
+
+        {
+            type: "cancel", 
+            value: "Cancel"
+        }
         ]
-        }, function(result) {
-            if(result=='Yes')
-               window.location.href=anchor.attr('href');
-            else
-                return false
+    }, function(result) {
+        if(result=='Yes')
+            window.location.href=anchor.attr('href');
+        else
+            return false
     });
 }); 

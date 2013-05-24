@@ -27,8 +27,8 @@ class Gallery extends FrontController {
 
     function index() {
         $this->data['gallery_active'] = TRUE;
-        $this->data['images']=$this->gallery_model->get_images();
-        
+        $this->data['images'] = $this->gallery_model->get_images();
+
         $this->data['main_content'] = 'gallery';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
     }

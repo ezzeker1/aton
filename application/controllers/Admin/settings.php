@@ -8,7 +8,7 @@ if (!defined('BASEPATH'))
  * @Date: 10/05/2013
  */
 
-class Settings_model extends Logged_controller {
+class Settings extends Logged_controller {
 
     function __construct() {
         parent::__construct();
@@ -19,13 +19,26 @@ class Settings_model extends Logged_controller {
     }
 
     function index() {
+        $this->output->enable_profiler();
+        $this->data['h3'] = 'Website settings';
+        $this->data['buttons'] = form_submit('save', 'save', 'class="btn btn-danger btn"');
+        anchor('admin/' . $this->router->class . '/add', 'Add new product', 'class="btn btn-primary"');
         $this->data['table'] = $this->generateTable();
-        $this->data['main_cotent'] = 'settings';
+        $this->data['main_content'] = 'settings';
         $this->load->view('admin/layouts/template', $this->data);
     }
 
     function update() {
-        
+        $data=array();
+        foreach ($_POST as $key => $value) {
+            if ($value != 'save')
+                $data[$key] = $value;
+        }
+        if (!$this->settings_model->update($data))
+            $this->notify->set_message('Error occured while saving settings', 'error');
+        else
+            $this->notify->set_message('Website settings has been updated successfully', 'success');
+        redirect('admin/settings');
     }
 
     function generateTable() {
@@ -33,7 +46,7 @@ class Settings_model extends Logged_controller {
             $this->table->add_row(
                     array(
                         $setting->key,
-                        '<input id="name" class="input-large" type="text" name="name" value="' . $setting->value . '">'
+                        '<input name="' . $setting->key . '" class="input-large" type="text" value="' . $setting->value . '">'
             ));
         }
         return $this->table->generate();

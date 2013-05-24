@@ -10,9 +10,9 @@
  * echo load_css('screen.css');
  * echo load_css(array('screen.css','otherstyle.css'));
  * echo load_css(array(
- *			 array('screen.css', 'screen, projection'),
- *			 array('print.css', 'print'),
- *		 ));
+ * 			 array('screen.css', 'screen, projection'),
+ * 			 array('print.css', 'print'),
+ * 		 ));
  *
  * @author William Rufino <williamhrs@gmail.com>
  * @author Lucas Vasconcelos <lucas.vasconcelos@gmail.com>
@@ -21,26 +21,26 @@
  */
 if (!function_exists('load_css')) {
 
-	function load_css($data,$group) {
-		$CI =& get_instance();
-		$CI->load->helper('html');
+    function load_css($data, $group) {
+        $CI = & get_instance();
+        $CI->load->helper('html');
 
-		$csspath = base_url() . 'resources/'.$group.'/css/';
+        $csspath = base_url() . 'resources/' . $group . '/css/';
 
-		if (!is_array($data))
-			return link_tag($csspath . $data, 'stylesheet', 'text/css');
-		else {
-			$return = '';
-			foreach ($data as $item) {
-				if (!is_array($item)) {
-					$return .= link_tag($csspath . $item, 'stylesheet', 'text/css').PHP_EOL;
-				} else {
-					$return .= link_tag($csspath . $item[0], 'stylesheet', 'text/css', '', $item[1]).PHP_EOL;
-				}
-			}
-		}
-		return $return;
-	}
+        if (!is_array($data))
+            return link_tag($csspath . $data, 'stylesheet', 'text/css');
+        else {
+            $return = '';
+            foreach ($data as $item) {
+                if (!is_array($item)) {
+                    $return .= link_tag($csspath . $item, 'stylesheet', 'text/css') . PHP_EOL;
+                } else {
+                    $return .= link_tag($csspath . $item[0], 'stylesheet', 'text/css', '', $item[1]) . PHP_EOL;
+                }
+            }
+        }
+        return $return;
+    }
 
 }
 /*
@@ -51,19 +51,19 @@ if (!function_exists('load_css')) {
  */
 if (!function_exists('load_js')) {
 
-	function load_js($js,$group) {
-		$CI =& get_instance();
-		$CI->load->helper('url');
-		if (!is_array($js)) {
-			$js = (array) $js;
-		}
+    function load_js($js, $group) {
+        $CI = & get_instance();
+        $CI->load->helper('url');
+        if (!is_array($js)) {
+            $js = (array) $js;
+        }
 
-		$return = '';
-		foreach ($js as $j) {
-			$return .= '<script type="text/javascript" src="' . base_url() . 'resources/'.$group.'/js/' . $j . '"></script>' .PHP_EOL;
-		}
-		return $return;
-	}
+        $return = '';
+        foreach ($js as $j) {
+            $return .= '<script type="text/javascript" src="' . base_url() . 'resources/' . $group . '/js/' . $j . '"></script>' . PHP_EOL;
+        }
+        return $return;
+    }
 
 }
 
@@ -75,11 +75,11 @@ if (!function_exists('load_js')) {
  */
 if (!function_exists('load_img')) {
 
-	function load_img($img,$group){
-		$CI =& get_instance();
-		$CI->load->helper('url');
-		return base_url().'resources/'.$group.'/images/' . $img;
-	}
+    function load_img($img, $group) {
+        $CI = & get_instance();
+        $CI->load->helper('url');
+        return base_url() . 'resources/' . $group . '/images/' . $img;
+    }
 
 }
 
