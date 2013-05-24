@@ -59,19 +59,11 @@ class Products_model extends CI_Model {
         }
     }
 
-    /**
-     * 
-     */
-    function get_product($id = FALSE) {
-        if ($id) {
-            $this->db->where('id', $id);
-        }
-        $query = $this->db->get($this->products_table);
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return false;
-        }
+    
+    function get_product($id)
+    {
+        $this->db->where('id',$id);
+        return $this->db->get($this->products_table)->row();
     }
 
     /**

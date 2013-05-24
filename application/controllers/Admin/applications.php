@@ -18,7 +18,7 @@ class Applications extends Logged_controller {
         $this->form_validation->set_message('is_unique', 'Category name already exist');
         $this->data = array(
             'title' => 'ATON | Admin panel | Applications',
-            'products_active' => true,
+            'applications_active' => true,
             'assets_js' => array_merge($this->assets_js, array(
                 'plugins/hoverIntent/jquery.hoverIntent.minified.js',
                 'plugins/lightbox/jquery.lightbox.min.js',
@@ -37,16 +37,29 @@ class Applications extends Logged_controller {
     }
 
     function add() {
-        $this->data['h3']='Add new application';
+        $this->data['h3'] = 'Add new application';
+        $this->data['controller_action'] = $this->data['form_action_button'] = 'add';
+
+        $this->data['application'] = null;
         if ($this->validate()) {
-            
+            $data = array(
+                'title_en' => $this->input->post('title_en'),
+                'title_ar' => $this->input->post('title_ar'),
+                'description_en' => $this->input->post('description_en'),
+                'description_ar' => $this->input->post('description_ar')
+            );
+            if ($this->applications_model->add($data))
+                $this->notify->set_message('Applicaton has been added succssfully', 'success');
+            else
+                $this->notify->set_message('Error occured while adding aapplication', 'error');
         }
         $this->data['main_content'] = 'application_edit';
         $this->load->view('admin/layouts/template', $this->data);
     }
 
     function edit($id) {
-        
+        $this->data['controller_action'] = 'edit/' . $id;
+        $this->data['form_action_button'] = 'Save';
     }
 
     function delete($id) {

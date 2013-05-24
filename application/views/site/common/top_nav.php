@@ -25,8 +25,8 @@
 
                             <div class="flags pull-left">
                                 <ul class="clearfix">
-                                    <li><a href="<?php echo base_url('home/change_locale/english/back_url/' . $this->uri->ruri_string()); ?>"><img src="<?php base_url(); ?>resources/site/images/uk-flag.png" width="32" height="25" alt="uk-flag"></a></li>
-                                    <li><a href="<?php echo base_url('home/change_locale/arabic/back_url/' . $this->uri->ruri_string()); ?>"><img src="<?php base_url(); ?>resources/site/images/arabic-flag.png" width="32" height="25" alt="arabic-flag"></a></li>
+                                    <li><a href="<?php echo base_url('home/change_locale/english?back_url=' . $this->uri->uri_string()); ?>"><img src="<?php echo base_url(); ?>resources/site/images/uk-flag.png" width="32" height="25" alt="uk-flag"></a></li>
+                                    <li><a href="<?php echo base_url('home/change_locale/arabic?back_url=' . $this->uri->uri_string()); ?>"><img src="<?php echo base_url(); ?>resources/site/images/arabic-flag.png" width="32" height="25" alt="arabic-flag"></a></li>
                                 </ul>
                             </div>
 
@@ -48,11 +48,9 @@
                                     </li>
                                     <li class="dropdown <?php echo isset($product_active) ? 'active' : ''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">المنتجات  <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="<?php echo base_url('product-list'); ?>">المنتج الأول</a></li>
-                                            <li><a href="<?php echo base_url('product-list'); ?>">المنتج الثانى</a></li>
-                                            <li><a href="<?php echo base_url('product-list'); ?>">المنتج الثالث</a></li>                    
-                                            <li><a href="<?php echo base_url('product-list'); ?>">المنتج الرابع</a></li>
-                                            <li><a href="<?php echo base_url('product-list'); ?>">المنتج الخامس</a></li>
+                                            <?php foreach ($categories as $category) { ?>
+                                                <li> <a href="<?php echo base_url('category/' . $category->id); ?>">  <?php echo localize($category, 'name'); ?></a></li>
+                                            <?php } ?>
                                         </ul>
                                     </li>
                                     <li class="<?php echo isset($gallery_active) ? 'active' : ''; ?>"> <a href="<?php echo base_url('gallery'); ?>">معرض الصور</a></li>

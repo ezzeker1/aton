@@ -49,13 +49,15 @@ $route['404_override'] = '';
 $route['admin/pages/(:any)'] = 'admin/pages/edit/$1';
 $route['admin/(:any)'] = 'admin/$1';
 $route['home'] = 'site/home';
-$route['home/change_locale/(:any)/back_url/(:any)'] = 'site/home/change_locale/$1/$2';
+$route['home/change_locale/(:any)'] = 'site/home/change_locale/$1';
 $route['about-us'] = 'site/home/load_about/aboutus';
-$route['products'] = 'site/home';
 $route['contact-us'] = 'site/home/load_contact';
 $route['gallery'] = 'site/gallery/index';
-$route['product/(:any)'] = 'site/product/load/$1';
+$route['category/(:num)']='site/product/load_category/$1';
+
 $route['product-list'] = 'site/product/product_list';
+//$route['product-list/page/(:num)'] = 'site/product/product_list';
+$route['product/(:any)'] = 'site/product/load/$1';
 $route['applications'] = 'site/home/load_application';
 
 /* End of file routes.php */
