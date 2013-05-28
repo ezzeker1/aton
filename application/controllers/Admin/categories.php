@@ -63,14 +63,49 @@ class Categories extends Logged_controller {
                 $this->notify->set_message('Category has been added successfully', 'success');
             redirect('admin/categories');
         }
+        $this->data['action_label'] = 'Add';
         $this->data['main_content'] = 'categories';
+        $this->data['controller_action'] = 'add';
         $this->load->view('admin/layouts/template', $this->data);
     }
 
-    function edit($id) {
+    function edit($id)
+    {
+        $category_info = $this->categories_model->get_category($id);
+        $this->data['category_info'] =$category_info[0];
+        $this->data['controller_action'] = 'edit_category/'.$id;
+        $this->data['action_label'] = 'Edit';
+        $this->data['main_content'] = 'categories';
+        $this->load->view('admin/layouts/template', $this->data);
+        
+    }
+    
+    function edit_category($id) {
         if (isset($id)) {
-            //where is the new data to be updated ??
+            //Validate user input
+            if ($this->validate_user_input() == true) {
+                //Validation Successful
+                $name_ar = $this->input->post('category_name_ar');
+                $name_en = $this->input->post('category_name_en');
+                $description_ar = $this->input->post('category_description_ar');
+                $description_en = $this->input->post('category_description_en');
+                /**
+                 * Should change after we agree on the Crud design to hold multi lang
+                 * Data
+                 */
+                $payload = array('name_ar' => $name_ar,
+                    'name_en' => $name_en,
+                    'description_ar' => $description_ar,
+                    'description_en' => $description_en);
+                $added = $this->categories_model->update_category($id, $payload);
+                if (!$added)
+                    $this->notify->set_message('Error has been occured while adding category', 'error');
+                else
+                    $this->notify->set_message('Category has been edited successfully', 'success');
+                redirect('admin/categories');
+            }
         }
+        
     }
 
     function delete($id) {
