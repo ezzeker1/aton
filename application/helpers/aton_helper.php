@@ -1,12 +1,12 @@
 <?php
 
-function get_product_info($product_info, $field_name) {
+function set_input($object, $property) {
 
-    if (isset($product_info)) {
-        return $product_info->$field_name;
+    if (isset($object)) {
+        return $object->$property;
     }
     $ci = &get_instance();
-    return $ci->input->post($field_name);
+    return $ci->input->post($property);
 }
 
 /*

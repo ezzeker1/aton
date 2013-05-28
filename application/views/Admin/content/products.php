@@ -34,14 +34,14 @@
 						    <div class="control-group">
 						      <label class="control-label" for="product_name_en">Product Name </label>
 						      <div class="controls">
-                                                          <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_en"id="name" value="<?php echo get_product_info($product_info,'name_en'); ?>">
+                                                          <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_en"id="name" value="<?php echo set_input($product_info,'name_en'); ?>">
 						      </div>
 						    </div>
 						    
 						    <div class="control-group">
 						      <label class="control-label" for="product_description">Product Description</label>
 						      <div class="controls">
-						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_en" id="message" rows="4"><?php echo get_product_info($product_info,'description_en'); ?></textarea>
+						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_en" id="message" rows="4"><?php echo set_input($product_info,'description_en'); ?></textarea>
 						      </div>
 						    </div>
 						  </fieldset>
@@ -51,14 +51,14 @@
 						    <div class="control-group">
 						      <label class="control-label" for="product_name_ar">اسم  </label>
 						      <div class="controls">
-                                                        <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_ar"id="name" value="<?php echo get_product_info($product_info,'name_ar'); ?>">
+                                                        <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_ar"id="name" value="<?php echo set_input($product_info,'name_ar'); ?>">
 						      </div>
 						    </div>
 						    
 						    <div class="control-group">
 						      <label class="control-label" for="product_description">تفصيل</label>
 						      <div class="controls">
-						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_ar" id="message" rows="4" ><?php echo get_product_info($product_info,'description_ar'); ?></textarea>
+						        <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_ar" id="message" rows="4" ><?php echo set_input($product_info,'description_ar'); ?></textarea>
 						      </div>
 						    </div>
                                          </fieldset>
@@ -74,7 +74,7 @@
 				          </div>
                                         <div class="control-group">
                                             <div class="controls">
-                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img_path)){echo base_url().$product_img_path;}else{echo base_url()."resources/admin/img/no_img.jpg";} ?>/>  
+                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img_path)){echo base_url().$product_img_path;}else{echo base_url()."resources/admin/img/no_img.jpg";} ?>"/>  
                                                </div>
                                         </div>
                                     

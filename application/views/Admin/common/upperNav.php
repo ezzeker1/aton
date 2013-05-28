@@ -100,7 +100,7 @@
 						</ul> 				
 					</li>
 					 <li class="<?php echo isset($applications_active)?'active':''; ?>">
-						<a href="<?php echo base_url('admin/applicatons'); ?>">
+						<a href="<?php echo base_url('admin/applications'); ?>">
 							<i class="icon-reorder"></i>
 							<span>Applications</span>
 						</a>	    				

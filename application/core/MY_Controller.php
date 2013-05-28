@@ -87,6 +87,10 @@ class FrontController extends CI_Controller {
         $this->load->helper('language');
         $this->lang = get_locale();
         $this->_load_assets();
+        $this->load->model('categories_model');
+        $this->load->vars(array(
+            'categories'=>$this->categories_model->get_category()
+        ));
     }
 
     /*
@@ -104,7 +108,8 @@ class FrontController extends CI_Controller {
             "bootstrap.css",
             "bootstrap-responsive.css",
             "elastislide.css",
-            "boorstrap-over.css"
+            "boorstrap-over.css",
+            "aton.css"
         );
         $this->load->vars(array(
             'assets_js' => $this->assets_js,

@@ -10,49 +10,18 @@
         </div>
     </div>
 </div>
+
+
 <div class="container-fluid inner-data-wrap">
     <div class="row-fluid">
 
-        <div class="span3">    
-            <div class="accordion" id="accordion2">
-                <?php
-                if (isset($categories)) {
-                    foreach ($categories as $category) {
-                        ?>
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                    <?php echo localize($category, 'name'); ?>
-                                </a>
-                            </div>
-                            <?php
-                            if (isset($products)) {
-                                foreach ($products as $product) {
-                                    if ($product->category_id == $category->id) {
-                                        ?>
+   <?php $this->load->view('site/common/side_products'); ?>
 
-                                        <div id="collapseOne" class="accordion-body collapse in">
-                                            <div class="accordion-inner">
-                                                <?php echo localize($product, 'name'); ?>
-                                            </div>
-                                        </div>
-                                        <?php
-                                    }
-                                }
-                            }
-                            ?>
-                        </div>
-                    <?php
-                    }
-                }
-                ?>
-            </div>
-        </div>
-        <?php
-        if (isset($products)) {
-            foreach ($products as $product) {
-                ?>
-                <div class="span9">    
+        <div class="span9">  
+            <?php
+            if (isset($products)) {
+                foreach ($products as $product) {
+                    ?>
                     <div class="section-header green-title">
                         <h1><?php echo localize($product, 'name'); ?></h1>
                     </div>    
@@ -63,12 +32,19 @@
                         </div>  
                     </div>  
 
-                </div>
-                <?php
+                    <?php
+                }
             }
-        }
-        ?>
+            ?>
+
+            <div class="pagination pagination-centered">
+<?= $pages ?>
+            </div>
+
+        </div>
+
+
+
     </div>
     <!-- /.row --> 
 </div>
-<?= $pages ?>
