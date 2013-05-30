@@ -10,6 +10,8 @@ class Home extends FrontController {
 
     public function __construct() {
         parent::__construct();
+        $this->load->model('pages_model');
+        $this->load->model('gallery_model');
     }
 
     function index() {
@@ -17,7 +19,10 @@ class Home extends FrontController {
             'jquery.elastislide.js',
             'core-script.js'
                 ));
-
+        $this->load->model('products_model');
+        $this->data['slider_images'] = $this->gallery_model->get_images(false, 'slider');
+        $this->data['home_products'] = $this->products_model->get_products_max(4);
+        $this->data['page_home'] = $this->pages_model->get('home');
         $this->data['main_content'] = 'home';
         $this->load->view('site/layouts/general', $this->data);
     }
@@ -31,13 +36,14 @@ class Home extends FrontController {
     function load_contact() {
         $this->data['assets_js'] = array_merge($this->assets_js, array(
             'core-script.js',
-            'parsley.extend.min.js'
+            'parsley.extend.min.js',
+            'jquery.elastislide.js'
                 ));
         $this->data['contact_active'] = TRUE;
 
         $this->load->model('pages_model');
         $this->load->model('settings_model');
-        $this->data['page'] = $this->pages_model->get('contactus');
+        $this->data['page_contactus'] = $this->pages_model->get('contactus');
 
         $data = new stdClass();
         foreach ($this->settings_model->get() as $setting) {

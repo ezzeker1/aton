@@ -78,15 +78,16 @@ class Logged_controller extends CI_Controller {
 
 class FrontController extends CI_Controller {
 
-    var $lang;
     var $assets_css;
     var $assets_js;
+    protected $current_language;
 
     public function __construct() {
         parent::__construct();
         $this->load->helper('language');
-        $this->lang = get_locale();
+        $this->current_language = get_locale();
         $this->_load_assets();
+        $this->lang->load('messages', $this->current_language);
         $this->load->model('categories_model');
         $this->load->vars(array(
             'categories'=>$this->categories_model->get_category()

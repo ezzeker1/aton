@@ -24,14 +24,14 @@
                     <h1>معلومات الاتصال</h1>
                 </div>
                 <p>
-                    <?php echo localize($page, 'content'); ?>
+                    <?php echo localize($page_contactus, 'content'); ?>
                 </p>
                 <hr>
                 <div class="contact-info">
                     <ul>
                           <li> <i class="icon-globe" ></i> <?php echo  $settings->address; ?></li>
                         <li> <i class="icon-bullhorn" ></i><?php echo $settings->phone; ?></li>                 
-                        <li> <i class="icon-envelope" ></i> <a href="mailto:info@aton.com.eg"><?php echo $settings->email; ?></a> </li>
+                        <li> <i class="icon-envelope" ></i> <a href="mailto:<?php echo $settings->email; ?>"><?php echo $settings->email; ?></a> </li>
                     </ul>
                 </div>
             </div>

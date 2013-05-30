@@ -31,7 +31,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
 font-family: "ge_eastregular";
-padding: 22px 29px;
+padding: 22px 21px;
 }
 /* Offset the responsive button for proper vertical alignment */
     .navbar .btn-navbar {

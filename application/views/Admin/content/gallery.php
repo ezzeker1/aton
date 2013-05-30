@@ -13,11 +13,16 @@
 
                             <?php foreach ($images as $image) { ?>
                                 <li>
+
                                     <a href="<?php echo $image['url']; ?>" class="ui-lightbox">
                                         <img src="<?php echo $image['thumb_url']; ?>" alt="" />
                                     </a>
 
-                                    <a href="<?php echo  $image['url'];  ?>" class="preview"></a>
+                                    <a href="<?php echo $image['url']; ?>" class="preview"></a>
+                                    <a class="btn btn-small btn-danger confirm-popup btn-warning" 
+                                       href="<?php echo base_url('admin/gallery/delete/' . basename($image['url'] ). '/gallery?backuri=gallery'); ?>">
+                                        <i class="btn-icon-only icon-remove">X</i>										
+                                    </a>
                                 </li>
                             <?php } ?>
 
@@ -36,7 +41,7 @@
                     </div> <!-- /widget-header -->	
                     <div class="widget-content">
                         <br />
-                        <form data-validate="parsley"  method="POST"  enctype="multipart/form-data" action="<?php echo base_url('admin/gallery/add'); ?>" id="validation-form" class="form-horizontal">
+                        <form data-validate="parsley"  method="POST"  enctype="multipart/form-data" action="<?php echo base_url('admin/gallery/add/gallery?backuri=gallery'); ?>" id="validation-form" class="form-horizontal">
                             <fieldset>
                                 <div class="control-group">
                                     <label class="control-label" for="name">Caption</label>

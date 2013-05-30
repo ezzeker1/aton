@@ -52,5 +52,6 @@
 			</div> <!-- /widget -->
 	    </div> <!-- /span12 -->
       </div> <!-- /row -->
+      <?php echo isset($extra_content)?$extra_content:''; ?>
     </div> <!-- /container -->
 </div>

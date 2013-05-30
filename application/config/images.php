@@ -14,12 +14,16 @@ $config = array(
             'lare' => '250x250'
         ),
         'slider' => array(
-            'small' => '200x150',
+            'medium' => '200x150',
             'large' => '1200x720'
         ),
-        'applications'=>array(
-            'small'=>'335x150',
-            'large'=>'770x300'
+        'aboutus' => array(
+            'medium' => '179x89',
+            'large' => '358x177'
+        ),
+        'applications' => array(
+            'medium' => '335x150',
+            'large' => '770x300'
         )
     )
 );

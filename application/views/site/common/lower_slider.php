@@ -4,7 +4,7 @@
     <div class="span12">
     
     <div class="section-header">
-    	<h1>أهم الأستخدامات</h1>
+        <h1><?php echo lang('home_common_application'); ?></h1>
     </div>
     
     	<!-- Elastislide Carousel -->

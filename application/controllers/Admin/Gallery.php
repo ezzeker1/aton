@@ -21,7 +21,8 @@ class Gallery extends Logged_controller {
                 'plugins/lightbox/jquery.lightbox.min.js',
                 'demo/gallery.js',
                 'plugins/validate/jquery.validate.js',
-                'demo/validation.js'
+                'demo/validation.js',
+                'plugins/msgbox/jquery.msgbox.min.js'
             )),
             'assets_css' => array_merge($this->assets_css, array(
                 '../js/plugins/lightbox/themes/evolution-dark/jquery.lightbox.css',
@@ -35,34 +36,39 @@ class Gallery extends Logged_controller {
         $this->load->view('admin/layouts/template', $this->data);
     }
 
-    function add() {
-        $this->_upload();
+    function add($image_group = false) {
+        $this->_upload($image_group);
     }
 
-    function _delete() {
-        $deleted = $this->gallery_model->delete($this->input->post('images_names'));
+    function delete($url, $image_group) {
+        $deleted = $this->gallery_model->delete($url,$image_group);
         if (!$deleted)
             $this->notify->set_message('Error occured while deleting the image', 'error');
         else
             $this->notify->set_message('Image has been deleted successfully', 'success');
-        redirect('admin/gallery');
+
+        $uri = $this->input->get('backuri');
+        if (isset($uri))
+            redirect('admin/' . $uri);
+        else
+            redirect('admin/gallery');
     }
 
-    function _upload() {
+    function _upload($image_group) {
 
         $sizes = $this->config->item('image_sizes');
         $config[0] = array(
             'input_name' => 'userfile',
             'file_name' => $this->input->post('caption'),
-            'path' => 'gallery',
-            'sizes' => array($sizes['gallery']['large'])
+            'path' => $image_group,
+            'sizes' => array($sizes[$image_group]['large'])
         );
 
         $config[1] = array(
             'input_name' => 'userfile',
             'file_name' => $this->input->post('caption'),
-            'path' => 'gallery/thumbs',
-            'sizes' => array($sizes['gallery']['medium'])
+            'path' => $image_group . '/thumbs',
+            'sizes' => array($sizes[$image_group]['medium'])
         );
 
         $this->load->library('upload');
@@ -74,7 +80,12 @@ class Gallery extends Logged_controller {
         else
             $this->notify->set_message('Image has been added successfully', 'success');
 
-        redirect('admin/gallery');
+        //TODO to know how to redirect to the same page
+        $uri = $this->input->get('backuri');
+        if (isset($uri))
+            redirect('admin/' . $uri);
+        else
+            redirect('admin/gallery');
     }
 
 }

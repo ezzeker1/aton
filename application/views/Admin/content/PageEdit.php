@@ -67,5 +67,6 @@
 	    </div> <!-- /span12 -->     	
       	
       </div> <!-- /row -->
+      <?php echo $this->widgets->load(); ?>
     </div> <!-- /container -->
 </div>

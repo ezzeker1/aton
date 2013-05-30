@@ -46,3 +46,13 @@ function localize($object,$property)
     $property=$property.'_'.$locale;
     return $object->$property;
 }
+/*
+ * Strip file extension
+ */
+if(!function_exists('strip_ext')){
+    function strip_ext($file){
+        $info = pathinfo($file);
+        $file_name =  basename($file,'.'.$info['extension']);
+        return $file_name; 
+    }
+}

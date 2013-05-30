@@ -7,12 +7,12 @@
                 <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
                 <div class="container">
 
-                    <div class="container">
+                    <div class="container main_slider">
                         <div class="row-fluid">
 
                             <div class="span10 logo-wrap clearfix">
                                 <div class="slogan pull-right span4">
-                                    <h1>شركة أتون لأنظمة الطاقة الشمسية ذ.م.م.</h1>
+                                    <h1><?php echo lang('top_slogan'); ?></h1>
                                 </div>
                                 <div class="logo pull-left span3"><a class="brand" href="index.htm"><img src="<?php base_url(); ?>resources/site/images/logo.png" width="192" height="77" alt="Aton logo"></a></div> 
                             </div>      
@@ -36,8 +36,8 @@
 
                             <div class="nav-collapse collapse">
                                 <ul class="nav">
-                                    <li><a href="<?php echo base_url('home'); ?>">الرئيسية</a></li>
-                                    <li class="dropdown <?php echo isset($application_active) ? 'active' : ''; ?>"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">التطبيقات   <b class="caret"></b></a>
+                                    <li><a href="<?php echo base_url('home'); ?>"><?php echo lang('menu_home'); ?></a></li>
+                                    <li class="dropdown <?php echo isset($application_active) ? 'active' : ''; ?>"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_applications'); ?><b class="caret"></b></a>
                                         <ul class="dropdown-menu ">
                                             <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الأول</a></li>
                                             <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الثانى</a></li>
@@ -46,16 +46,16 @@
                                             <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الخامس</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown <?php echo isset($product_active) ? 'active' : ''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">المنتجات  <b class="caret"></b></a>
+                                    <li class="dropdown <?php echo isset($product_active) ? 'active' : ''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_products'); ?><b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <?php foreach ($categories as $category) { ?>
                                                 <li> <a href="<?php echo base_url('category/' . $category->id); ?>">  <?php echo localize($category, 'name'); ?></a></li>
                                             <?php } ?>
                                         </ul>
                                     </li>
-                                    <li class="<?php echo isset($gallery_active) ? 'active' : ''; ?>"> <a href="<?php echo base_url('gallery'); ?>">معرض الصور</a></li>
-                                    <li class="<?php echo isset($about_active) ? 'active' : ''; ?>"><a href="<?php echo base_url('about-us'); ?>">من نحن</a></li>
-                                    <li class="<?php echo isset($contact_active) ? 'active' : ''; ?>"> <a href="<?php echo base_url('contact-us'); ?>">الاتصال بنا</a></li>
+                                    <li class="<?php echo isset($gallery_active) ? 'active' : ''; ?>"> <a href="<?php echo base_url('gallery'); ?>"><?php echo lang('menu_gallery'); ?></a></li>
+                                    <li class="<?php echo isset($about_active) ? 'active' : ''; ?>"><a href="<?php echo base_url('about-us'); ?>"><?php echo lang('menu_aboutus'); ?></a></li>
+                                    <li class="<?php echo isset($contact_active) ? 'active' : ''; ?>"> <a href="<?php echo base_url('contact-us'); ?>"><?php echo lang('menu_contactus'); ?></a></li>
                                 </ul>
 
                                 <!--/.nav-collapse --> 
