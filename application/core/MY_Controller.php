@@ -89,8 +89,10 @@ class FrontController extends CI_Controller {
         $this->_load_assets();
         $this->lang->load('messages', $this->current_language);
         $this->load->model('categories_model');
+        $this->load->model('applications_model');
         $this->load->vars(array(
-            'categories'=>$this->categories_model->get_category()
+            'categories'=>$this->categories_model->get_category(),
+            'applications'=>$this->applications_model->get()
         ));
     }
 
@@ -106,10 +108,10 @@ class FrontController extends CI_Controller {
             'holder.js'
         );
         $this->assets_css = array(
-            "bootstrap.css",
-            "bootstrap-responsive.css",
+            localize_css("bootstrap.css"),
+            localize_css("bootstrap-responsive.css"),
             "elastislide.css",
-            "boorstrap-over.css",
+            localize_css("boorstrap-over.css"),
             "aton.css"
         );
         $this->load->vars(array(

@@ -59,10 +59,8 @@ class Products_model extends CI_Model {
         }
     }
 
-    
-    function get_product($id)
-    {
-        $this->db->where('id',$id);
+    function get_product($id) {
+        $this->db->where('id', $id);
         return $this->db->get($this->products_table)->row();
     }
 
@@ -74,6 +72,18 @@ class Products_model extends CI_Model {
         if ($result) {
             foreach ($result as $row) {
                 $product_names[$row->id] = $row->name;
+            }
+            return $product_names;
+        } else {
+            return FALSE;
+        }
+    }
+
+    function get_product_list_2() {
+        $result = $this->db->get('products')->result();
+        if ($result) {
+            foreach ($result as $row) {
+                $product_names[$row->id] = $row->name_en;
             }
             return $product_names;
         } else {

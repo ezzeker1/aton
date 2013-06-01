@@ -21,16 +21,16 @@
                                 <div id="en" class="tab-pane active">
                                     <fieldset>
                                         <div class="control-group">
-                                            <label class="control-label" for="product_name_en">Product Name </label>
+                                            <label class="control-label" for="title_en">Product Name </label>
                                             <div class="controls">
-                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_en"id="name" value="<?php echo set_input($application, 'ttle_en'); ?>">
+                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="title_en"id="name" value="<?php echo set_input($application, 'ttle_en'); ?>">
                                             </div>
                                         </div>
 
                                         <div class="control-group">
-                                            <label class="control-label" for="product_description">Product Description</label>
+                                            <label class="control-label" for="description_en">Product Description</label>
                                             <div class="controls">
-                                                <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_en" id="message" rows="4"><?php echo set_input($application, 'description_en'); ?></textarea>
+                                                <textarea data-required="true" data-trigger="change" class="span4 rich" name="description_en" id="message" rows="4"><?php echo set_input($application, 'description_en'); ?></textarea>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -38,16 +38,16 @@
                                 <div id="ar" class="tab-pane">     
                                     <fieldset>
                                         <div class="control-group">
-                                            <label class="control-label" for="product_name_ar">اسم  </label>
+                                            <label class="control-label" for="title_ar">اسم  </label>
                                             <div class="controls">
-                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="product_name_ar"id="name" value="<?php echo set_input($application, 'ttle_ar'); ?>">
+                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="title_ar"id="name" value="<?php echo set_input($application, 'ttle_ar'); ?>">
                                             </div>
                                         </div>
 
                                         <div class="control-group">
-                                            <label class="control-label" for="product_description">تفصيل</label>
+                                            <label class="control-label" for="description_ar">تفصيل</label>
                                             <div class="controls">
-                                                <textarea data-required="true" data-trigger="change" class="span4 rich" name="product_description_ar" id="message" rows="4" ><?php echo set_input($application, 'description_ar'); ?></textarea>
+                                                <textarea data-required="true" data-trigger="change" class="span4 rich" name="description_ar" id="message" rows="4" ><?php echo set_input($application, 'description_ar'); ?></textarea>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -55,13 +55,23 @@
                                 <div class="control-group">
                                     <label class="control-label" for="categoryNameSelect">Photo </label>
                                     <div class="controls">
-                                        <input  name="application_picture" id="application_picture" type='file' onchange="readURL(this,'application_picture_display');" style="display:none !important;"/>
-                                        <input class="btn" name='upload_btn' value="Browse"  type='button' onclick="trigger_upload('application_picture')"/> 
+                                        <?php
+                                        foreach ($related_products as $id => $product) {
+                                            ?>
+                                            <label class="checkbox">
+                                                <?php echo $product; ?>
+                                                <input type="checkbox" value="<?php echo $id; ?>" name="related_products[]">
+                                            </label>
+                                        <?php }
+                                        ?>
                                     </div>
                                 </div>
+
                                 <div class="control-group">
+                                    <label class="control-label" for="categoryNameSelect">Photo </label>
                                     <div class="controls">
-                                        <img  id="application_picture_display" class="instant_display" src=""
+
+                                        <input type="file" name="userfile[]" t class="btn"  multiple/>
                                     </div>
                                 </div>
                                 <div class="control-group">

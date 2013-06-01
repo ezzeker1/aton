@@ -43,6 +43,7 @@ class Products extends Logged_controller {
         //Validating fields
         if ($this->validateUserInput()) {
             //Insert the data to database and return the recordID
+            var_dump($_FILES);
             $recordId = $this->insert_record();
             if ($recordId) {
                 $this->createFilesFolder($recordId);
@@ -50,16 +51,16 @@ class Products extends Logged_controller {
                 $this->upload_pdf($recordId);
                 $this->notify->set_message('Product has been added successfully', 'success');
             }
-            else
-                $this->notify->set_message('Error occured while adding product', 'error');
-            redirect('admin/products');
+//            else
+//                $this->notify->set_message('Error occured while adding product', 'error');
+//            redirect('admin/products');
         }
         //set page data
         $this->data['widget_header'] = 'Add product';
         $this->data['form_action_button'] = 'Add';
         $this->data['controller_action'] = 'add';
-        $this->data['product_info']=NULL;
-        $this->data['product_img_path']=NULL;
+        $this->data['product_info'] = NULL;
+        $this->data['product_img_path'] = NULL;
         $this->loadform();
     }
 
@@ -237,6 +238,7 @@ class Products extends Logged_controller {
         $config['max_width'] = '9999';
         $config['max_height'] = '9999';
         $config['input_name'] = 'product_picture';
+        $config['file_name'] = $recordId;
         $this->load->library('upload', $config);
         //incase of failed upload 
         if (!$this->upload->do_upload('product_picture')) {
@@ -250,9 +252,11 @@ class Products extends Logged_controller {
         $config['upload_path'] = './uploads/products/' . $recordId . '/';
         $config['allowed_types'] = 'pdf';
         $config['input_name'] = 'product_pdf';
+        $config['file_name'] = $recordId;
         $this->load->library('upload', $config);
         //incase of failed upload 
         $uploadResult = $this->upload->do_upload('product_pdf');
+        var_dump($this->upload->display_errors());
         if ($uploadResult) {
             return FALSE;
         }

@@ -27,10 +27,10 @@ class Pages extends Logged_controller {
             'tinymce' => initialize_tinymce()
         );
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('title_en', 'required', 'Title is required');
-        $this->form_validation->set_rules('title_ar', 'required', 'content is required');
-        $this->form_validation->set_rules('content_en', 'required', 'Arabic title is required');
-        $this->form_validation->set_rules('content_ar', 'required', 'Arabic content is required');
+        $this->form_validation->set_rules('title_en[]', 'required', 'Title is required');
+        $this->form_validation->set_rules('title_ar[]', 'required', 'content is required');
+        $this->form_validation->set_rules('content_en[]', 'required', 'Arabic title is required');
+        $this->form_validation->set_rules('content_ar[]', 'required', 'Arabic content is required');
     }
 
     function edit($page) {
@@ -63,14 +63,40 @@ class Pages extends Logged_controller {
             $data = array(
                 'images' => $this->gallery_model->get_images(false, 'slider')
             );
+            $this->widgets->set($page, $data);
         }
         if ($page == 'aboutus') {
             $this->load->model('gallery_model');
             $data = array(
                 'images' => $this->gallery_model->get_images(false, 'aboutus')
             );
+            $this->widgets->set($page, $data);
         }
-        $this->widgets->set($page, $data);
+    }
+
+    public function edit_about_page() {
+//        var_dump($_POST);
+        if ($this->form_validation->run() == TRUE) {
+            $data = array(
+                'name' => $this->input->post('name'),
+                'title_en' => $this->input->post('title_en'),
+                'title_ar' => $this->input->post('title_ar'),
+                'content_en' => $this->input->post('content_en'),
+                'content_ar' => $this->input->post('content_ar'),
+            );
+            if (!$this->pages_model->update_about($data))
+                $this->notify->set_message('Error occured while updating the about us page', 'error');
+            else
+                $this->notify->set_message('Page has been updated successfully', 'success');
+
+//            var_dump($_POST);
+            redirect('admin/pages/aboutus');
+        }
+        
+        $this->data['h3'] = 'About us';
+        $this->data['about'] = $this->pages_model->get_about();
+        $this->data['main_content'] = 'about_us';
+        $this->load->view('admin/layouts/template', $this->data);
     }
 
 }

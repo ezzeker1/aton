@@ -40,7 +40,7 @@ class Categories extends Logged_controller {
         $this->load->view('admin/layouts/table', $this->data);
     }
 
-    function add_category() {
+    function add() {
         //Validate user input
         if ($this->validate_user_input() == true) {
             //Validation Successful
@@ -52,7 +52,8 @@ class Categories extends Logged_controller {
              * Should change after we agree on the Crud design to hold multi lang
              * Data
              */
-            $payload = array('name_ar' => $name_ar,
+            $payload = array(
+                'name_ar' => $name_ar,
                 'name_en' => $name_en,
                 'description_ar' => $description_ar,
                 'description_en' => $description_en);
@@ -63,24 +64,15 @@ class Categories extends Logged_controller {
                 $this->notify->set_message('Category has been added successfully', 'success');
             redirect('admin/categories');
         }
+        $this->data['category_info'] = null;
         $this->data['action_label'] = 'Add';
         $this->data['main_content'] = 'categories';
         $this->data['controller_action'] = 'add';
         $this->load->view('admin/layouts/template', $this->data);
     }
 
-    function edit($id)
-    {
-        $category_info = $this->categories_model->get_category($id);
-        $this->data['category_info'] =$category_info[0];
-        $this->data['controller_action'] = 'edit_category/'.$id;
-        $this->data['action_label'] = 'Edit';
-        $this->data['main_content'] = 'categories';
-        $this->load->view('admin/layouts/template', $this->data);
-        
-    }
-    
-    function edit_category($id) {
+
+    function edit($id) {
         if (isset($id)) {
             //Validate user input
             if ($this->validate_user_input() == true) {
@@ -104,8 +96,13 @@ class Categories extends Logged_controller {
                     $this->notify->set_message('Category has been edited successfully', 'success');
                 redirect('admin/categories');
             }
+            $category_info = $this->categories_model->get_category($id);
+            $this->data['category_info'] = $category_info[0];
+            $this->data['controller_action'] = 'edit/' . $id;
+            $this->data['action_label'] = 'Save';
+            $this->data['main_content'] = 'categories';
+            $this->load->view('admin/layouts/template', $this->data);
         }
-        
     }
 
     function delete($id) {
@@ -125,14 +122,14 @@ class Categories extends Logged_controller {
         //Form validation Rules
         //Category name must be unique and it is required.
         //Category description is not required and is not unique.
-        $this->form_validation->set_rules('category_name_ar', 'Category Name', 'required|is_unique[categories.name_ar]');
-        $this->form_validation->set_rules('category_name_en', 'Category Name', 'required|is_unique[categories.name_en]');
+        $this->form_validation->set_rules('category_name_ar', 'Category Name', 'required');
+        $this->form_validation->set_rules('category_name_en', 'Category Name', 'required');
 
         return ($this->form_validation->run());
     }
 
     function datatable() {
-        $this->datatables->select('id,name_en,name_ar,description_en,description_ar')
+        $this->datatables->select('id,name_en,description_en,name_ar,description_ar')
                 ->add_column('Edit', anchor('admin/' . $this->router->class . '/edit/$1', '<i class="btn-icon-only icon-pencil"></i>', 'class="btn btn-small"'), 'id')
                 ->add_column('Delete', anchor('admin/' . $this->router->class . '/delete/$1', '<i class="btn-icon-only icon-remove "></i>', 'class="confirm-popup btn btn-small btn-warning"'), 'id')
                 ->from('categories');

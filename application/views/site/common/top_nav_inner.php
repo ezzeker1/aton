@@ -14,8 +14,8 @@
                         <div class="row-fluid">
 
                             <div class="span10 logo-wrap clearfix">
-                                <div class="slogan-inner pull-right span4">
-                                   <h1><?php echo lang('top_slogan'); ?></h1>
+                                <div class="slogan-inner pull-right span6">
+                                    <h1><?php echo lang('top_slogan'); ?></h1>
                                 </div>
                                 <div class="logo-inner pull-left span3"><a class="brand" href="index.htm"><img src="<?php echo base_url(); ?>resources/site/images/logo.png" width="192" height="77" alt="Aton logo"></a></div> 
                             </div>      
@@ -44,11 +44,15 @@
                                     <li><a href="<?php echo base_url('home'); ?>"><?php echo lang('menu_home'); ?></a></li>
                                     <li class="dropdown <?php echo isset($application_active) ? 'active' : ''; ?>"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_applications'); ?><b class="caret"></b></a>
                                         <ul class="dropdown-menu ">
-                                            <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الأول</a></li>
-                                            <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الثانى</a></li>
-                                            <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الثالث</a></li>                    
-                                            <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الرابع</a></li>
-                                            <li><a href="<?php echo base_url('applications'); ?>">التطبيق  الخامس</a></li>
+                                            <?php
+                                            if (isset($applications)) {
+                                                foreach ($applications as $application) {
+                                                    ?>
+                                                    <li><a href = "<?php echo base_url('applications/' . $application->id); ?>"><?php echo localize($application, 'title'); ?></a></li>
+                                                <?php
+                                                }
+                                            }
+                                            ?>
                                         </ul>
                                     </li>
                                     <li class="dropdown <?php echo isset($product_active) ? 'active' : ''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_products'); ?><b class="caret"></b></a>

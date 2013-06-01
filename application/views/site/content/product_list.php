@@ -4,7 +4,7 @@
         <div class="span12">
 
             <div class="header-img">
-                <h1 class="inner-page-header">منتجاتنا</h1>
+                <h1 class="inner-page-header"><?php echo lang('our_products'); ?></h1>
             </div>
 
         </div>
@@ -15,7 +15,7 @@
 <div class="container-fluid inner-data-wrap">
     <div class="row-fluid">
 
-   <?php $this->load->view('site/common/side_products'); ?>
+        <?php $this->load->view('site/common/side_products'); ?>
 
         <div class="span9">  
             <?php
@@ -38,7 +38,7 @@
             ?>
 
             <div class="pagination pagination-centered">
-<?= $pages ?>
+                <?= $pages ?>
             </div>
 
         </div>

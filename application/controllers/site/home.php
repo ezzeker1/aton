@@ -23,11 +23,14 @@ class Home extends FrontController {
         $this->data['slider_images'] = $this->gallery_model->get_images(false, 'slider');
         $this->data['home_products'] = $this->products_model->get_products_max(4);
         $this->data['page_home'] = $this->pages_model->get('home');
+        $this->data['home_active'] = TRUE;
         $this->data['main_content'] = 'home';
         $this->load->view('site/layouts/general', $this->data);
     }
 
-    function load_about($page) {
+    function load_about($aboutus) {
+        $this->load->model('pages_model');
+        $this->data['about_us'] = $this->pages_model->get_about();
         $this->data['about_active'] = TRUE;
         $this->data['main_content'] = 'about';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
@@ -75,7 +78,7 @@ class Home extends FrontController {
         echo $this->email->print_debugger();
     }
 
-    function load_application() {
+    function load_application($id) {
         $this->data['assets_js'] = array_merge($this->assets_js, array(
             'responsiveslides.min.js',
             "core-script.js"
@@ -83,6 +86,12 @@ class Home extends FrontController {
         $this->data['assets_css'] = array_merge($this->assets_css, array(
             'responsiveslides.css'
                 ));
+        $this->data['id'] = $id;
+        $this->load->model('gallery_model');
+        $this->load->model('applications_model');
+        $this->data['images'] = $this->gallery_model->get_images(false, 'applications/' . $id);
+        $this->data['related_products'] = $this->applications_model->get_related_products($id);
+        $this->data['application'] = $this->applications_model->get_one($id);
         $this->data['application_active'] = TRUE;
         $this->data['main_content'] = 'application';
         $this->load->view('site/layouts/inner', $this->data);

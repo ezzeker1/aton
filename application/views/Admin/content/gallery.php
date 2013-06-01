@@ -46,7 +46,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="name">Caption</label>
                                     <div class="controls">
-                                        <input data-required="true" data-trigger="change" type="text" class="input-large" name="caption" id="name">
+                                        <input data-required="true" data-trigger="change" data-type="alphanum" type="text" class="input-large" name="caption" id="name">
                                     </div>
                                 </div>
                                 <div class="control-group">

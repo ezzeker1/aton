@@ -22,6 +22,7 @@ class Gallery_model extends CI_Model {
             $this->gallery_path = realpath(APPPATH . '../uploads/' . $folder . '/');
             $this->gallery_path_url = base_url() . 'uploads/' . $folder . '/';
         }
+//        var_dump($folder);
         //scan the files in the folder
         $files = $this->scan_dir($this->gallery_path);
         if ($limit)

@@ -4,22 +4,19 @@
         <div class="span12">
 
             <div class="header-img">
-                <h1 class="inner-page-header">معرض الصور  </h1>
+                <h1 class="inner-page-header"><?php echo lang('gallery'); ?> </h1>
             </div>
 
         </div>
     </div>
 </div>
-
-
 <div class="container-fluid inner-data-wrap">
     <div class="row-fluid">
 
         <div class="span12">    
             <div class="section-header green-title">
-                <h1>معرض الصور  </h1>
+                <h1><?php echo lang('gallery'); ?></h1>
             </div>    
-
             <div class="content">
                 <div id="rg-gallery" class="rg-gallery">
                     <div class="rg-thumbs">
@@ -37,7 +34,7 @@
                                             <img src="<?php echo $image['thumb_url']; ?>"
                                                  data-large="<?php echo $image['url']; ?>" 
                                                  alt="<?php echo $image['caption']; ?>" 
-                                                 data-description="<?php echo $image['caption']; ?>" 
+                                                 data-description="<?php echo $image['caption']; ?>" />
                                         </a>
                                     </li>   
                                     <?php }?>

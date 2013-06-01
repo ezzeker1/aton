@@ -98,7 +98,7 @@
                 <div class="quotation">
                     <h1 class="green-title"><?php echo lang('home_quote');?>  </h1>
                     <p><?php echo lang('home_quote_text');?></p>
-                    <a class="" href="#"><?php echo lang('more'); ?></a>
+                    <a class="" href="<?php echo base_url('quote'); ?>"><?php echo lang('more'); ?></a>
 
                 </div>
                 <br><br><br><br><br><br>

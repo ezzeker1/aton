@@ -45,7 +45,7 @@ $route['default_controller'] = "site/home";
 $route['404_override'] = '';
 
 
-
+$route['admin/pages/aboutus']='admin/pages/edit_about_page';
 $route['admin/pages/(:any)'] = 'admin/pages/edit/$1';
 $route['admin/(:any)'] = 'admin/$1';
 $route['home'] = 'site/home';
@@ -58,7 +58,7 @@ $route['category/(:num)']='site/product/load_category/$1';
 $route['product-list'] = 'site/product/product_list';
 //$route['product-list/page/(:num)'] = 'site/product/product_list';
 $route['product/(:any)'] = 'site/product/load/$1';
-$route['applications'] = 'site/home/load_application';
-
+$route['applications/(:any)'] = 'site/home/load_application/$1';
+$route['quote']='site/quote';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

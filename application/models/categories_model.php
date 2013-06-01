@@ -62,6 +62,8 @@ class Categories_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->delete($this->categories_table);
         if ($this->db->affected_rows() > 0) {
+            $this->db->where('category_id', $id);
+            $this->db->delete('products');
             return TRUE;
         } else {
             return FALSE;
@@ -91,7 +93,7 @@ class Categories_model extends CI_Model {
                         where c.id = p.category_id';
         if ($id)
             $query .= ' AND c.id  = ' . $id . '';
-        $result=$this->db->query($query);
+        $result = $this->db->query($query);
         return $result->result();
     }
 

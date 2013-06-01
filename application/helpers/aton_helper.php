@@ -13,12 +13,11 @@ function set_input($object, $property) {
  * @return current local
  */
 
-function get_locale($short=false) {
+function get_locale($short = false) {
     $ci = &get_instance();
     $locale = $ci->session->userdata('language');
-    if($short)
-    {
-        if($locale=='english')
+    if ($short) {
+        if ($locale == 'english')
             return 'en';
         else
             return 'ar';
@@ -37,22 +36,48 @@ function set_locale($locale) {
     $ci = &get_instance();
     $locale = $ci->session->set_userdata('language', $locale);
 }
+
 /*
  * localize
  */
-function localize($object,$property)
-{
-    $locale=  get_locale(true);
-    $property=$property.'_'.$locale;
+
+function localize($object, $property) {
+    $locale = get_locale(true);
+    $property = $property . '_' . $locale;
     return $object->$property;
 }
+
 /*
  * Strip file extension
  */
-if(!function_exists('strip_ext')){
-    function strip_ext($file){
+if (!function_exists('strip_ext')) {
+
+    function strip_ext($file) {
         $info = pathinfo($file);
-        $file_name =  basename($file,'.'.$info['extension']);
-        return $file_name; 
+        $file_name = basename($file, '.' . $info['extension']);
+        return $file_name;
     }
+
+}
+/*
+ * localize css
+ */
+
+function localize_css($css) {
+    $locale = get_locale(true);
+    return strip_ext($css) . '_' . $locale . '.css';
+}
+
+/*
+ * transpose array
+ */
+
+function transpose_array($arr) {
+    $out = array();
+    foreach ($arr as $key => $subarr) {
+        foreach ($subarr as $subkey => $subvalue) {
+            $out[$subkey][$key] = $subvalue;
+        }
+    }
+    return $out;
 }
