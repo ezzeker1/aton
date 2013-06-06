@@ -36,11 +36,15 @@ class notify {
         return $data;
     }
 
-    function get() {
+    function get($font_end = false) {
         $data = $this->get_message();
-        if ($data) {
+        if ($data && !$font_end) {
             $this->ci->load->vars($data);
             $this->ci->load->view('admin/common/notifications', $data);
+        }
+        if ($data && $font_end) {
+            $this->ci->load->vars($data);
+            $this->ci->load->view('site/common/notifications', $data);
         }
     }
 

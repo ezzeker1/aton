@@ -15,8 +15,8 @@
 |
 */
 
-//$config['base_url']	= 'http://localhost/aton';
-$config['base_url']	= 'http://www.aton-eg.com';
+$config['base_url']	= 'http://localhost/aton';
+//$config['base_url']	= 'http://www.aton-eg.com';
 
 
 $config['index_page'] = '';
@@ -62,7 +62,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'arabic';
 
 /*
 |--------------------------------------------------------------------------

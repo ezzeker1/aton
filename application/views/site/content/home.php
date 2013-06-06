@@ -60,13 +60,13 @@
         <div class="span8">
 
             <div class="section-header green-title">
-                <h1><?php echo lang('home_welcome') ?></h1>
+                <h1><?php echo localize($page_home, 'title'); ?></h1>
             </div>
 
             <div class="welcome-data">
 
                 <img src="<?php base_url(); ?>resources/site/images/welcome-img.jpg" width="769" height="183" alt="welcome img">
-                <h3><?php echo localize($page_home, 'title'); ?></h3>
+
                 <p>
                     <?php echo localize($page_home, 'content'); ?> 
                 </p>

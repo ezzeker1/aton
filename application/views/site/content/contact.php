@@ -3,7 +3,7 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="header-img">
-                <h1 class="inner-page-header"><?php echo lang('contact_contactus') ?></h1>
+           
             </div>
         </div>
     </div>
@@ -42,6 +42,7 @@
                 </div>
                 <form class="form-horizontal" data-validate="parsley"
                       id="registerHere" method='post' action="<?php echo base_url('site/home/contact_mail'); ?>" >
+                    <?php echo $this->notify->get(true); ?>
                     <fieldset>
                         <div class="control-group">
                             <label class="control-label" for="input01"><?php echo lang('name') ?></label>
@@ -52,7 +53,7 @@
                         <div class="control-group">
                             <label class="control-label" for="input01"><?php echo lang('email') ?></label>
                             <div class="controls">
-                                <input  data-required="true" data-trigger="change"  type="text" class="input-xlarge" id="user_email" name="user_email">
+                                <input  data-required="true" data-trigger="change"  data-type="email" type="email" class="input-xlarge" id="user_email" name="user_email">
                             </div>
                         </div>
                         <div class="control-group">

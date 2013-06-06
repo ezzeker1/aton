@@ -31,16 +31,21 @@
 <!-- Placed at the end of the document so the pages load faster --> 
 <?php echo load_js($assets_js, 'site'); ?>
 <script>
-        !function ($) {
-        $(function(){
+
+
+    $('html, body').animate({
+        scrollTop: $("#notify").offset().top
+    }, 2000);
+    !function($) {
+        $(function() {
             // carousel demo
             $('#myCarousel').carousel()
         })
     }(window.jQuery)
 </script>
 <script>
-        !function ($) {
-        $(function(){
+    !function($) {
+        $(function() {
             // carousel demo
             $('#myCarousel').carousel()
         })
@@ -48,7 +53,7 @@
 </script>
 
 <script>
-    $(function () {
+    $(function() {
         // Slideshow 3
         $("#slider3").responsiveSlides({
             auto: true,
@@ -56,15 +61,18 @@
             nav: true,
             speed: 500,
             namespace: "callbacks",
-            before: function () {
+            before: function() {
                 $('.events').append("<li>before event fired.</li>");
             },
-            after: function () {
+            after: function() {
                 $('.events').append("<li>after event fired.</li>");
             }
         });
 
     });
+
+
+
 </script>
 </body>
 </html>

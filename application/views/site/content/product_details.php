@@ -4,7 +4,7 @@
         <div class="span12">
 
             <div class="header-img">
-                <h1 class="inner-page-header"><?php echo localize($product, 'name'); ?></h1>
+            
             </div>
 
         </div>

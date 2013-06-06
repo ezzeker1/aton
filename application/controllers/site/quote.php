@@ -20,10 +20,12 @@ class Quote extends FrontController {
         $this->data['assets_js'] = array_merge($this->assets_js, array(
             'core-script.js',
             'parsley.extend.min.js'
-                ));
+        ));
     }
 
     public function index() {
+        $this->data['flash_message'] = $this->session->flashdata('message');
+
         $this->data['main_content'] = 'quote';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
     }
@@ -43,24 +45,31 @@ class Quote extends FrontController {
                 'Static water level' => $this->input->post('water_level'),
                 'Recovery rate' => $this->input->post('recovery_rate'),
                 'Pipe length' => $this->input->post('length_pipe'),
+                'Pipe Diameter'=>$this->input->post('pipe_diameter'),
                 'Water temprature' => $this->input->post('temprature'),
-                'Water quality' => $this->input->post('water_quality'),
+                'Application ' => $this->input->post('water_quality'),
                 'Tank available' => $this->input->post('tank_available'),
                 'Cable length' => $this->input->post('cable_length'),
                 'Power supply' => $this->input->post('power_supply'),
-                'notes' => $this->input->post('notes')
+                'notes' => $this->input->post('notes'),
+               
             )
         );
         $this->load->library('email');
 
-        $this->email->from($data['email'], $data['name']);
+        $this->email->from($data['details']['email'], $data['details']['name']);
         $this->email->to($this->email_address);
 
 
-        $this->email->subject('Quote from -' . $data['name']);
-        $this->email->message($this->load->view('site/email/quote', $data, TRUE));
+        $this->email->subject('Quote from -' . $data['details']['name']);
+        $message = $this->load->view('site/email/quote', $data, TRUE);
+        
+        $this->email->message($message);
 
-        $this->email->send();
+        if (!$this->email->send())
+            $this->notify->set_message(lang('quote.error'), 'error');
+        else
+            $this->notify->set_message(lang('quote.success'), 'success');
         redirect('quote');
     }
 

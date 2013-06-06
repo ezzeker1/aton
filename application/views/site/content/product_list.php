@@ -4,7 +4,7 @@
         <div class="span12">
 
             <div class="header-img">
-                <h1 class="inner-page-header"><?php echo lang('our_products'); ?></h1>
+           
             </div>
 
         </div>

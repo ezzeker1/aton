@@ -3,7 +3,7 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="header-img">
-                <h1 class="inner-page-header"><?php echo lang('home_common_application'); ?></h1>
+               
             </div>
         </div>
     </div>

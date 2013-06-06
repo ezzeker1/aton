@@ -105,14 +105,16 @@ class FrontController extends CI_Controller {
             'modernizr.custom.17475.js',
             'jquery.js',
             'bootstrap-rtl.js',
-            'holder.js'
+            'holder.js',
+            'plugins/msgbox/jquery.msgbox.min.js'
         );
         $this->assets_css = array(
             localize_css("bootstrap.css"),
             localize_css("bootstrap-responsive.css"),
             "elastislide.css",
             localize_css("boorstrap-over.css"),
-            "aton.css"
+            "aton.css",
+            '../js/plugins/msgbox/jquery.msgbox.css'
         );
         $this->load->vars(array(
             'assets_js' => $this->assets_js,

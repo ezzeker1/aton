@@ -10,7 +10,10 @@
                     <div class="container">
                         <div class="row-fluid">
 
-                            <div class="span10 logo-wrap clearfix">
+                            <div class="span12 logo-wrap clearfix">
+                            
+                            <div class="lorentz-logo"><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" width="237" height="72" alt="lorentz-logo"></a></div>
+                            
                                 <div class="slogan pull-right span6">
                                     <h1><?php echo lang('top_slogan'); ?></h1>
                                 </div>
