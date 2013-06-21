@@ -764,7 +764,7 @@ h3 {
 }
 
 h1 {
-  font-size: 38.5px;
+  font-size: 23px;
 }
 
 h2 {
@@ -4590,6 +4590,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   float: left;
   margin: 0 10px 0 0;
+  width:80%;
 }
 
 .navbar .nav.pull-right {
@@ -4603,10 +4604,11 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 15px 10px;
+  padding: 5px;
   color: #777777;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
+  font-weight: bold;
 }
 
 .navbar .nav .dropdown-toggle .caret {

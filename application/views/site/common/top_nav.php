@@ -12,12 +12,12 @@
 
                             <div class="span12 logo-wrap clearfix">
                             
-                            <div class="lorentz-logo"><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" width="237" height="72" alt="lorentz-logo"></a></div>
+                            <div class="lorentz-logo"><a href="#"><img src="<?php echo base_url(); ?>resources/site/images/lorentz-logo.png" width="237" height="72" alt="lorentz-logo"></a></div>
                             
                                 <div class="slogan pull-right span6">
                                     <h1><?php echo lang('top_slogan'); ?></h1>
                                 </div>
-                                <div class="logo pull-left span3"><a class="brand" href="index.htm"><img src="<?php base_url(); ?>resources/site/images/logo.png" width="192" height="77" alt="Aton logo"></a></div> 
+                                <div class="logo pull-left span3"><a class="brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>resources/site/images/logo.png" width="192" height="77" alt="Aton logo"></a></div> 
                             </div>      
 
                         </div>
@@ -55,7 +55,7 @@
                                     <li class="dropdown <?php echo isset($product_active) ? 'active' : ''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_products'); ?><b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <?php foreach ($categories as $category) { ?>
-                                                <li> <a href="<?php echo base_url('category/' . $category->id); ?>">  <?php echo localize($category, 'name'); ?></a></li>
+                                                <li> <a href="<?php echo base_url('categories/' . $category->id); ?>">  <?php echo localize($category, 'name'); ?></a></li>
 <?php } ?>
                                         </ul>
                                     </li>

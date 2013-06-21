@@ -53,15 +53,12 @@ class Applications extends Logged_controller {
             );
             $id = $this->applications_model->save($data);
             if ($id) {
-                if ($this->upload_photos($id))
-                    $this->notify->set_message('Applicaton has been added succssfully', 'success');
-                else {
-                    $this->notify->set_message('Error occured while uploading application photos', 'error');
-                }
+                $this->upload_pdf($id);
+                $this->notify->set_message('Applicaton has been added succssfully, you can add photos now', 'success');
             }
             else
                 $this->notify->set_message('Error occured while adding aapplication', 'error');
-            redirect('admin/applications');
+            redirect('admin/applications/edit/' . $id);
         }
         $this->data['main_content'] = 'application_edit';
         $this->load->view('admin/layouts/template', $this->data);
@@ -69,10 +66,14 @@ class Applications extends Logged_controller {
 
     function edit($id) {
         $this->data['h3'] = 'Add new application';
-        $this->data['controller_action'] = $this->data['form_action_button'] = 'add';
+        $this->data['controller_action'] = 'edit/' . $id;
+        $this->data['form_action_button'] = 'Save';
         $this->data['related_products'] = $this->products_model->get_product_list_2();
+        $this->data['checked_products'] = $this->prep_checked_products($this->applications_model->get_related_products($id));
+        $data['id'] = $id;
+        $this->set_widget($data, $id);
 
-        $this->data['application'] = null;
+        $this->data['application'] = $this->applications_model->get_one($id);
         if ($this->validate()) {
             $data = array(
                 'title_en' => $this->input->post('title_en'),
@@ -81,16 +82,14 @@ class Applications extends Logged_controller {
                 'description_ar' => $this->input->post('description_ar'),
                 'related_products' => $this->input->post('related_products'),
             );
-            $id = $this->applications_model->save($data,$id);
-            if ($id) {
-                if ($this->upload_photos($id))
-                    $this->notify->set_message('Applicaton has been updated succssfully', 'success');
-                else {
-                    $this->notify->set_message('Error occured while uploading application photos', 'error');
-                }
+
+            $saved = $this->applications_model->save($data, $id);
+            if ($saved) {
+                $this->upload_pdf($id);
+                $this->notify->set_message('Application has been updated successfully', 'success');
             }
             else
-                $this->notify->set_message('Error occured while adding aapplication', 'error');
+                $this->notify->set_message('Error occured while adding application', 'error');
             redirect('admin/applications');
         }
         $this->data['main_content'] = 'application_edit';
@@ -124,61 +123,34 @@ class Applications extends Logged_controller {
         return $this->form_validation->run();
     }
 
-    function upload_photos($id) {
-
-        $path = 'applications/' . $id;
-        $folder_path = 'uploads/' . $path . '/thumbs';
-        if (!is_dir($folder_path))
-            mkdir($folder_path, '0777', TRUE);
-
-
-        $sizes = $this->config->item('image_sizes');
-
-
-        $smallPhoto = array($sizes['applications']['medium']);
-        $largePhoto = array($sizes['applications']['large']);
-
-
-        foreach ($_FILES['userfile'] as $key => $val) {
-            $i = 1;
-            foreach ($val as $v) {
-                $field_name = "file_" . $i;
-                $_FILES[$field_name][$key] = $v;
-                $i++;
-            }
+    function prep_checked_products($array) {
+        $data = array();
+        foreach ($array as $obj) {
+            $data[] = $obj->id;
         }
-        unset($_FILES['userfile']);
-
-
-
-
-        foreach ($_FILES as $field_name => $file) {
-            $original = $this->_prep_upload($field_name, $file['name'], $smallPhoto, $largePhoto, $path);
-        }
-        if (is_string($original)) {
-            return false;
-        } else {
-            return true;
-        }
+        return $data;
     }
 
-    function _prep_upload($input_name, $photo_name, $smallPhoto, $largePhoto, $path) {
+    function set_widget($data, $id) {
+        $this->load->model('gallery_model');
+        $data['images'] = $this->gallery_model->get_images(false, 'applications/' . $id);
+        $this->widgets->set('application', $data);
+    }
 
-        $config[0] = array(
-            'input_name' => $input_name,
-            'file_name' => $photo_name,
-            'path' => $path,
-            'sizes' => $largePhoto
-        );
+    function upload_pdf($recordId) {
+        //configuring upload
+        $config['upload_path'] = './uploads/applications/'.$recordId.'/pdf';
+        $config['allowed_types'] = 'pdf';
+        $config['input_name'] = 'product_pdf';
+        $config['file_name'] = $recordId;
+        $this->load->library('upload',$config);
 
-        $config[1] = array(
-            'input_name' => $input_name,
-            'file_name' => $photo_name,
-            'path' => $path . '/thumbs',
-            'sizes' => $smallPhoto
-        );
-        $this->load->library('upload');
-        return $this->upload->custom_upload_multi($config, true);
+        $uploadResult = $this->upload->do_upload('application_pdf');
+
+        if ($uploadResult) {
+            return FALSE;
+        }
+        return TRUE;
     }
 
 }

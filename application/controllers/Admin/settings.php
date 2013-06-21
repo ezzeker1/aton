@@ -19,7 +19,6 @@ class Settings extends Logged_controller {
     }
 
     function index() {
-        $this->output->enable_profiler();
         $this->data['h3'] = 'Website settings';
         $this->data['buttons'] = form_submit('save', 'save', 'class="btn btn-danger btn"');
         anchor('admin/' . $this->router->class . '/add', 'Add new product', 'class="btn btn-primary"');

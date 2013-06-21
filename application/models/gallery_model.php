@@ -22,7 +22,7 @@ class Gallery_model extends CI_Model {
             $this->gallery_path = realpath(APPPATH . '../uploads/' . $folder . '/');
             $this->gallery_path_url = base_url() . 'uploads/' . $folder . '/';
         }
-//        var_dump($folder);
+
         //scan the files in the folder
         $files = $this->scan_dir($this->gallery_path);
         if ($limit)
@@ -69,7 +69,7 @@ class Gallery_model extends CI_Model {
      */
 
     function scan_dir($dir, $order = 'desc') {
-        $ignored = array('.', '..', 'thumbs', 'index.html');
+        $ignored = array('.', '..', 'thumbs', 'index.html','pdf');
 
         //if no dir found create one 
         if (!is_dir($dir))

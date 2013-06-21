@@ -49,6 +49,9 @@ class MY_Upload extends CI_Upload {
         $return = false;
         foreach ($params as $param) {
 
+            if (!is_dir(APPPATH . '../uploads/' . $param['path']))
+                mkdir(APPPATH . '../uploads/' . $param['path'], 0777, true);
+
             $config = array(
                 'allowed_types' => 'jpg|jpeg|gif|png|bmp',
                 'overwrite' => 'TRUE',
@@ -76,7 +79,7 @@ class MY_Upload extends CI_Upload {
         return $return;
     }
 
-    function make_thumb($data, $size, $wallpaper = FALSE) {
+    function make_thumb($data, $size, $wallpaper = FALSE, $maintain_ratio = FALSE) {
 
         $CI = & get_instance();
         // get width and height
@@ -84,10 +87,16 @@ class MY_Upload extends CI_Upload {
         $config['source_image'] = $data['full_path'];
         if (!$wallpaper)
             $config['new_image'] = $data['file_path'] . $data['raw_name'] . '_' . $size . $data['file_ext'];
-        $config['maintain_ratio'] = TRUE;
+
         $config['width'] = $sizes[0];
         $config['height'] = $sizes[1];
-//      /  $config['master_dim'] = $sizes[0] > $sizes[1] ? 'width' : 'height';
+        $config['maintain_ratio'] = FALSE;
+        if ($maintain_ratio) {
+            $config['maintain_ratio'] = TRUE;
+            $config['master_dim'] = $sizes[0] > $sizes[1] ? 'width' : 'height';
+        }
+
+
         $CI->image_lib->initialize($config);
 
         if (!$CI->image_lib->resize())

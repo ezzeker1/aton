@@ -23,7 +23,7 @@
                                         <div class="control-group">
                                             <label class="control-label" for="title_en">Product Name </label>
                                             <div class="controls">
-                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="title_en"id="name" value="<?php echo set_input($application, 'ttle_en'); ?>">
+                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="title_en" id="name" value="<?php echo set_input($application, 'title_en'); ?>">
                                             </div>
                                         </div>
 
@@ -40,7 +40,7 @@
                                         <div class="control-group">
                                             <label class="control-label" for="title_ar">اسم  </label>
                                             <div class="controls">
-                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="title_ar"id="name" value="<?php echo set_input($application, 'ttle_ar'); ?>">
+                                                <input data-required="true" data-trigger="change"  type="text" class="input-large" name="title_ar" id="name" value="<?php echo set_input($application, 'title_ar'); ?>">
                                             </div>
                                         </div>
 
@@ -53,27 +53,20 @@
                                     </fieldset>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label" for="categoryNameSelect">Photo </label>
+                                    <label class="control-label" for="categoryNameSelect">Related products </label>
                                     <div class="controls">
                                         <?php
                                         foreach ($related_products as $id => $product) {
                                             ?>
                                             <label class="checkbox">
                                                 <?php echo $product; ?>
-                                                <input type="checkbox" value="<?php echo $id; ?>" name="related_products[]">
+                                                <input type="checkbox" value="<?php echo $id; ?>" name="related_products[]" <?php echo isset($checked_products) && in_array($id, $checked_products) ? 'checked="checked"' : ''; ?> />
                                             </label>
                                         <?php }
                                         ?>
                                     </div>
                                 </div>
 
-                                <div class="control-group">
-                                    <label class="control-label" for="categoryNameSelect">Photo </label>
-                                    <div class="controls">
-
-                                        <input type="file" name="userfile[]" t class="btn"  multiple/>
-                                    </div>
-                                </div>
                                 <div class="control-group">
                                     <label class="control-label" for="application_pdf">PDF</label>
                                     <div class="controls">
@@ -93,5 +86,9 @@
                 </div> <!-- /widget -->					
             </div> <!-- /span12 -->     	
         </div> <!-- /row -->
+        <?php
+        if ( $controller_action != 'add')
+            echo $this->widgets->load();
+        ?>
     </div> <!-- /container -->
 </div> <!-- /main -->

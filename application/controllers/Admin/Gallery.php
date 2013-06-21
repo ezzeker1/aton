@@ -36,12 +36,16 @@ class Gallery extends Logged_controller {
         $this->load->view('admin/layouts/template', $this->data);
     }
 
-    function add($image_group = false) {
-        $this->_upload($image_group);
+    function add($image_group = false,$subfolder=FALSE) {
+        $this->_upload($image_group,$subfolder);
     }
 
-    function delete($url, $image_group) {
-        $deleted = $this->gallery_model->delete($url,$image_group);
+    function delete($url, $image_group, $subfolder = false) {
+        $path=$image_group;
+        if ($subfolder)
+            $path = $image_group . '/' . $subfolder;
+
+        $deleted = $this->gallery_model->delete($url, $path);
         if (!$deleted)
             $this->notify->set_message('Error occured while deleting the image', 'error');
         else
@@ -54,20 +58,24 @@ class Gallery extends Logged_controller {
             redirect('admin/gallery');
     }
 
-    function _upload($image_group) {
+    function _upload($image_group, $subfolder = false) {
+
+        $path = $image_group;
+        if ($subfolder)
+            $path = $image_group . '/' . $subfolder;
 
         $sizes = $this->config->item('image_sizes');
         $config[0] = array(
             'input_name' => 'userfile',
             'file_name' => $this->input->post('caption'),
-            'path' => $image_group,
+            'path' => $path,
             'sizes' => array($sizes[$image_group]['large'])
         );
 
         $config[1] = array(
             'input_name' => 'userfile',
             'file_name' => $this->input->post('caption'),
-            'path' => $image_group . '/thumbs',
+            'path' => $path . '/thumbs',
             'sizes' => array($sizes[$image_group]['medium'])
         );
 

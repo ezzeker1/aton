@@ -43,7 +43,6 @@ class Quote extends FrontController {
                 'Vertical Lift' => $this->input->post('vertical_lift'),
                 'Depth of the well' => $this->input->post('depth_well'),
                 'Static water level' => $this->input->post('water_level'),
-                'Recovery rate' => $this->input->post('recovery_rate'),
                 'Pipe length' => $this->input->post('length_pipe'),
                 'Pipe Diameter'=>$this->input->post('pipe_diameter'),
                 'Water temprature' => $this->input->post('temprature'),

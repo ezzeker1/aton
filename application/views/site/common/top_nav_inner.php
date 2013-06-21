@@ -1,48 +1,34 @@
-
-
 <body>
     <div class="container-fluid wood-Bg">
         <div class="container all-data-wrap"> 
-
             <!-- NAVBAR
             ================================================== -->
             <div class="navbar-wrapper-inner"> 
                 <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
                 <div class="container">
-
                     <div class="container">
                         <div class="row-fluid">
-
                             <div class="span12 logo-wrap clearfix">
-                            
-                            <div class="lorentz-logo"><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" width="237" height="72" alt="lorentz-logo"></a></div>
-                            
+                            <div class="lorentz-logo"><a href="#"><img src="<?php echo base_url(); ?>resources/site/images/lorentz-logo.png" width="237" height="72" alt="lorentz-logo"></a></div>
                                 <div class="slogan-inner pull-right span6">
                                     <h1><?php echo lang('top_slogan'); ?></h1>
                                 </div>
-                                <div class="logo-inner pull-left span3"><a class="brand" href="index.htm"><img src="<?php echo base_url(); ?>resources/site/images/logo.png" width="192" height="77" alt="Aton logo"></a></div> 
+                                <div class="logo-inner pull-left span3"><a class="brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>resources/site/images/logo.png" width="192" height="77" alt="Aton logo"></a></div> 
                             </div>      
 
                         </div>
                         <!-- /.row --> 
                     </div>
-
-
                     <div class="navbar navbar-inverse">        
                         <div class="navbar-inner span12"> 
-
-                            <div style="margin-left: 5%;" class="flags pull-left">
+                            <div class="flags pull-left">
                                 <ul class="clearfix">
                                     <li><a href="<?php echo base_url('home/change_locale/english?back_url=' . $this->uri->uri_string()); ?>"><img src="<?php echo base_url(); ?>resources/site/images/uk-flag.png" width="32" height="25" alt="uk-flag"></a></li>
                                     <li><a href="<?php echo base_url('home/change_locale/arabic?back_url=' . $this->uri->uri_string()); ?>"><img src="<?php echo base_url(); ?>resources/site/images/arabic-flag.png" width="32" height="25" alt="arabic-flag"></a></li>
                                 </ul>
                             </div>
-
-
                             <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-
-
-                            <div style="margin-right: 8%;" class="nav-collapse collapse">
+                            <div class="nav-collapse collapse">
                                 <ul class="nav">
                                     <li><a href="<?php echo base_url('home'); ?>"><?php echo lang('menu_home'); ?></a></li>
                                     <li class="dropdown <?php echo isset($application_active) ? 'active' : ''; ?>"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_applications'); ?><b class="caret"></b></a>
@@ -61,7 +47,7 @@
                                     <li class="dropdown <?php echo isset($product_active) ? 'active' : ''; ?> "><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><?php echo lang('menu_products'); ?><b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <?php foreach ($categories as $category) { ?>
-                                                <li> <a href="<?php echo base_url('category/' . $category->id); ?>">  <?php echo localize($category, 'name'); ?></a></li>
+                                                <li> <a href="<?php echo base_url('categories/' . $category->id); ?>">  <?php echo localize($category, 'name'); ?></a></li>
                                             <?php } ?>
                                         </ul>
                                     </li>

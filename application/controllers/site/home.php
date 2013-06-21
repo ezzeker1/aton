@@ -12,6 +12,7 @@ class Home extends FrontController {
         parent::__construct();
         $this->load->model('pages_model');
         $this->load->model('gallery_model');
+        
     }
 
     function index() {
@@ -20,8 +21,10 @@ class Home extends FrontController {
             'core-script.js'
         ));
         $this->load->model('products_model');
+        $this->load->model('applications_model');
         $this->data['slider_images'] = $this->gallery_model->get_images(false, 'slider');
-        $this->data['home_products'] = $this->products_model->get_products_max(4);
+        $this->data['home_products'] = $this->products_model->get_products_max();
+        $this->data['home_applications'] = $this->applications_model->get_with_images(4);
         $this->data['page_home'] = $this->pages_model->get('home');
         $this->data['home_active'] = TRUE;
         $this->data['main_content'] = 'home';
@@ -78,7 +81,7 @@ class Home extends FrontController {
 
         $this->email->from('info@aton-eg.com');
         $this->email->to($aton_email);
-        $this->email->reply_to($data['email'], $data['name']);
+        $this->email->reply_to($data['email']);
 
 
         $this->email->subject($data['subject']);
@@ -109,7 +112,7 @@ class Home extends FrontController {
         $this->data['application'] = $this->applications_model->get_one($id);
         $this->data['application_active'] = TRUE;
         $this->data['main_content'] = 'application';
-        $this->load->view('site/layouts/inner', $this->data);
+        $this->load->view('site/layouts/inner_no_slider', $this->data);
     }
 
     function change_locale($language) {

@@ -14,8 +14,6 @@
             <h1>Details</h1>
         </p>
         <table>
-
-
             <?php foreach ($details as $key => $value) { ?>
                 <tr>
                     <td>  <?php echo $key; ?></td>
@@ -24,7 +22,6 @@
                 </tr>
             <?php } ?>
         </table>
-
-    </div>
+    </div>  
 </body>
 </html>

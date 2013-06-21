@@ -47,8 +47,14 @@ class Pages extends Logged_controller {
             else
                 $this->notify->set_message('Page has been updated successfully' . $data['title_en'], 'success');
 
-//            var_dump($_POST);
             redirect('admin/pages/' . $page);
+        }
+        if ($page == 'aboutus') {
+            $this->data['sections'] = array(
+                'aboutus_vision' => 'Vision',
+                'aboutus_success_story' => 'Success Story',
+                'aboutus_mission' => 'Mission'
+            );
         }
         $this->set_widgets($page);
         $this->data['h3'] = $page;
@@ -75,7 +81,11 @@ class Pages extends Logged_controller {
     }
 
     public function edit_about_page() {
-//        var_dump($_POST);
+        $this->data['sections'] = array(
+            'aboutus_vision' => 'Vision',
+            'aboutus_success_story' => 'Success Story',
+            'aboutus_mission' => 'Mission'
+        );
         if ($this->form_validation->run() == TRUE) {
             $data = array(
                 'name' => $this->input->post('name'),
@@ -92,7 +102,8 @@ class Pages extends Logged_controller {
 //            var_dump($_POST);
             redirect('admin/pages/aboutus');
         }
-        
+
+        $this->set_widgets('aboutus');
         $this->data['h3'] = 'About us';
         $this->data['about'] = $this->pages_model->get_about();
         $this->data['main_content'] = 'about_us';

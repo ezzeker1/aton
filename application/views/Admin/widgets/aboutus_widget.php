@@ -6,15 +6,12 @@
                 <h3>About Us images</h3>
             </div> <!-- /widget-header -->		
             <div class="widget-content">
-
                 <ul class="gallery-container">
-
                     <?php
                     if (isset($images)) {
                         foreach ($images as $image) {
                             ?>
                             <li>
-
                                 <a href="<?php echo $image['url']; ?>" class="ui-lightbox">
                                     <img src="<?php echo $image['thumb_url']; ?>" alt="" />
                                 </a>
@@ -65,9 +62,7 @@
                                 </div>
                             </fieldset>
                         </form>
-
                     </div> <!-- /widget-content -->
-
                 </div> <!-- /widget -->	
             <?php } ?>
         </div> <!-- /span12 -->     

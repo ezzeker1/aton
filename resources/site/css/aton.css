@@ -31,3 +31,8 @@ ul.parsley-error-list li{ line-height: 11px; color:red; }
 .quote-wrap strong {color:red;}
 .quote-wrap .control-label {width:211px !important;}
 .quote-wrap .controls {margin-right: 211px !important;}
+.same-as-products a {
+    display: block;
+}
+.slogan h1, .slogan-inner h1 { font-size: 40px; }
+.partners li { list-style: none; }

@@ -11,19 +11,19 @@ $config = array(
         'products' => array(
             'small' => '100x100',
             'medium' => '250x120',
-            'lare' => '250x250'
+            'large' => '250x250'
         ),
         'slider' => array(
             'medium' => '200x150',
-            'large' => '1200x720'
+            'large' => '600x400'
         ),
         'aboutus' => array(
             'medium' => '179x89',
             'large' => '358x177'
         ),
         'applications' => array(
-            'medium' => '335x150',
-            'large' => '770x300'
+            'medium' => '260x260',
+            'large' => '770x500'
         )
     )
 );

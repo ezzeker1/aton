@@ -39,11 +39,10 @@ class Products_model extends CI_Model {
     function update_product($id, $payload) {
         $this->db->where('id', $id);
         $this->db->update($this->products_table, $payload);
-        if ($this->db->affected_rows() > 0) {
+
+        if ($this->db->affected_rows() > 0)
             return TRUE;
-        } else {
-            return FALSE;
-        }
+        return FALSE;
     }
 
     /**
@@ -53,6 +52,8 @@ class Products_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->delete($this->products_table);
         if ($this->db->affected_rows() > 0) {
+            $this->db->where('product_id',$id);
+            $this->db->delete('applications_products');
             return TRUE;
         } else {
             return FALSE;
@@ -115,14 +116,14 @@ class Products_model extends CI_Model {
         $this->db->limit($row_number);
     }
 
-    function get_products_max($max_limit) {
-        if (isset($max_limit)) {
+    function get_products_max($max_limit = FALSE) {
+        if ($max_limit)
             $this->db->limit($max_limit);
-            $query = $this->db->get($this->products_table);
-            if ($query->num_rows() > 0) {
-                return $query->result();
-            }
+        $query = $this->db->get($this->products_table);
+        if ($query->num_rows() > 0) {
+            return $query->result();
         }
+
         return FALSE;
     }
 

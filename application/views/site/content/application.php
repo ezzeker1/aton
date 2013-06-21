@@ -3,7 +3,7 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="header-img">
-               
+
             </div>
         </div>
     </div>
@@ -15,7 +15,6 @@
                 <h1><?php echo localize($application, 'title'); ?></h1>
             </div>
             <div class="welcome-data">
-
                 <div class="callbacks_container">
                     <ul class="rslides" id="slider3">
                         <?php
@@ -24,7 +23,7 @@
                                 ?>
                                 <li>
                                     <img src="<?php echo $image['url']; ?>" alt="" />
-                                    <p class="caption">المشروع الاول</p>
+                                   
                                 </li>
                                 <?php
                             }
@@ -32,9 +31,17 @@
                         ?>
                     </ul>
                 </div>
-
                 <p><?php echo localize($application, 'description'); ?></p>
-            </div>   
+            </div>
+            <?php
+            $path = realpath(APPPATH . '../uploads/applications/' . $application->id . '/pdf/' . $application->id . '.pdf');
+            if (is_file($path)) {
+                ?>
+                <a href="<?php echo base_url() . 'uploads/applications/' . $application->id . '/pdf/' . $application->id . '.pdf'; ?>">
+                    <h1><?php echo lang('download_pdf')?></h1>
+                </a>
+            <?php } ?>
+
         </div>
         <div class="span4">
             <div class="section-header">
@@ -47,12 +54,13 @@
                         foreach ($related_products as $product) {
                             ?>
                             <li>
-                                <a href="<?php echo base_url('product/'.$product->id); ?>">
-                                <h4>  <?php echo localize($product, 'name'); ?></h4>
+                                <a href="<?php echo base_url('product/' . $product->id); ?>">
+                                    <h4>  <?php echo localize($product, 'name'); ?></h4>
                                 </a>
                                 <p> <?php echo localize($product, 'description'); ?></p>
                             </li>
-                        <?php }
+                        <?php
+                        }
                     }
                     ?>
                 </ul>

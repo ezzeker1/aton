@@ -20,7 +20,7 @@
                 <h1><?php echo lang($page->name); ?></h1>
             </div>    
             <div class="welcome-data">    
-                <img src="<?php base_url(); ?>resources/site/images/about-1.png" width="769" height="183" alt="welcome img">
+                <img src="<?php base_url(); ?>uploads/aboutus/<?php echo $page->name.'.jpg'; ?>" width="769" height="183" alt="welcome img">
                 <h3><?php echo localize($page, 'title');  ?></h3>
                 <p><?php echo localize($page, 'content');  ?></p>
             </div>      

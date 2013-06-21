@@ -40,47 +40,47 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputEmail" class="control-label">الايميل  <strong>*</strong></label>
+                        <label for="inputEmail" class="control-label">الايميل  </label>
                         <div class="controls">
-                            <input type="text" placeholder="الايميل" class="input-xlarge" id="inputEmail" name="email" data-required="true" data-trigger="change" data-type="email" />
+                            <input type="text" placeholder="الايميل" class="input-xlarge" id="inputEmail" name="email"  data-trigger="change" data-type="email" />
                         </div>
                     </div>
 
-                    <h2>الاحتياج المائي</h2>
+                    <h2>الاحتياج اليومي من الماء </h2>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">الأحتياجات اليومية من الماء      <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">كمية  المياه المطلوبة يوميا   </label>
                         <div class="controls">
-                            <input type="text" placeholder="الأحتياجات اليومية من الماء    " id="inputPassword" class="input-xlarge"  name="daily_need"  data-required="true" data-trigger="change" data-type="number"/>
+                            <input type="text" placeholder="كمية  المياه المطلوبة يوميا " id="inputPassword" class="input-xlarge"  name="daily_need"  data-required="true" data-trigger="change" data-type="number"/>
                             متر مكعب/يوم 
                         </div>
                     </div>
                     <div class="control-group">
 
-                        <label for="inputPassword" class="control-label">مصدر المياه:    <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">مصدر المياه: </label>
                         <div class="controls">
 
                             <label class="radio">
-                                <input data-required="true" name="vertical_lift" type="radio" value="بئر"> بئر
+                                <input name="vertical_lift" type="radio" value="بئر"> بئر
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="vertical_lift" type="radio" value="نهر"> نهر
+                                <input  name="vertical_lift" type="radio" value="نهر"> نهر
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="vertical_lift" type="radio" value="خزان"> لاخزان
+                                <input  name="vertical_lift" type="radio" value="أخري"> أخري
                             </label>
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">أقصي عمق للبئر  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">أقصي عمق للبئر  </label>
                         <div class="controls">
-                            <input type="text" placeholder="أقصي عمق للبئر" id="inputPassword" class="input-xlarge" name="depth_well"  data-required="true" data-trigger="change" data-type="number"/>
+                            <input type="text" placeholder="أقصي عمق للبئر" id="inputPassword" class="input-xlarge" name="depth_well"   data-trigger="change" data-type="number"/>
                             متر
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">قطر ماسورة البئر  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">قطر ماسورة البئر  </label>
                         <div class="controls">
-                            <input type="text" placeholder="قطر ماسورة البئر" id="inputPassword" class="input-xlarge" name="pipe_diameter"  data-required="true" data-trigger="change" data-type="number"/>
+                            <input type="text" placeholder="قطر ماسورة البئر" id="inputPassword" class="input-xlarge" name="pipe_diameter"  data-trigger="change" data-type="number"/>
                             متر
                         </div>
                     </div>
@@ -91,77 +91,74 @@
                             متر
                         </div>
                     </div>
+  
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">معدل الاسترداد  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">طول وقطر الأنابيب خارج ألطرمبه    </label>
                         <div class="controls">
-                            <input type="text" placeholder="معدل الاسترداد" id="inputPassword" class="input-xlarge" name="recovery_rate"   data-trigger="change" data-type="number"/>
-                            متر مربع / ساعة
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label for="inputPassword" class="control-label">طول وقطر الأنابيب خارج طرمبة   <strong>*</strong></label>
-                        <div class="controls">
-                            <input type="text" placeholder="طول وقطر الأنابيب خارج طرمبة " id="inputPassword" class="input-xlarge" name="length_pipe" data-trigger="change" data-type="number" />
+                            <input type="text" placeholder="طول وقطر الأنابيب خارج ألطرمبه  " id="inputPassword" class="input-xlarge" name="length_pipe" data-trigger="change" data-type="number" />
                             متر
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">درجة حرارة الماء من بئر  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">درجة حرارة الماء من بئر  </label>
                         <div class="controls">
                             <input type="text" placeholder="درجة حرارة الماء من بئر" id="inputPassword" class="input-xlarge" name="temprature" data-trigger="change" data-type="number" />
                             مئوية 
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">نوع التطبيقات<strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">نوع التطبيقات</label>
                         <div class="controls">
 
                             <label class="radio">
-                                <input data-required="true"  name="water_quality" type="radio" value="ري"> ري 
+                                <input  name="water_quality" type="radio" value="ري"> ري 
                             </label>
                             <label class="radio">
-                                <input data-required="true"  name="water_quality" type="radio" value="ثروة حيوانية "> ثروة حيوانية 
+                                <input   name="water_quality" type="radio" value="ثروة حيوانية "> ثروة حيوانية 
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="water_quality" type="radio" value="مياه للشرب"> مياه للشرب  
+                                <input  name="water_quality" type="radio" value="مياه للشرب"> مياه للشرب  
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="water_quality" type="radio" value="حمامات سباحة"> حمامات سباحة  
+                                <input  name="water_quality" type="radio" value="حمامات سباحة"> حمامات سباحة  
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="water_quality" type="radio" value="أخري"> أخري
+                                <input  name="water_quality" type="radio" value="أخري"> أخري
                             </label>
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label"> هل يوجد خزان للمياه؟  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label"> هل يوجد خزان للمياه؟  </label>
                         <div class="controls">
 
                             <label class="radio">
-                                <input data-required="true" name="tank_available" type="radio" value="yes"> نعم
+                                <input  name="tank_available" type="radio" value="yes"> نعم
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="tank_available" type="radio" value="no"> لا 
+                                <input \ name="tank_available" type="radio" value="no"> لا 
                             </label>
                         </div>
 
                     </div>
                     <h2>تركيب الطاقة الشمسية</h2>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">المسافة بين البئر وموقع الخلايا الشمسية  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">المسافة بين البئر وموقع الخلايا الشمسية  </label>
                         <div class="controls">
                             <input type="text" placeholder="المسافة بين البئر وموقع الخلايا الشمسية" name="cable_length" class="input-xlarge"/>
                             متر                                 
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="inputPassword" class="control-label">كيفية إمدادات الطاقة  <strong>*</strong></label>
+                        <label for="inputPassword" class="control-label">كيفية إمدادات الطاقة  </label>
                         <div class="controls">
                             <label class="radio">
-                                <input data-required="true" name="power_supply" type="radio" value=" الطاقة الشمسية فقط" > الطاقة الشمسية فقط
+                                <input name="power_supply" type="radio" value=" الطاقة الشمسية فقط" > الطاقة الشمسية فقط
                             </label>
                             <label class="radio">
-                                <input data-required="true" name="power_supply" type="radio" value=" الطاقة الشمسية مع البطاريات" > الطاقة الشمسية مع البطاريات
+                                <input name="power_supply" type="radio" value=" الطاقة الشمسية مع البطاريات" > الطاقة الشمسية مع البطاريات
+                            </label>
+                            <label class="radio">
+                                <input name="power_supply" type="radio" value="الطاقة الشمسية مع الكهرباء " > الطاقة الشمسية مع الكهرباء 
                             </label>
 
                         </div>

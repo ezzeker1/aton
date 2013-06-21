@@ -35,7 +35,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
 font-family: "OpenSansRegular";
-padding: 12px 29px;
+padding: 12px 15px;
 }
 /* Offset the responsive button for proper vertical alignment */
     .navbar .btn-navbar {
@@ -62,7 +62,7 @@ position: absolute;
 top: 0;
 left: 0;
 min-width: 100%;
-height: 600px;
+height: 400px;
 }
 .carousel-caption {
   background-color: transparent;
@@ -224,7 +224,7 @@ body a,body a:hover {
     transition: color 0.5s ease;
 }
 h1 {
-  font-size: 25px;
+  font-size: 22 px;
   font-weight: bold;
 }
 .wood-Bg {
@@ -266,8 +266,6 @@ border-radius: 0;
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
     color: #FFFFFF;
-    font-size: 16px;
-    font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 0 2px #738838;
     text-transform: uppercase;

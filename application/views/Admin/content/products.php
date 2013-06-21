@@ -15,18 +15,14 @@
 					  <li class=""><a data-toggle="tab" href="#ar">Arabic</a></li>
 					</ul>
 					<br />
-                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/Products/'.$controller_action); ?>" method="post" id="validation-form" class="form-horizontal ">
+                                        <form  enctype="multipart/form-data" data-validate="parsley" action="<?php echo base_url('admin/products/'.$controller_action); ?>" method="post" id="validation-form" class="form-horizontal ">
                                     <div class="tab-content">
                                           <div class="control-group">
 				            <label class="control-label" for="categoryNameSelect">Select Category</label>
 				            <div class="controls">
                                                 
-				              <select data-error-message="You have to select category" data-min="1" id="validateSelect" name="categoryNameSelect"  >
-                                                  <option value="<?php if(isset($category_value)){echo $category_value;}else{echo '0';}?>"><?php if(isset($categoryname_en)){echo $categoryname_en;}else{echo 'Select...';}?></option>
-				                <?php foreach($category_names as $value=>$category_name)
-                                                echo"<option value='".$value."'>".$category_name."</option>";
-				                ?>
-				              </select>
+                                                <?php echo form_dropdown('categoryNameSelect', $category_names, isset($product->category_id)?$product->category_id: 0, ' data-error-message="You have to select category" data-min="1" id="validateSelect"'); ?>
+                                                
 				            </div>
 				          </div>
                                         <div id="en" class="tab-pane active">
@@ -74,7 +70,7 @@
 				          </div>
                                         <div class="control-group">
                                             <div class="controls">
-                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img_path)){echo base_url().$product_img_path;}else{echo base_url()."resources/admin/img/no_img.jpg";} ?>"/>  
+                                                <img  id="product_picture_display" class="instant_display" src="<?php if(isset($product_img)){echo base_url().'uploads/products/small/'.$product_img;}else{echo base_url()."resources/admin/img/no_img.jpg";} ?>"/>  
                                                </div>
                                         </div>
                                     

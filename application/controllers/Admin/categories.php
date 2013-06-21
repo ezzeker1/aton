@@ -34,7 +34,7 @@ class Categories extends Logged_controller {
     function index() {
 
         $this->table->set_heading('#', 'Name', 'Description', 'اسم ', 'تفصيل', 'Edit', 'Delete');
-        $this->data['buttons'] = anchor('admin/categories/add_category', 'Add new category', 'class="btn btn-primary"');
+        $this->data['buttons'] = anchor('admin/categories/add', 'Add new category', 'class="btn btn-primary"');
         $this->data['h3'] = 'Category managment';
         $this->data['tableTitle'] = 'Categories';
         $this->load->view('admin/layouts/table', $this->data);

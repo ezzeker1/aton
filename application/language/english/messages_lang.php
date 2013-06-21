@@ -2,7 +2,7 @@
 
 $lang['more'] = "more";
 $lang['home_welcome']='Welcome To Aton';
-$lang['home_common_application']='Applications';
+$lang['home_common_application']='Range of Applications';
 $lang['home_distributor_of']='Official Partner for LORENTZ';
 $lang['home_']='Welcome To Aton';
 $lang['copyrights']='Copyright 2013 Aton | Solar Power Solutions . All rights reserved. ';
@@ -38,4 +38,5 @@ $lang['error']='error';
 $lang['quote.error']='Error has been occured, please try again';
 $lang['quote.success']='Your request has been sent to ATON team, you will be contact as soon as possible, have a nice day';
 $lang['contact.error']='Error has been occured, please try again';
-$lang['contact.success']='Thank you for contacting ATON, we you will reply your inquiery as soon as possible, have a nice day!';
+$lang['contact.success']='Thanks for contacting ATON, we will reply you as soon as possible, have a nice day!';
+$lang['download_pdf']='Download PDF';

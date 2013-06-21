@@ -8,10 +8,7 @@
                 ?>
                 <div class="item <?php echo $key == 0 ? 'active' : ''; ?>"> <img src="<?php echo $image['url']; ?>" alt="">
                     <div class="container">
-                        <div class="carousel-caption">
-                            <h1 class="lead"> <?php echo humanize(strip_ext(basename($image['url']))); ?> </h1>
 
-                        </div>
                     </div>
                 </div>
                 <?php
@@ -25,7 +22,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="section-header">
-            <h1><?php echo lang('home_latest_products'); ?></h1>
+            <h1><?php echo lang('home_common_application'); ?></h1>
         </div>
     </div>
 </div>
@@ -33,16 +30,16 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <?php
-        if (isset($home_products)) {
-            foreach ($home_products as $product) {
+        if (isset($home_applications)) {
+            foreach ($home_applications as $application) {
                 ?>
                 <div class="span3">
                     <div class="products">
-                        <img src="<?php base_url(); ?>resources/site/images/pro-1.jpg" alt="product 1">
-                        <h3><?php echo localize($product, 'name'); ?></h3>
-                        <p><?php echo substr( localize($product, 'description'),0,300);   ?></p>
+                        <img src="<?php if(isset($application->images[0]['thumb_url']) ) echo $application->images[0]['thumb_url'] ; ?>" alt="<?php echo localize($application, 'title'); ?>">
+                        <h3><?php echo localize($application, 'title'); ?></h3>
+                        <p><?php echo substr( localize($application, 'description'),0,300);   ?></p>
                      
-                        <a class="btn" href="<?php echo base_url('product/'.$product->id); ?>"><?php echo lang('more'); ?></a>
+                        <a class="btn" href="<?php echo base_url('applications/'.$application->id); ?>"><?php echo lang('more'); ?></a>
                     </div>        
                 </div>
                 <?php
@@ -65,7 +62,7 @@
 
             <div class="welcome-data">
 
-                <img src="<?php base_url(); ?>resources/site/images/welcome-img.jpg" width="769" height="183" alt="welcome img">
+                <img src="<?php echo base_url(); ?>resources/site/images/welcome.jpg" width="769" height="183" alt="welcome img">
 
                 <p>
                     <?php echo localize($page_home, 'content'); ?> 
@@ -78,18 +75,16 @@
         </div>
         <div class="span4">
             <div class="partners-wrap">
-                <h1 class="green-title"><?php echo lang('home_distributor_of'); ?></h1>
-                <div class="partners-slider demo-2">
+                <h1 class="green-title" style="font-size:15px; font-weight: bold;"><?php echo lang('home_distributor_of'); ?></h1>
+                <div class="partners" >
 
                     <!-- Elastislide Carousel -->
-                    <ul id="carousel-2" class="elastislide-list">
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image01" /></a></li>
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image02" /></a></li>
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image03" /></a></li>
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image04" /></a></li>
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image01" /></a></li>
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image02" /></a></li>
-                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="image03" /></a></li>									 					
+                    <ul  >
+                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/lorentz-logo.png" alt="Lorentz" /></a></li>
+                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/suntech.jpg" alt="Sun tech" /></a></li>
+                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/deka.jpg" alt="Deka solar" /></a></li>
+                        <li><a href="#"><img src="<?php base_url(); ?>resources/site/images/candian.jpg" alt="Canadian solar" /></a></li>
+							 					
                     </ul>
                     <!-- End Elastislide Carousel -->
 
@@ -97,6 +92,7 @@
 
                 <div class="quotation">
                     <h1 class="green-title"><?php echo lang('home_quote');?>  </h1>
+                    <br class="clear"/>
                     <p><?php echo lang('home_quote_text');?></p>
                     <a class="" href="<?php echo base_url('quote'); ?>"><?php echo lang('more'); ?></a>
 

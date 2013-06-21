@@ -9,7 +9,7 @@
 				<i class="icon-cog"></i>
 			</a>
 			
-			<a class="brand" href="./index.html">
+			<a class="brand" href="<?php echo base_url(); ?>>
 				ATON <sup>Admin Panel </sup>
 			</a>		
 			

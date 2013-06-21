@@ -25,6 +25,10 @@
                                 <div id="en" class="tab-pane active">
 
                                     <?php foreach ($about as $page) { ?>
+                                        <div class="control-group">
+                                              <h3>   <?php echo $sections[$page->name]; ?><h3>
+
+                                        </div>
                                         <input name="name[]" value="<?php echo $page->name; ?>" type="hidden"/>
                                         <div class="control-group">
                                             <label for="name" class="control-label">Title</label>
@@ -44,6 +48,11 @@
 
                                 <div id="ar" class="tab-pane">
                                     <?php foreach ($about as $page) { ?>
+                                        <div class="control-group">
+                                            <h3>   <?php echo $sections[$page->name]; ?><h3>
+
+                                        </div>
+
                                         <div class="control-group">
                                             <label for="name" class="control-label">اسم</label>
                                             <div class="controls">
@@ -66,7 +75,7 @@
                         </form>
                     </div> <!-- /widget-content -->
 
-
+               <?php echo $this->widgets->load(); ?>
 
 
                 </div> <!-- /widget -->					
