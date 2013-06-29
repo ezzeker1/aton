@@ -10,15 +10,15 @@
 $(document).ready(function()
 {
 	//Add Inactive Class To All Accordion Headers
-	$('.accordion-header').toggleClass('inactive-header');
+//	$('.accordion-header').toggleClass('inactive-header');
 	
 	//Set The Accordion Content Width
 	var contentwidth = $('.accordion-header').width();
 	$('.accordion-content').css({'width' : contentwidth });
 	
 	//Open The First Accordion Section When Page Loads
-	$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-	$('.accordion-content').first().slideDown().toggleClass('open-content');
+//	$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
+	$('.active-content').first().slideDown().toggleClass('open-content');
 	
 	// The Accordion Effect
 	$('.accordion-header').click(function () {

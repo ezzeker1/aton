@@ -5,8 +5,10 @@
             if (isset($categories)) {
                 foreach ($categories as $category) {
                     ?>
-                    <h2 class="accordion-header">       <?php echo localize($category, 'name'); ?></h2>
-                    <div class="accordion-content">
+            
+                    <h2 class="accordion-header <?php echo $category->id == $current_category  ? 'active-header':'inactive-header'?>">     
+                          <?php echo localize($category, 'name'); ?></h2>
+                    <div class="accordion-content <?php echo $category->id == $current_category  ? 'active-content':'inactive-content'?>">
                         <ul>
                             <?php
                             if (isset($side_products)) {

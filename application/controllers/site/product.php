@@ -24,7 +24,7 @@ class Product extends FrontController {
     function load_cat($id) {
 
         $this->data['products'] = $this->categories_model->get_products_by_category($id);
-
+        $this->data['current_category']=$id;
         $this->data['pages'] = null;
         $this->data['main_content'] = 'product_list';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
@@ -45,6 +45,7 @@ class Product extends FrontController {
                 ));
 
         $this->data['product']=$this->products_model->get_product($id);
+        $this->data['current_category']=$this->data['product']->category_id;
         $this->data['main_content'] = 'product_details';
         $this->load->view('site/layouts/inner_no_slider', $this->data);
     }

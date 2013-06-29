@@ -34,7 +34,7 @@
                                             <img src="<?php echo $image['thumb_url']; ?>"
                                                  data-large="<?php echo $image['url']; ?>" 
                                                  alt="<?php echo $image['caption']; ?>" 
-                                                 data-description="<?php echo $image['caption']; ?>" />
+                                                />
                                         </a>
                                     </li>   
                                     <?php }?>

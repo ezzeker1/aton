@@ -12,7 +12,6 @@
                         ?>
                         <li><a href="<?php echo base_url('product/' . $product->id); ?>"><img src="<?php echo base_url() . 'uploads/products/medium/' . $product->id . '.jpg'; ?>" alt="<?php echo localize($product, 'name'); ?>" /></a>
                             <h1><?php echo localize($product, 'name'); ?></h1>
-                            <p><?php echo substr(localize($product, 'description'), 0, 30); ?></p>
                         </li>
                         <?php
                     }

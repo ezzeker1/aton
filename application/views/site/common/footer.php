@@ -47,7 +47,9 @@
     !function($) {
         $(function() {
             // carousel demo
-            $('#myCarousel').carousel()
+            $('#myCarousel').carousel({
+                interval: 3000
+            })
         })
     }(window.jQuery)
 </script>
